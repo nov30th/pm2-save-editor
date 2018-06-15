@@ -2,3 +2,5 @@
 .vs
 pm2-save-editor/bin
 pm2-save-editor/obj
+nppBackup
+pm2-save-editor/nppBackup
