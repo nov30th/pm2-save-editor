@@ -12,11 +12,13 @@ namespace pm2_save_editor
 {
     
     /// <summary>
-    /// Main interface with which to interact with Princes Maker 2 save files
+    /// Basic interface for interacting with Princess Maker 2 save files
     /// </summary>
-    class PrincessMaker
+    class PrincessMakerFileBuffer
     {
         const int PM2_SAVE_FILE_SIZE = 8192;
+        byte[] pm2SaveFileBytes;
+        const int CHECKSUM_OFFSET = 0x1B4C; // temporary storage of checksum offset here - will ideally pull the offset from full offset list later
 
         /// <summary>
         /// Read a Princess Maker 2 save file into memory
@@ -58,27 +60,77 @@ namespace pm2_save_editor
                 }
             }
 
-            byte[] pm2SaveFileBytes = new byte[PM2_SAVE_FILE_SIZE];
+            pm2SaveFileBytes = new byte[PM2_SAVE_FILE_SIZE];
 
             pm2SaveFileStream.Read(pm2SaveFileBytes, 0, PM2_SAVE_FILE_SIZE);
 
             MemoryStream ms = new MemoryStream(pm2SaveFileBytes);
             BinaryReader br = new BinaryReader(ms);
 
-            StringStatContainer daughtersName = new StringStatContainer(48, 0x74, 8, 1, br);
-
-            MessageBox.Show(daughtersName.GetString());
-
-
             ms.Close();
             br.Close();
 
             pm2SaveFileStream.Close();
 
-            int checksum = Checksum.CalculateChecksum(pm2SaveFileBytes);
+            return true;
+        }
 
+        /// <summary>
+        /// Write a loaded Princess Market 2 save file to disk
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        public bool SaveFile(string fileName)
+        {
+            // This function is very basic and deviates from the planned model regarding how to handle parts of the file
+            // Once the planned model is setup up the calculation and updating of checksum should be moved out of this function and integrated with it
+            FileStream fs;
+
+            try
+            {
+                fs = new FileStream(fileName, FileMode.Create);
+            }
+            catch
+            {
+                MessageBox.Show("Error creating file " + fileName);
+                return false;
+            }
+
+            int newChecksum = Checksum.CalculateChecksum(pm2SaveFileBytes);
+            WriteAtOffset(CHECKSUM_OFFSET, 4, BitConverter.GetBytes(newChecksum));
+
+            BinaryWriter bw = new BinaryWriter(fs);
+
+            bw.Write(pm2SaveFileBytes);
+
+            bw.Close();
+            fs.Close();
 
             return true;
+        }
+
+        /// <summary>
+        /// Read bytes from file in memory to a specified buffer
+        /// </summary>
+        /// <param name="offset">Offset in file to read from</param>
+        /// <param name="size">Size of requested data</param>
+        /// <returns>Byte array containing requested data</returns>
+        public byte[] ReadAtOffset(int offset, int size)
+        {
+            byte[] bytesRead = new byte[size];
+            Array.Copy(pm2SaveFileBytes, offset, bytesRead, 0, size);
+            return bytesRead;
+        }
+
+        /// <summary>
+        /// Write specified bytes to the file in memory
+        /// </summary>
+        /// <param name="offset">Offset in file to write to</param>
+        /// <param name="size">Size of data to write</param>
+        /// <param name="bytesToWrite">Data to write</param>
+        public void WriteAtOffset(int offset, int size, byte[] bytesToWrite)
+        {
+            Array.Copy(bytesToWrite, 0, pm2SaveFileBytes, offset, size);
         }
 
     }
