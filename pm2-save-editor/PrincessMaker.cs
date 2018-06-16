@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
-
+using System.Runtime.InteropServices;
 
 
 namespace pm2_save_editor
@@ -74,7 +74,9 @@ namespace pm2_save_editor
             br.Close();
 
             pm2SaveFileStream.Close();
-            
+
+            int checksum = Checksum.CalculateChecksum(pm2SaveFileBytes);
+
 
             return true;
         }
