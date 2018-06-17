@@ -26,11 +26,20 @@ namespace pm2_save_editor
 
             string newName = "Marisa";
             byte[] newNameBytes = ASCIIEncoding.ASCII.GetBytes(newName);
-            pm2.WriteAtOffset(0x74, newNameBytes.Length, newNameBytes);
+            //pm2.WriteAtOffset(0x74, newNameBytes.Length, newNameBytes);
 
-            byte[] name = pm2.ReadAtOffset(0x74, 48);
+            //byte[] name = pm2.ReadAtOffset(0x74, 48);
 
-            MessageBox.Show(ASCIIEncoding.ASCII.GetString(name));
+            StringStatContainer dn = new StringStatContainer(StatInitalizationValues.statInitalizationMap[Stat.DaughtersName], pm2);
+
+            MessageBox.Show(dn.GetString());
+
+            dn.SetString("Alice");
+            dn.CommitContents();
+
+            MessageBox.Show(dn.GetString());
+
+            //MessageBox.Show(ASCIIEncoding.ASCII.GetString(name));
 
             pm2.SaveFile("F109.GNX");
 

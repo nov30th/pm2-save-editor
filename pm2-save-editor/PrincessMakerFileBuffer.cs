@@ -64,12 +64,6 @@ namespace pm2_save_editor
 
             pm2SaveFileStream.Read(pm2SaveFileBytes, 0, PM2_SAVE_FILE_SIZE);
 
-            MemoryStream ms = new MemoryStream(pm2SaveFileBytes);
-            BinaryReader br = new BinaryReader(ms);
-
-            ms.Close();
-            br.Close();
-
             pm2SaveFileStream.Close();
 
             return true;

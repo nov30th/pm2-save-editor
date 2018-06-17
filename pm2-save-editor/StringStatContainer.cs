@@ -15,6 +15,10 @@ namespace pm2_save_editor
     class StringStatContainer
     {
         /// <summary>
+        /// Internal ID used to identify the contents of this container
+        /// </summary>
+        Stat statId;
+        /// <summary>
         /// Byte array representing the string block as it appears in the file
         /// </summary>
         byte[] stringAsBytes;
@@ -35,21 +39,26 @@ namespace pm2_save_editor
         /// Offset of the string buffer in the file
         /// </summary>
         int offset = 0;
+        /// <summary>
+        /// A handle to the file buffer in which this container represents a stat
+        /// </summary>
+        PrincessMakerFileBuffer attachedBuffer;
 
         /// <summary>
         /// Initalize the container
         /// </summary>
-        /// <param name="size">Size of the string block in bytes</param>
-        /// <param name="offset">Offset of the string block in the file buffer</param>
-        /// <param name="br">BinaryReader that has opened the file buffer</param>
-        public StringStatContainer(int size, int offset, int maxSize, int minSize, BinaryReader br)
+        /// <param name="defaultValues">A struct containing the default values for this container</param>
+        /// <param name="workingFileBuffer">A handle to the file buffer in which this container represents a stat</param>
+        public StringStatContainer(InitalizationStruct defaultValues, PrincessMakerFileBuffer workingFileBuffer)
         {
-            this.sizeInMemory = size;
-            this.offset = offset;
-            this.maxSize = maxSize;
-            this.minSize = minSize;
-            br.BaseStream.Position = offset;
-            stringAsBytes = br.ReadBytes(size);
+            attachedBuffer = workingFileBuffer;
+            this.statId = defaultValues.statID;
+            this.sizeInMemory = defaultValues.size;
+            this.offset = defaultValues.offset;
+            this.maxSize = defaultValues.maxLength;
+            this.minSize = defaultValues.minLength;
+
+            stringAsBytes = attachedBuffer.ReadAtOffset(offset, sizeInMemory);
         }
 
         /// <summary>
@@ -93,13 +102,11 @@ namespace pm2_save_editor
         }
 
         /// <summary>
-        /// Write the container contents to a buffer representing the file
+        /// Write the container contents to its attached buffer
         /// </summary>
-        /// <param name="bw">BinaryWriter that has opened the file buffer</param>
-        public void CommitContents(BinaryWriter bw)
+        public void CommitContents()
         {
-            bw.BaseStream.Position = offset;
-            bw.Write(stringAsBytes, 0, sizeInMemory);
+            attachedBuffer.WriteAtOffset(offset, sizeInMemory, stringAsBytes);
         }
 
     }
