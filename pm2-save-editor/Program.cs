@@ -8,6 +8,7 @@ using System.Text;
 
 namespace pm2_save_editor
 {
+
     static class Program
     {
 
@@ -40,6 +41,14 @@ namespace pm2_save_editor
             MessageBox.Show(dn.GetString());
 
             //MessageBox.Show(ASCIIEncoding.ASCII.GetString(name));
+
+            IntStatContainer fr = new IntStatContainer(StatInitalizationValues.statInitalizationMap[Stat.FightingRep], pm2);
+
+            var newValue = new IntUnion { intType = IntType.UInt16, UInt16Value = 573 };
+            var result = fr.SetValue(newValue);
+            MessageBox.Show(result.ToString());
+
+            fr.CommitContents();
 
             pm2.SaveFile("F109.GNX");
 

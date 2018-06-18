@@ -7,7 +7,7 @@ using System.IO;
 
 namespace pm2_save_editor
 {
-    enum StatContainerReturnCodes { OK = 0, UnderMinimumSize = -1, OverMaximumSize = -2, AccessingUnitalizedContainer = -3 }
+    enum StatContainerReturnCodes { OK = 0, UnderMinimumSize = -1, OverMaximumSize = -2, AccessingUnitalizedContainer = -3, InvalidType = -4 }
 
     /// <summary>
     /// Container for a string variable

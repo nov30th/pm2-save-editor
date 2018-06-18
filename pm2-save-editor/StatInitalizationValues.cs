@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace pm2_save_editor
 {
 
-    enum StatTypes { Int, String };
-    enum IntType   { Int8, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64 };
+    enum StatTypes { Int, UInt, String };
 
     /// <summary>
     /// Struct used to hold default initalization values for stat containers. 
@@ -22,20 +21,12 @@ namespace pm2_save_editor
         public int size;
         public int offset;
 
-        // Integer Type
-        IntType intType;
+        public IntType intType;
 
-        //public sbyte Int8Value;
-        //public byte UInt8Value;
-        //public short Int16Value;
-        //public ushort UInt16Value;
-        //public int Int32Value;
-        //public uint UInt32Value;
-        //public long Int64Value;
-        //public ulong UInt64Value;
-
-        public int minValue;
-        public int maxValue;
+        public long iMax;
+        public long iMin;
+        public ulong uMax;
+        public ulong uMin;
 
         // String Type
         //public string stringValue;
@@ -44,7 +35,14 @@ namespace pm2_save_editor
         public int maxLength;
     }
 
-    enum Stat { DaughtersName };
+    enum Stat { DaughtersName, FightingRep };
+
+    static class Limits
+    {
+        public const int RepMax = 2000;
+        public const int RepMin = 0;
+    }
+    
 
     static class StatInitalizationValues
     {
@@ -60,6 +58,17 @@ namespace pm2_save_editor
                 minLength = 1,
                 maxLength = 8 }
             },
+
+            { Stat.FightingRep, new InitalizationStruct {
+                name = "Fighting Reputation",
+                statID = Stat.FightingRep,
+                type = StatTypes.UInt,
+                intType = IntType.UInt16,
+                offset = 0x4E,
+                uMax = Limits.RepMax,
+                uMin = Limits.RepMin }
+            },
+
         };
 
     }
