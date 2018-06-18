@@ -54,6 +54,8 @@ namespace pm2_save_editor
 
             GNXFloatStatContainer height = new GNXFloatStatContainer(StatInitalizationValues.statInitalizationMap[Stat.Height], pm2);
 
+            MessageBox.Show(height.GetValue().ToString());
+
             var result = height.SetValueFromFloat(100.00);
 
             MessageBox.Show(result.ToString());

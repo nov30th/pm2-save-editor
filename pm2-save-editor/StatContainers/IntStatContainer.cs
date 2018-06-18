@@ -47,6 +47,7 @@ namespace pm2_save_editor
             offset = defaultValues.offset;
             Max = defaultValues.Max;
             Min = defaultValues.Min;
+
         }
 
         /// <summary>

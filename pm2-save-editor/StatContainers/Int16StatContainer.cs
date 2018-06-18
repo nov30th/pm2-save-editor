@@ -13,6 +13,8 @@ namespace pm2_save_editor
 
         public Int16StatContainer(InitalizationStruct defaultValues, PrincessMakerFileBuffer workingFileBuffer) : base(defaultValues, workingFileBuffer)
         {
+            byte[] intAsBytes = workingFileBuffer.ReadAtOffset(offset, 2);
+            currentValue = BitConverter.ToInt16(intAsBytes, 0);
         }
 
         public override void CommitContents()
