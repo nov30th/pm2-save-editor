@@ -12,6 +12,7 @@ namespace pm2_save_editor
     static class Program
     {
 
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -42,10 +43,11 @@ namespace pm2_save_editor
 
             //MessageBox.Show(ASCIIEncoding.ASCII.GetString(name));
 
-            IntStatContainer fr = new IntStatContainer(StatInitalizationValues.statInitalizationMap[Stat.FightingRep], pm2);
+            UInt16StatContainer fr = new UInt16StatContainer(StatInitalizationValues.statInitalizationMap[Stat.FightingRep], pm2);
 
-            var newValue = new IntUnion { intType = IntType.UInt16, UInt16Value = 573 };
+            var newValue = 677;
             var result = fr.SetValue(newValue);
+
             MessageBox.Show(result.ToString());
 
             fr.CommitContents();
@@ -53,6 +55,8 @@ namespace pm2_save_editor
             pm2.SaveFile("F109.GNX");
 
             //Application.Run(new Form1());
+
+            
 
         }
     }

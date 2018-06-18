@@ -23,10 +23,8 @@ namespace pm2_save_editor
 
         public IntType intType;
 
-        public long iMax;
-        public long iMin;
-        public ulong uMax;
-        public ulong uMin;
+        public long Max;
+        public long Min;
 
         // String Type
         //public string stringValue;
@@ -65,8 +63,8 @@ namespace pm2_save_editor
                 type = StatTypes.UInt,
                 intType = IntType.UInt16,
                 offset = 0x4E,
-                uMax = Limits.RepMax,
-                uMin = Limits.RepMin }
+                Max = Limits.RepMax,
+                Min = Limits.RepMin }
             },
 
         };
