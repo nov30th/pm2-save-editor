@@ -17,10 +17,6 @@ namespace pm2_save_editor
         /// <summary>
         /// An enum indicating the kind of integer which the container holds
         /// </summary>
-        IntType intType;
-        /// <summary>
-        /// Current value of the stat
-        /// </summary>
         protected long currentValue;
         /// <summary>
         /// Maximum value of the stat
