@@ -64,7 +64,8 @@ namespace pm2_save_editor
         /// <param name="newValue">An IntUnion containing the new value</param>
         /// <returns></returns>
         public StatContainerReturnCodes SetValue(long newValue)
-        {            
+        {   
+                     
             if (newValue < Min)
             {
                 return StatContainerReturnCodes.UnderMinimumSize;

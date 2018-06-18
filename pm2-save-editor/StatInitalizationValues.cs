@@ -33,7 +33,7 @@ namespace pm2_save_editor
         public int maxLength;
     }
 
-    enum Stat { DaughtersName, FightingRep };
+    enum Stat { DaughtersName, FightingRep, Height };
 
     static class Limits
     {
@@ -60,11 +60,19 @@ namespace pm2_save_editor
             { Stat.FightingRep, new InitalizationStruct {
                 name = "Fighting Reputation",
                 statID = Stat.FightingRep,
-                type = StatTypes.UInt,
                 intType = IntType.UInt16,
                 offset = 0x4E,
                 Max = Limits.RepMax,
                 Min = Limits.RepMin }
+            },
+
+            { Stat.Height, new InitalizationStruct {
+                name = "Height",
+                statID = Stat.Height,
+                intType = IntType.UInt16,
+                offset = 0xF0,
+                Max = 50000,
+                Min = 0 }
             },
 
         };

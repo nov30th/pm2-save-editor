@@ -32,25 +32,33 @@ namespace pm2_save_editor
 
             //byte[] name = pm2.ReadAtOffset(0x74, 48);
 
-            StringStatContainer dn = new StringStatContainer(StatInitalizationValues.statInitalizationMap[Stat.DaughtersName], pm2);
+            //StringStatContainer dn = new StringStatContainer(StatInitalizationValues.statInitalizationMap[Stat.DaughtersName], pm2);
 
-            MessageBox.Show(dn.GetString());
+            //MessageBox.Show(dn.GetString());
 
-            dn.SetString("Alice");
-            dn.CommitContents();
+            //dn.SetString("Alice");
+            //dn.CommitContents();
 
-            MessageBox.Show(dn.GetString());
+            //MessageBox.Show(dn.GetString());
 
-            //MessageBox.Show(ASCIIEncoding.ASCII.GetString(name));
+            ////MessageBox.Show(ASCIIEncoding.ASCII.GetString(name));
 
-            UInt16StatContainer fr = new UInt16StatContainer(StatInitalizationValues.statInitalizationMap[Stat.FightingRep], pm2);
+            //UInt16StatContainer fr = new UInt16StatContainer(StatInitalizationValues.statInitalizationMap[Stat.FightingRep], pm2);
 
-            var newValue = 677;
-            var result = fr.SetValue(newValue);
+            //var newValue = 677;
+            //var result = fr.SetValue(newValue);
+
+            //MessageBox.Show(result.ToString());
+
+            //fr.CommitContents();
+
+            GNXFloatStatContainer height = new GNXFloatStatContainer(StatInitalizationValues.statInitalizationMap[Stat.Height], pm2);
+
+            var result = height.SetValueFromFloat(100.00);
 
             MessageBox.Show(result.ToString());
 
-            fr.CommitContents();
+            height.CommitContents();
 
             pm2.SaveFile("F109.GNX");
 
