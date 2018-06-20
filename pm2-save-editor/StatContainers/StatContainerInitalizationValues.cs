@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace pm2_save_editor
 {
 
-    enum StatTypes { Int, UInt, String };
+    public enum StatTypes { Int, UInt, String };
 
     /// <summary>
     /// Struct used to hold default initalization values for stat containers. 
     /// </summary>
-    struct InitalizationStruct
+    public struct InitalizationStruct
     {
         public string name;
         public Stat statID;
@@ -33,16 +33,16 @@ namespace pm2_save_editor
         public int maxLength;
     }
 
-    enum Stat { DaughtersName, FightingRep, Height };
+    public enum Stat { DaughtersName, FightingRep, Height };
 
-    static class Limits
+    public static class Limits
     {
         public const int RepMax = 2000;
         public const int RepMin = 0;
     }
     
 
-    static class StatInitalizationValues
+    public static class StatInitalizationValues
     {
 
         internal static Dictionary<Stat, InitalizationStruct> statInitalizationMap = new Dictionary<Stat, InitalizationStruct>

@@ -52,11 +52,19 @@ namespace pm2_save_editor
 
             //fr.CommitContents();
 
-            GNXFloatStatContainer height = new GNXFloatStatContainer(StatInitalizationValues.statInitalizationMap[Stat.Height], pm2);
+            //GNXFloatStatContainer height = new GNXFloatStatContainer(StatInitalizationValues.statInitalizationMap[Stat.Height], pm2);
 
-            MessageBox.Show(height.GetValue().ToString());
+            //MessageBox.Show(height.GetValue().ToString());
 
-            var result = height.SetValueFromFloat(100.00);
+            //var result = height.SetValueFromFloat(100.00);
+
+            //MessageBox.Show(result.ToString());
+
+            //height.CommitContents();
+
+            var height = StatFactory.BuildStat<GNXFloatStatContainer>(Stat.Height, pm2);
+
+            var result = height.SetValue(12345);
 
             MessageBox.Show(result.ToString());
 

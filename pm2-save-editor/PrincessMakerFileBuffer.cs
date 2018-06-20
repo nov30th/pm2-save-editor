@@ -14,7 +14,7 @@ namespace pm2_save_editor
     /// <summary>
     /// Basic interface for interacting with Princess Maker 2 save files
     /// </summary>
-    class PrincessMakerFileBuffer
+    public class PrincessMakerFileBuffer
     {
         const int PM2_SAVE_FILE_SIZE = 8192;
         byte[] pm2SaveFileBytes;
