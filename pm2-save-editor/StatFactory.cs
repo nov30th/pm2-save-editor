@@ -9,7 +9,7 @@ namespace pm2_save_editor
 {
     public static class StatFactory
     {
-        public static T BuildStat<T>(Stat statID, PrincessMakerFileBuffer fileBuffer)
+        public static T BuildStat<T>(Stat statID, PrincessMakerFileBuffer fileBuffer) where T: StatContainer
         {
             InitalizationStruct defaultValue;
             bool statFound;
@@ -22,6 +22,15 @@ namespace pm2_save_editor
             }
 
             var newContainer = (T)Activator.CreateInstance(typeof(T), defaultValue, fileBuffer);
+
+            var statType = defaultValue.type;
+            var containerType = newContainer.GetStatType();
+
+            if (statType != containerType)
+            {
+                throw new Exception(String.Format("Incompatible types for stat {0} and container {1}", statID, containerType));
+            }
+
             return newContainer;
         }
     }

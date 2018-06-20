@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace pm2_save_editor
 {
 
-    public enum StatTypes { Int, UInt, String };
+    public enum StatTypes { Int16, UInt16, String, GNXFloat };
 
     /// <summary>
     /// Struct used to hold default initalization values for stat containers. 
@@ -60,7 +60,7 @@ namespace pm2_save_editor
             { Stat.FightingRep, new InitalizationStruct {
                 name = "Fighting Reputation",
                 statID = Stat.FightingRep,
-                intType = IntType.UInt16,
+                type = StatTypes.UInt16,
                 offset = 0x4E,
                 Max = Limits.RepMax,
                 Min = Limits.RepMin }
@@ -69,7 +69,7 @@ namespace pm2_save_editor
             { Stat.Height, new InitalizationStruct {
                 name = "Height",
                 statID = Stat.Height,
-                intType = IntType.UInt16,
+                type = StatTypes.GNXFloat,
                 offset = 0xF0,
                 Max = 50000,
                 Min = 0 }

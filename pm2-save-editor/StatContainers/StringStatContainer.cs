@@ -12,12 +12,16 @@ namespace pm2_save_editor
     /// <summary>
     /// Container for a string variable
     /// </summary>
-    class StringStatContainer
+    class StringStatContainer : StatContainer
     {
         /// <summary>
         /// Internal ID used to identify the contents of this container
         /// </summary>
         Stat statId;
+        /// <summary>
+        /// Indicator of the specific type of stat which the container holds
+        /// </summary>
+        protected StatTypes statType;
         /// <summary>
         /// Byte array representing the string block as it appears in the file
         /// </summary>
@@ -57,6 +61,8 @@ namespace pm2_save_editor
             this.offset = defaultValues.offset;
             this.maxSize = defaultValues.maxLength;
             this.minSize = defaultValues.minLength;
+
+            this.statType = StatTypes.String;
 
             stringAsBytes = attachedBuffer.ReadAtOffset(offset, sizeInMemory);
         }
@@ -107,6 +113,11 @@ namespace pm2_save_editor
         public void CommitContents()
         {
             attachedBuffer.WriteAtOffset(offset, sizeInMemory, stringAsBytes);
+        }
+
+        public StatTypes GetStatType()
+        {
+            return statType;
         }
 
     }

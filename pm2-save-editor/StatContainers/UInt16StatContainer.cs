@@ -15,6 +15,7 @@ namespace pm2_save_editor
         {
             byte[] intAsBytes = workingFileBuffer.ReadAtOffset(offset, 2);
             currentValue = BitConverter.ToUInt16(intAsBytes, 0);
+            this.statType = StatTypes.UInt16;
         }
 
         public override void CommitContents()

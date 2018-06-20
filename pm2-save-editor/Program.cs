@@ -66,8 +66,6 @@ namespace pm2_save_editor
 
             var result = height.SetValue(12345);
 
-            MessageBox.Show(result.ToString());
-
             height.CommitContents();
 
             pm2.SaveFile("F109.GNX");

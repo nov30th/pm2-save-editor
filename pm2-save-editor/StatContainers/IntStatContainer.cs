@@ -8,12 +8,16 @@ namespace pm2_save_editor
 {
     public enum IntType { Int8, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64 };
 
-    abstract class IntStatContainer
+    abstract class IntStatContainer : StatContainer
     {
         /// <summary>
         /// Internal ID used to identify the contents of this container
         /// </summary>
         Stat statId;
+        /// <summary>
+        /// Indicator of the specific type of stat which the container holds
+        /// </summary>
+        protected StatTypes statType;
         /// <summary>
         /// An enum indicating the kind of integer which the container holds
         /// </summary>
@@ -47,7 +51,6 @@ namespace pm2_save_editor
             offset = defaultValues.offset;
             Max = defaultValues.Max;
             Min = defaultValues.Min;
-
         }
 
         /// <summary>
@@ -86,6 +89,10 @@ namespace pm2_save_editor
         /// </summary>
         public abstract void CommitContents();
 
+        public StatTypes GetStatType()
+        {
+            return statType;
+        }
     }
 }
 
