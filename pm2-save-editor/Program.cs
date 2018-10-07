@@ -67,6 +67,7 @@ namespace pm2_save_editor
 
             var height = StatFactory.BuildStat<GNXFloatStatContainer>(Stat.Height, pm2);
 
+
             var result = height.SetValue(12345);
 
             height.CommitContents();

@@ -63,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Checksum.cs" />
+    <Compile Include="CustomControls\StatContainerBindedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +83,9 @@
     <Compile Include="StatContainers\StatContainerInitalizationValues.cs" />
     <Compile Include="StatContainers\StringStatContainer.cs" />
     <Compile Include="StatFactory.cs" />
+    <EmbeddedResource Include="CustomControls\StatContainerBindedTextBox.resx">
+      <DependentUpon>StatContainerBindedTextBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

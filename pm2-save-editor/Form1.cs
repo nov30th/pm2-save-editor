@@ -13,9 +13,12 @@ namespace pm2_save_editor
     public partial class Form1 : Form
     {
 
+        
+
         private bool fileHasBeenOpened = false;
         private bool unsavedChangesPresent = false; // not yet impelemeted
         private PrincessMakerFileBuffer workingFile;
+        Dictionary<Stat, StatContainer> statDictionary; // should perhaps belong to PrincessMakerFileBuffer, can be easily moved if necessary
         private string workingFileName = "";
         private Dictionary<string, object> panelDictionary;
 
@@ -32,12 +35,53 @@ namespace pm2_save_editor
             openFileDialog1.Filter = "PM2 Save Files|*.GNX";
             saveFileDialog1.Filter = "PM2 Save Files|*.GNX";
 
+            statDictionary = new Dictionary<Stat, StatContainer>();
+
+            InitalizeTabChildControls();
+
             HideTabPages();
 
         }
 
-        private void HideTabPages()
+        public StatContainer RequestStat(Stat requestedStat)
         {
+            bool success;
+            StatContainer foundStat;
+
+            success = statDictionary.TryGetValue(requestedStat, out foundStat);
+
+            if (!success)
+            {
+                MessageBox.Show("Could not find stat with name of " + requestedStat.ToString());
+                Environment.Exit(1);
+            }
+
+            return foundStat;
+
+        }
+
+        // i really wanted to have this be part of the initalization or constructor of the binded text boxes but i couldn't find a way to do it without running into errors
+        private void InitalizeTabChildControls()
+        {
+            foreach (var tabPage in tabControl1.TabPages)
+            {
+                var tab = tabPage as TabPage;
+                foreach (Control childControl in tab.Controls)
+                {
+                    bool isBindedTextBox = childControl.GetType() == typeof(CustomControls.StatContainerBindedTextBox);
+                    if (isBindedTextBox)
+                    {
+                        var bindedTextBox = childControl as CustomControls.StatContainerBindedTextBox;
+                        Stat bindTarget = bindedTextBox.bindTarget;
+                        StatContainer foundStat = RequestStat(bindTarget);
+                        bindedTextBox.Bind(foundStat);
+                    }
+                }
+            }
+        }
+
+        private void HideTabPages()
+        { 
             tabControl1.Enabled = false; // would have preffered to have kept the tabs enable but the child controls disabled but without having to manually cycle through ever control. might try again later.
         }
 
