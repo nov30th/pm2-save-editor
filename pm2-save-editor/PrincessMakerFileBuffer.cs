@@ -38,6 +38,8 @@ namespace pm2_save_editor
 
             if (pm2SaveFileInfo.Length != PM2_SAVE_FILE_SIZE)
             {
+                // the usage of "Are you sure" here implies a Yes/No response, so it may need to be changed or reworked
+                // not sure whether or not user should be allowed to proceed with a file of the wrong extension and wrong size. the chances of them actually having a valid file that fits such criteria is vanishingly small.
                 MessageBox.Show("File " + fileName + " did not match the expected file size. Are you sure it is a PM2 save file?", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }

@@ -22,6 +22,9 @@ namespace pm2_save_editor
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            Application.Run(new Form1());
+            Environment.Exit(0);
+
             PrincessMakerFileBuffer pm2 = new PrincessMakerFileBuffer();
 
             bool testLoad = pm2.LoadFile("F101.GNX");
@@ -72,7 +75,7 @@ namespace pm2_save_editor
 
             //Application.Run(new Form1());
 
-            
+
 
         }
     }
