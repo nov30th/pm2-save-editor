@@ -17,6 +17,7 @@ namespace pm2_save_editor
         private bool unsavedChangesPresent = false; // not yet impelemeted
         private PrincessMakerFileBuffer workingFile;
         private string workingFileName = "";
+        private Dictionary<string, object> panelDictionary;
 
         public Form1()
         {
@@ -30,6 +31,19 @@ namespace pm2_save_editor
 
             openFileDialog1.Filter = "PM2 Save Files|*.GNX";
             saveFileDialog1.Filter = "PM2 Save Files|*.GNX";
+
+            HideTabPages();
+
+        }
+
+        private void HideTabPages()
+        {
+            tabControl1.Enabled = false; // would have preffered to have kept the tabs enable but the child controls disabled but without having to manually cycle through ever control. might try again later.
+        }
+
+        private void ShowTabPages()
+        {
+            tabControl1.Enabled = true;
         }
 
         private void fIleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,6 +68,7 @@ namespace pm2_save_editor
                 saveAsToolStripMenuItem.Enabled = true; // perhaps these should be in seperate functions
                 saveToolStripMenuItem.Enabled = true;
                 workingFileName = openFileDialog1.FileName;
+                ShowTabPages();
             }
 
         }
@@ -107,5 +122,17 @@ namespace pm2_save_editor
         {
 
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
