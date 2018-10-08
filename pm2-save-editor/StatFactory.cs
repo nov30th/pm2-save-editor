@@ -16,6 +16,7 @@ namespace pm2_save_editor
             { StatTypes.Int16, typeof(Int16StatContainer) },
             { StatTypes.String, typeof(StringStatContainer) },
             { StatTypes.GNXFloat, typeof(GNXFloatStatContainer) },
+            { StatTypes.Int32, typeof(Int32StatContainer) },
         };
 
         public static T BuildStat<T>(Stat statID, PrincessMakerFileBuffer fileBuffer) where T: StatContainer

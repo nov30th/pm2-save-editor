@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace pm2_save_editor
 {
 
-    public enum StatTypes { Int16, UInt16, String, GNXFloat };
+    public enum StatTypes { Int16, UInt16, Int32, String, GNXFloat };
 
     /// <summary>
     /// Struct used to hold default initalization values for stat containers. 
