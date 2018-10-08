@@ -19,18 +19,8 @@ namespace pm2_save_editor
             { StatTypes.Int32, typeof(Int32StatContainer) },
         };
 
-        public static T BuildStat<T>(Stat statID, PrincessMakerFileBuffer fileBuffer) where T: StatContainer
+        public static T BuildStat<T>(Stat statID, InitalizationStruct defaultValue, PrincessMakerFileBuffer fileBuffer) where T: StatContainer
         {
-            InitalizationStruct defaultValue;
-            bool statFound;
-
-            statFound = StatInitalizationValues.statInitalizationMap.TryGetValue(statID, out defaultValue);
-
-            if (!statFound)
-            {
-                throw new Exception(String.Format("No config exists for stat id {0}.", statID));
-            }
-
             var statType = defaultValue.type;
 
             var newContainer = (T)Activator.CreateInstance(typeDict[statType], defaultValue, fileBuffer);

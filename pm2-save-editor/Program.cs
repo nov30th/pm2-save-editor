@@ -65,13 +65,13 @@ namespace pm2_save_editor
 
             //height.CommitContents();
 
-            var height = StatFactory.BuildStat<GNXFloatStatContainer>(Stat.Height, pm2);
+            //var height = StatFactory.BuildStat<GNXFloatStatContainer>(Stat.Height, pm2);
 
-            var result = height.SetValue(12345);
+            //var result = height.SetValue(12345);
 
-            height.CommitContents();
+            //height.CommitContents();
 
-            pm2.SaveFile("F109.GNX");
+            //pm2.SaveFile("F109.GNX");
 
             //Application.Run(new Form1());
 
