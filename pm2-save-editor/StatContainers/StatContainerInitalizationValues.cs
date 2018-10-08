@@ -26,9 +26,6 @@ namespace pm2_save_editor
         public long Max;
         public long Min;
 
-        // String Type
-        //public string stringValue;
-
         public int minLength;
         public int maxLength;
     }
@@ -369,12 +366,6 @@ namespace pm2_save_editor
                 Max = Limits.BodyProportionMax,
                 Min = Limits.BodyProportionMin }
             },
-
-        //        GNX_FLOAT height;
-        //GNX_FLOAT weight;
-        //GNX_FLOAT bust;
-        //GNX_FLOAT waist;
-        //GNX_FLOAT hips;
 
     };
 
