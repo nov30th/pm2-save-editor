@@ -31,18 +31,30 @@ namespace pm2_save_editor
         public StatContainerReturnCodes SetValueFromFloat(double newValue) // overloading SetValue with long and double parameters results in an infinite loop
         {
             double newValueAdjusted = newValue * 100; // 123.45 to 12345.00
-            long newValueInteger = Convert.ToInt16(newValueAdjusted); // 12345.00 to 12345
+            long newValueInteger = Convert.ToInt32(newValueAdjusted); // 12345.00 to 12345
             return SetValue(newValueInteger);
         }
 
         public override string GetContents()
         {
-            throw new NotImplementedException();
+            double value = (double)currentValue;
+            value /= 100;
+            return value.ToString();
         }
 
         public override StatContainerReturnCodes SetContents(string newContents)
         {
-            throw new NotImplementedException();
+            double newValue;
+            bool success;
+
+            success = double.TryParse(newContents, out newValue);
+
+            if (!success)
+            {
+                return StatContainerReturnCodes.InvalidType;
+            }
+
+            return SetValueFromFloat(newValue);
         }
 
         public override void PushChanges()

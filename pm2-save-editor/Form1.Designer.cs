@@ -97,8 +97,9 @@
             this.statContainerBindedTextBox20 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox19 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label26 = new System.Windows.Forms.Label();
             this.statContainerBindedTextBox29 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.statContainerBindedTextBox30 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -482,6 +483,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.statContainerBindedTextBox30);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.statContainerBindedTextBox2);
@@ -754,6 +756,14 @@
             this.tabPage4.Text = "Gold";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // statContainerBindedTextBox29
+            // 
+            this.statContainerBindedTextBox29.bindTarget = pm2_save_editor.Stat.Gold;
+            this.statContainerBindedTextBox29.Location = new System.Drawing.Point(270, 157);
+            this.statContainerBindedTextBox29.Name = "statContainerBindedTextBox29";
+            this.statContainerBindedTextBox29.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox29.TabIndex = 1;
+            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -763,13 +773,13 @@
             this.label26.TabIndex = 0;
             this.label26.Text = "Gold";
             // 
-            // statContainerBindedTextBox29
+            // statContainerBindedTextBox30
             // 
-            this.statContainerBindedTextBox29.bindTarget = pm2_save_editor.Stat.Gold;
-            this.statContainerBindedTextBox29.Location = new System.Drawing.Point(270, 157);
-            this.statContainerBindedTextBox29.Name = "statContainerBindedTextBox29";
-            this.statContainerBindedTextBox29.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox29.TabIndex = 1;
+            this.statContainerBindedTextBox30.bindTarget = pm2_save_editor.Stat.Height;
+            this.statContainerBindedTextBox30.Location = new System.Drawing.Point(204, 189);
+            this.statContainerBindedTextBox30.Name = "statContainerBindedTextBox30";
+            this.statContainerBindedTextBox30.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox30.TabIndex = 4;
             // 
             // Form1
             // 
@@ -870,6 +880,7 @@
         private System.Windows.Forms.TabPage tabPage4;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox29;
         private System.Windows.Forms.Label label26;
+        private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox30;
     }
 }
 

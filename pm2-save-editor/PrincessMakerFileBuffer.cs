@@ -138,6 +138,8 @@ namespace pm2_save_editor
             // the statDictionary and statInitalizationMap are strong candidates for a merger
             Dictionary<Stat, StatContainer> statDictionary = new Dictionary<Stat, StatContainer>
             {
+                { Stat.Gold, StatFactory.BuildStat<IntStatContainer>(Stat.Gold, this) },
+
                 { Stat.DaughtersName, StatFactory.BuildStat<StringStatContainer>(Stat.DaughtersName, this) },
                 { Stat.FathersName, StatFactory.BuildStat<StringStatContainer>(Stat.FathersName, this) },
 
@@ -170,7 +172,9 @@ namespace pm2_save_editor
                 { Stat.Cooking, StatFactory.BuildStat<IntStatContainer>(Stat.Cooking, this) },
                 { Stat.Cleaning, StatFactory.BuildStat<IntStatContainer>(Stat.Cleaning, this) },
                 { Stat.Personality, StatFactory.BuildStat<IntStatContainer>(Stat.Personality, this) },
-                { Stat.Gold, StatFactory.BuildStat<IntStatContainer>(Stat.Gold, this) },
+
+                { Stat.Height, StatFactory.BuildStat<IntStatContainer>(Stat.Height, this) },
+
             };
 
             return statDictionary;
