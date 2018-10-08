@@ -35,5 +35,20 @@ namespace pm2_save_editor
             return SetValue(newValueInteger);
         }
 
+        public override string GetContents()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override StatContainerReturnCodes SetContents(string newContents)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void PushChanges()
+        {
+            this.CommitContents();
+        }
+
     }
 }

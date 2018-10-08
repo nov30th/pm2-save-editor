@@ -33,7 +33,7 @@ namespace pm2_save_editor
         public int maxLength;
     }
 
-    public enum Stat { DaughtersName, FightingRep, Height };
+    public enum Stat { DaughtersName, FathersName, FightingRep, Height };
 
     public static class Limits
     {
@@ -53,6 +53,16 @@ namespace pm2_save_editor
                 type = StatTypes.String,
                 size = 48,
                 offset = 0x74,
+                minLength = 1,
+                maxLength = 8 }
+            },
+
+            { Stat.FathersName, new InitalizationStruct {
+                name = "Fathers's Name",
+                statID = Stat.DaughtersName,
+                type = StatTypes.String,
+                size = 48,
+                offset = 0xA4,
                 minLength = 1,
                 maxLength = 8 }
             },

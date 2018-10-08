@@ -25,6 +25,30 @@ namespace pm2_save_editor
             attachedBuffer.WriteAtOffset(offset, sizeof(short), intAsBytes);
         }
 
+        public override string GetContents()
+        {
+            return currentValue.ToString();
+        }
+
+        public override StatContainerReturnCodes SetContents(string newContents)
+        {
+            int newValue;
+            bool success = int.TryParse(newContents, out newValue);
+
+            if (!success)
+            {
+                return StatContainerReturnCodes.InvalidType;
+            }
+
+            return SetValue((long)newValue);
+
+        }
+
+        public override void PushChanges()
+        {
+            this.CommitContents();
+        }
+
     }
 
 }

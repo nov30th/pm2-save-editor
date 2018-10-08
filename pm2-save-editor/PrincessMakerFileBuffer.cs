@@ -138,6 +138,26 @@ namespace pm2_save_editor
             Dictionary<Stat, StatContainer> statDictionary = new Dictionary<Stat, StatContainer>
             {
                 { Stat.DaughtersName, StatFactory.BuildStat<StringStatContainer>(Stat.DaughtersName, this) },
+                { Stat.FathersName, StatFactory.BuildStat<StringStatContainer>(Stat.FathersName, this) },
+                { Stat.FightingRep, StatFactory.BuildStat<IntStatContainer>(Stat.FightingRep, this) },
+
+            //                { Stat.FightingRep, new InitalizationStruct {
+            //    name = "Fighting Reputation",
+            //    statID = Stat.FightingRep,
+            //    type = StatTypes.UInt16,
+            //    offset = 0x4E,
+            //    Max = Limits.RepMax,
+            //    Min = Limits.RepMin }
+            //},
+
+            //{ Stat.Height, new InitalizationStruct {
+            //    name = "Height",
+            //    statID = Stat.Height,
+            //    type = StatTypes.GNXFloat,
+            //    offset = 0xF0,
+            //    Max = 50000,
+            //    Min = 0 }
+            //},
             };
             return statDictionary;
         }

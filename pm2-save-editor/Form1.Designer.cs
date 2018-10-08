@@ -38,9 +38,14 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.statContainerBindedTextBox2 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox1 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.statContainerBindedTextBox3 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.menuStrip1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
@@ -106,6 +111,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.statContainerBindedTextBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -116,6 +122,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.statContainerBindedTextBox2);
             this.tabPage1.Controls.Add(this.statContainerBindedTextBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -124,6 +133,25 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Bio";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(348, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Father\'s Name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(84, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Daughter\'s Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // tabControl1
             // 
@@ -136,13 +164,29 @@
             this.tabControl1.Size = new System.Drawing.Size(712, 421);
             this.tabControl1.TabIndex = 2;
             // 
+            // statContainerBindedTextBox2
+            // 
+            this.statContainerBindedTextBox2.bindTarget = pm2_save_editor.Stat.FathersName;
+            this.statContainerBindedTextBox2.Location = new System.Drawing.Point(429, 77);
+            this.statContainerBindedTextBox2.Name = "statContainerBindedTextBox2";
+            this.statContainerBindedTextBox2.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox2.TabIndex = 1;
+            // 
             // statContainerBindedTextBox1
             // 
             this.statContainerBindedTextBox1.bindTarget = pm2_save_editor.Stat.DaughtersName;
-            this.statContainerBindedTextBox1.Location = new System.Drawing.Point(211, 92);
+            this.statContainerBindedTextBox1.Location = new System.Drawing.Point(179, 77);
             this.statContainerBindedTextBox1.Name = "statContainerBindedTextBox1";
             this.statContainerBindedTextBox1.Size = new System.Drawing.Size(100, 20);
             this.statContainerBindedTextBox1.TabIndex = 0;
+            // 
+            // statContainerBindedTextBox3
+            // 
+            this.statContainerBindedTextBox3.bindTarget = pm2_save_editor.Stat.FightingRep;
+            this.statContainerBindedTextBox3.Location = new System.Drawing.Point(118, 63);
+            this.statContainerBindedTextBox3.Name = "statContainerBindedTextBox3";
+            this.statContainerBindedTextBox3.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox3.TabIndex = 0;
             // 
             // Form1
             // 
@@ -156,6 +200,8 @@
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -178,6 +224,10 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox1;
+        private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox3;
     }
 }
 

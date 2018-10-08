@@ -9,6 +9,15 @@ namespace pm2_save_editor
 {
     public static class StatFactory
     {
+
+        private static Dictionary<StatTypes, Type> typeDict = new Dictionary<StatTypes, Type>
+        {
+            { StatTypes.UInt16, typeof(UInt16StatContainer) },
+            { StatTypes.Int16, typeof(Int16StatContainer) },
+            { StatTypes.String, typeof(StringStatContainer) },
+            { StatTypes.GNXFloat, typeof(GNXFloatStatContainer) },
+        };
+
         public static T BuildStat<T>(Stat statID, PrincessMakerFileBuffer fileBuffer) where T: StatContainer
         {
             InitalizationStruct defaultValue;
@@ -21,9 +30,10 @@ namespace pm2_save_editor
                 throw new Exception(String.Format("No config exists for stat id {0}.", statID));
             }
 
-            var newContainer = (T)Activator.CreateInstance(typeof(T), defaultValue, fileBuffer);
-
             var statType = defaultValue.type;
+
+            var newContainer = (T)Activator.CreateInstance(typeDict[statType], defaultValue, fileBuffer);
+
             var containerType = newContainer.GetStatType();
 
             if (statType != containerType)

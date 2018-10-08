@@ -98,28 +98,19 @@ namespace pm2_save_editor
         /// Public interface for accessing container contents
         /// </summary>
         /// <returns>Container contents as string</returns>
-        public string GetContents()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract string GetContents();
 
         /// <summary>
         /// Public interface for setting container contents
         /// </summary>
         /// <param name="newContents">New containers contents</param>
         /// <returns>Information on whether or not attempt to set contents was successful</returns>
-        public StatContainerReturnCodes SetContents(string newContents)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract StatContainerReturnCodes SetContents(string newContents);
 
         /// <summary>
         /// Public interface for requesting the StatContainer push its current contents for the attached file buffer
         /// </summary>
-        public void PushChanges()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void PushChanges();
     }
 }
 
