@@ -35,10 +35,6 @@ namespace pm2_save_editor
             openFileDialog1.Filter = "PM2 Save Files|*.GNX";
             saveFileDialog1.Filter = "PM2 Save Files|*.GNX";
 
-            statDictionary = new Dictionary<Stat, StatContainer>();
-
-            InitalizeTabChildControls();
-
             HideTabPages();
 
         }
@@ -82,7 +78,7 @@ namespace pm2_save_editor
 
         private void HideTabPages()
         { 
-            tabControl1.Enabled = false; // would have preffered to have kept the tabs enable but the child controls disabled but without having to manually cycle through ever control. might try again later.
+            tabControl1.Enabled = false; // would have preferred to have kept the tabs enabled but the child controls disabled but without having to manually cycle through ever control. might try again later.
         }
 
         private void ShowTabPages()
@@ -112,18 +108,37 @@ namespace pm2_save_editor
                 saveAsToolStripMenuItem.Enabled = true; // perhaps these should be in seperate functions
                 saveToolStripMenuItem.Enabled = true;
                 workingFileName = openFileDialog1.FileName;
+                statDictionary = workingFile.BuildStatDictionary();
+                InitalizeTabChildControls();
                 ShowTabPages();
+            }
+
+        }
+
+        /// <summary>
+        /// Iterate through the StatContainers in the StatContainerDictionary and ask them to update their contents
+        /// </summary>
+        private void StatContainerListUpdate()
+        {
+            var dictEnumerator = statDictionary.GetEnumerator();
+
+            while (dictEnumerator.MoveNext() != false)
+            {
+                var currentStatContainer = dictEnumerator.Current.Value;
+                currentStatContainer.PushChanges();
             }
 
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            StatContainerListUpdate();
             workingFile.SaveFile(workingFileName);
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             saveFileDialog1.FileName = "";
 
             saveFileDialog1.ShowDialog();
@@ -133,10 +148,15 @@ namespace pm2_save_editor
                 return;
             }
 
+            StatContainerListUpdate();
+
             if (!workingFile.SaveFile(saveFileDialog1.FileName))
             {
                 MessageBox.Show("There are was an error when attempting to save the file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            workingFileName = saveFileDialog1.FileName;
+
 
         }
 

@@ -9,5 +9,8 @@ namespace pm2_save_editor
     public interface StatContainer
     {
         StatTypes GetStatType();
+        string GetContents();
+        StatContainerReturnCodes SetContents(string newContents);
+        void PushChanges();
     }
 }

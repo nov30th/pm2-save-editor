@@ -19,7 +19,6 @@ namespace pm2_save_editor
         const int PM2_SAVE_FILE_SIZE = 8192;
         byte[] pm2SaveFileBytes;
         const int CHECKSUM_OFFSET = 0x1B4C; // temporary storage of checksum offset here - will ideally pull the offset from full offset list later
-        
 
         /// <summary>
         /// Read a Princess Maker 2 save file into memory
@@ -128,6 +127,19 @@ namespace pm2_save_editor
         public void WriteAtOffset(int offset, int size, byte[] bytesToWrite)
         {
             Array.Copy(bytesToWrite, 0, pm2SaveFileBytes, offset, size);
+        }
+
+        /// <summary>
+        /// Build a dictionary of StatContainers based on the contents of this buffer
+        /// </summary>
+        /// <returns>Dictionary of publically accessible stats</returns>
+        public Dictionary<Stat, StatContainer> BuildStatDictionary()
+        {
+            Dictionary<Stat, StatContainer> statDictionary = new Dictionary<Stat, StatContainer>
+            {
+                { Stat.DaughtersName, StatFactory.BuildStat<StringStatContainer>(Stat.DaughtersName, this) },
+            };
+            return statDictionary;
         }
 
     }

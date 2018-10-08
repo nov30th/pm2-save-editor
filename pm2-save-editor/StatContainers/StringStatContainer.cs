@@ -7,7 +7,7 @@ using System.IO;
 
 namespace pm2_save_editor
 {
-    enum StatContainerReturnCodes { OK = 0, UnderMinimumSize = -1, OverMaximumSize = -2, AccessingUnitalizedContainer = -3, InvalidType = -4 }
+    public enum StatContainerReturnCodes { OK = 0, UnderMinimumSize = -1, OverMaximumSize = -2, AccessingUnitalizedContainer = -3, InvalidType = -4 }
 
     /// <summary>
     /// Container for a string variable
@@ -118,6 +118,33 @@ namespace pm2_save_editor
         public StatTypes GetStatType()
         {
             return statType;
+        }
+
+        /// <summary>
+        /// Public interface for accessing container contents
+        /// </summary>
+        /// <returns>Container contents as string</returns>
+        public string GetContents()
+        {
+            return GetString();
+        }
+
+        /// <summary>
+        /// Public interface for setting container contents
+        /// </summary>
+        /// <param name="newContents">New containers contents</param>
+        /// <returns>Information on whether or not attempt to set contents was successful</returns>
+        public StatContainerReturnCodes SetContents(string newContents)
+        {
+            return SetString(newContents);
+        }
+
+        /// <summary>
+        /// Public interface for requesting the StatContainer push its current contents for the attached file buffer
+        /// </summary>
+        public void PushChanges()
+        {
+            CommitContents();
         }
 
     }

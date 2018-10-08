@@ -45,6 +45,23 @@ namespace pm2_save_editor.CustomControls
         public void Bind(StatContainer stat)
         {
             _boundStat = stat;
+            Text = stat.GetContents();
+            TextChanged += TextUpdated; // adding the handler here avoids having the initial setting of the text trigger a change
+        }
+
+        public void TextUpdated(object sender, EventArgs e)
+        {
+            StatContainerReturnCodes retcode = _boundStat.SetContents(Text);
+
+            if (retcode != StatContainerReturnCodes.OK)
+            {
+                BackColor = System.Drawing.Color.Red; // ideally could be expanded to tell the user exactly why their commit is being rejected (too big, too small, wrong type, etc)
+            }
+            else
+            {
+                BackColor = System.Drawing.Color.White;
+            }
+
         }
     }
 }
