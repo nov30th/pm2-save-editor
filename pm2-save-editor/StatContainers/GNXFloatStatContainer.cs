@@ -30,9 +30,16 @@ namespace pm2_save_editor
 
         public StatContainerReturnCodes SetValueFromFloat(double newValue) // overloading SetValue with long and double parameters results in an infinite loop
         {
-            double newValueAdjusted = newValue * 100; // 123.45 to 12345.00
-            long newValueInteger = Convert.ToInt32(newValueAdjusted); // 12345.00 to 12345
-            return SetValue(newValueInteger);
+            try
+            {
+                double newValueAdjusted = newValue * 100; // 123.45 to 12345.00
+                long newValueInteger = Convert.ToInt32(newValueAdjusted); // 12345.00 to 12345
+                return SetValue(newValueInteger);
+            }
+            catch (OverflowException e)
+            {
+                return StatContainerReturnCodes.IntegerOverflow; 
+            }
         }
 
         public override string GetContents()
