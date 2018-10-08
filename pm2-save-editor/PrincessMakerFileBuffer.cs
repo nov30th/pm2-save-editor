@@ -174,6 +174,10 @@ namespace pm2_save_editor
                 { Stat.Personality, StatFactory.BuildStat<IntStatContainer>(Stat.Personality, this) },
 
                 { Stat.Height, StatFactory.BuildStat<IntStatContainer>(Stat.Height, this) },
+                { Stat.Weight, StatFactory.BuildStat<IntStatContainer>(Stat.Weight, this) },
+                { Stat.Bust, StatFactory.BuildStat<IntStatContainer>(Stat.Bust, this) },
+                { Stat.Waist, StatFactory.BuildStat<IntStatContainer>(Stat.Waist, this) },
+                { Stat.Hips, StatFactory.BuildStat<IntStatContainer>(Stat.Hips, this) },
 
             };
 

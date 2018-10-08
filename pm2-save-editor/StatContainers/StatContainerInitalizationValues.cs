@@ -40,7 +40,7 @@ namespace pm2_save_editor
         FightingRep, MagicRep, SocialRep, HousekeepingRep,
         CombatSkill, Attack, Defence, MagicSkill, MagicAttack, MagicDefence,
         Decorum, ArtSkill, Speech, Cooking, Cleaning, Personality,
-        Height
+        Height, Weight, Bust, Waist, Hips
     };
 
     public static class Limits
@@ -57,6 +57,8 @@ namespace pm2_save_editor
         public const int NameMin = 1;
         public const int GoldMax = 2147483647;
         public const int GoldMin = -2147483647;
+        public const int BodyProportionMax = 50000;
+        public const int BodyProportionMin = -50000;
     }
     
 
@@ -332,11 +334,49 @@ namespace pm2_save_editor
                 statID = Stat.Height,
                 type = StatTypes.GNXFloat,
                 offset = 0xF0,
-                Max = 50000,
-                Min = 0 }
+                Max = Limits.BodyProportionMax,
+                Min = Limits.BodyProportionMin }
+            },
+            { Stat.Weight, new InitalizationStruct {
+                name = "Weight",
+                statID = Stat.Weight,
+                type = StatTypes.GNXFloat,
+                offset = 0xF2,
+                Max = Limits.BodyProportionMax,
+                Min = Limits.BodyProportionMin }
+            },
+            { Stat.Bust, new InitalizationStruct {
+                name = "Bust",
+                statID = Stat.Bust,
+                type = StatTypes.GNXFloat,
+                offset = 0xF4,
+                Max = Limits.BodyProportionMax,
+                Min = Limits.BodyProportionMin }
+            },
+            { Stat.Waist, new InitalizationStruct {
+                name = "Waist",
+                statID = Stat.Waist,
+                type = StatTypes.GNXFloat,
+                offset = 0xF6,
+                Max = Limits.BodyProportionMax,
+                Min = Limits.BodyProportionMin }
+            },
+            { Stat.Hips, new InitalizationStruct {
+                name = "Hips",
+                statID = Stat.Hips,
+                type = StatTypes.GNXFloat,
+                offset = 0xF8,
+                Max = Limits.BodyProportionMax,
+                Min = Limits.BodyProportionMin }
             },
 
-        };
+        //        GNX_FLOAT height;
+        //GNX_FLOAT weight;
+        //GNX_FLOAT bust;
+        //GNX_FLOAT waist;
+        //GNX_FLOAT hips;
+
+    };
 
     }
 }
