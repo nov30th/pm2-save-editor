@@ -20,11 +20,12 @@ namespace pm2_save_editor
         private PrincessMakerFileBuffer workingFile;
         Dictionary<Stat, StatContainer> statDictionary; // should perhaps belong to PrincessMakerFileBuffer, can be easily moved if necessary
         private string workingFileName = "";
-        private Dictionary<string, object> panelDictionary;
 
         public Form1()
         {
             InitializeComponent();
+
+            this.Text = "Princess Maker 2 Save Editor";
 
             // Disabling Save/Save As until a file is opened
             saveToolStripMenuItem.Enabled = false;

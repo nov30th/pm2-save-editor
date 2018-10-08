@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace pm2_save_editor
 {
-
+    /// <summary>
+    /// A list of stat types supported by the program
+    /// </summary>
+    /// <remarks>
+    /// New stat types can be added by
+    /// - Adding a label for the type to the StatTypes snum
+    /// - Creating a StatContainer class to handle the type
+    /// - Adding the type to the typeDict in StatFactory
+    /// - Ensuring the InitalizationStruct has all necessary info to initalize the stat
+    /// </remarks>
     public enum StatTypes { Int16, UInt16, Int32, String, GNXFloat };
 
     /// <summary>
@@ -21,8 +30,6 @@ namespace pm2_save_editor
         public int size;
         public int offset;
 
-        public IntType intType;
-
         public long Max;
         public long Min;
 
@@ -30,6 +37,16 @@ namespace pm2_save_editor
         public int maxLength;
     }
 
+    /// <summary>
+    /// A list of stats known to the program in rough order and grouping of their order in the file
+    /// </summary>
+    /// <remarks>
+    /// Support for new stats can be added by
+    /// - Creating a lavel for the stat in the Stat enum
+    /// - Adding metadata for the stat to the statInitalizationMap
+    /// - Creating a UI control bound to the stat
+    /// - Adding the maximum and minimum bounds to the Limits class
+    /// </remarks>
     public enum Stat {
         Gold,
         DaughtersName, FathersName,
@@ -40,6 +57,9 @@ namespace pm2_save_editor
         Height, Weight, Bust, Waist, Hips
     };
 
+    /// <summary>
+    /// A list of constants used for conveniently noting or changing the minimum and maximum values of stats
+    /// </summary>
     public static class Limits
     {
         public const int RepMax = 2000;
@@ -58,7 +78,6 @@ namespace pm2_save_editor
         public const int BodyProportionMin = -50000;
     }
     
-
     public static class StatInitalizationValues
     {
 

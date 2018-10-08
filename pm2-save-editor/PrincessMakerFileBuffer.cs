@@ -68,6 +68,14 @@ namespace pm2_save_editor
 
             pm2SaveFileStream.Close();
 
+            FileStream fs = new FileStream(fileName + "_BAK", FileMode.Create);
+            BinaryWriter bw = new BinaryWriter(fs);
+
+            bw.Write(pm2SaveFileBytes);
+
+            bw.Close();
+            fs.Close();
+
             return true;
         }
 

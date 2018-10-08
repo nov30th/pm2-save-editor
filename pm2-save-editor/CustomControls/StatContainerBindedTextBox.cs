@@ -12,6 +12,10 @@ using System.ComponentModel.Design;
 
 namespace pm2_save_editor.CustomControls
 {
+
+    /// <summary>
+    /// A custom text box used to provide a direct interface with a StatContainer
+    /// </summary>
     class StatContainerBindedTextBox : TextBox
     {
 

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace pm2_save_editor
 {
-    public enum IntType { Int8, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64 };
 
+    /// <summary>
+    /// Container for an integer variable
+    /// </summary>
     abstract class IntStatContainer : StatContainer
     {
         /// <summary>

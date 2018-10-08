@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace pm2_save_editor
 {
+    /// <summary>
+    /// A set of return codes used the StatContainers to indicate whether or not an attempt at updating their contents was successful
+    /// </summary>
+    public enum StatContainerReturnCodes { OK = 0, UnderMinimumSize = -1, OverMaximumSize = -2, AccessingUnitalizedContainer = -3, InvalidType = -4, IntegerOverflow = -5 }
+
+    /// <summary>
+    /// A public interface for StatContainers using strings as input and output - primarily for usage by TextBoxes
+    /// </summary>
     public interface StatContainer
     {
         StatTypes GetStatType();

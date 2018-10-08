@@ -5,6 +5,8 @@ pm2-save-editor/obj
 nppBackup
 pm2-save-editor/nppBackup
 Debug
+Release
 pm2-checksum/Debug
+pm2-checksum/Release
 *.VC.opendb
 *.VC.db 

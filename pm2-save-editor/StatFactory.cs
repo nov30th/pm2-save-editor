@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace pm2_save_editor
 {
+
     public static class StatFactory
     {
 
@@ -19,6 +20,13 @@ namespace pm2_save_editor
             { StatTypes.Int32, typeof(Int32StatContainer) },
         };
 
+        /// <summary>
+        /// Used to created initalized StatContainers that can be used by the UI
+        /// </summary>
+        /// <param name="statID">The stat with the container will be associated</param>
+        /// <param name="defaultValue">A struct containing the default values and metadata for the stat</param>
+        /// <param name="fileBuffer">A handle to the file buffer which the container should interfact with</param>
+        /// <returns>An initalized stat container</returns>
         public static T BuildStat<T>(Stat statID, InitalizationStruct defaultValue, PrincessMakerFileBuffer fileBuffer) where T: StatContainer
         {
             var statType = defaultValue.type;
