@@ -84,7 +84,7 @@ namespace pm2_save_editor
                 name = "Stamina",
                 statID = Stat.Stamina,
                 type = StatTypes.UInt16,
-                offset = 0x2E,
+                offset = 0x3A,
                 Max = Limits.CombatSkillMax,
                 Min = Limits.CombatSkillMin }
             },
@@ -93,7 +93,7 @@ namespace pm2_save_editor
                 name = "Strength",
                 statID = Stat.Strength,
                 type = StatTypes.UInt16,
-                offset = 0x30,
+                offset = 0x3C,
                 Max = Limits.CombatSkillMax,
                 Min = Limits.CombatSkillMin }
             },
@@ -102,7 +102,7 @@ namespace pm2_save_editor
                 name = "Intelligence",
                 statID = Stat.Intelligence,
                 type = StatTypes.UInt16,
-                offset = 0x32,
+                offset = 0x3E,
                 Max = Limits.CombatSkillMax,
                 Min = Limits.CombatSkillMin }
             },
@@ -111,7 +111,7 @@ namespace pm2_save_editor
                 name = "Elegance",
                 statID = Stat.Elegance,
                 type = StatTypes.UInt16,
-                offset = 0x34,
+                offset = 0x40,
                 Max = Limits.CombatSkillMax,
                 Min = Limits.CombatSkillMin }
             },
@@ -120,7 +120,7 @@ namespace pm2_save_editor
                 name = "Glamour",
                 statID = Stat.Glamour,
                 type = StatTypes.UInt16,
-                offset = 0x36,
+                offset = 0x42,
                 Max = Limits.CombatSkillMax,
                 Min = Limits.CombatSkillMin }
             },
@@ -129,7 +129,7 @@ namespace pm2_save_editor
                 name = "Morality",
                 statID = Stat.Morality,
                 type = StatTypes.UInt16,
-                offset = 0x38,
+                offset = 0x44,
                 Max = Limits.CombatSkillMax,
                 Min = Limits.CombatSkillMin }
             },
@@ -138,7 +138,7 @@ namespace pm2_save_editor
                 name = "Faith",
                 statID = Stat.Faith,
                 type = StatTypes.UInt16,
-                offset = 0x3A,
+                offset = 0x46,
                 Max = Limits.CombatSkillMax,
                 Min = Limits.CombatSkillMin }
             },
@@ -147,7 +147,7 @@ namespace pm2_save_editor
                 name = "Sin",
                 statID = Stat.Sin,
                 type = StatTypes.UInt16,
-                offset = 0x3C,
+                offset = 0x48,
                 Max = Limits.CombatSkillMax,
                 Min = Limits.CombatSkillMin }
             },
@@ -156,7 +156,7 @@ namespace pm2_save_editor
                 name = "Sensetivity",
                 statID = Stat.Sensetivity,
                 type = StatTypes.UInt16,
-                offset = 0x3E,
+                offset = 0x4A,
                 Max = Limits.CombatSkillMax,
                 Min = Limits.CombatSkillMin }
             },
@@ -164,60 +164,6 @@ namespace pm2_save_editor
             { Stat.Stress, new InitalizationStruct {
                 name = "Stress",
                 statID = Stat.Stress,
-                type = StatTypes.UInt16,
-                offset = 0x40,
-                Max = Limits.CombatSkillMax,
-                Min = Limits.CombatSkillMin }
-            },
-
-            { Stat.CombatSkill, new InitalizationStruct {
-                name = "Combat Skill",
-                statID = Stat.CombatSkill,
-                type = StatTypes.UInt16,
-                offset = 0x42,
-                Max = Limits.CombatSkillMax,
-                Min = Limits.CombatSkillMin }
-            },
-
-            { Stat.Attack, new InitalizationStruct {
-                name = "Attack",
-                statID = Stat.Attack,
-                type = StatTypes.UInt16,
-                offset = 0x44,
-                Max = Limits.CombatSkillMax,
-                Min = Limits.CombatSkillMin }
-            },
-
-            { Stat.Defence, new InitalizationStruct {
-                name = "Defence",
-                statID = Stat.Defence,
-                type = StatTypes.UInt16,
-                offset = 0x46,
-                Max = Limits.CombatSkillMax,
-                Min = Limits.CombatSkillMin }
-            },
-
-            { Stat.MagicSkill, new InitalizationStruct {
-                name = "Magic Skill",
-                statID = Stat.MagicSkill,
-                type = StatTypes.UInt16,
-                offset = 0x48,
-                Max = Limits.CombatSkillMax,
-                Min = Limits.CombatSkillMin }
-            },
-
-            { Stat.MagicAttack, new InitalizationStruct {
-                name = "Magic Attack",
-                statID = Stat.MagicAttack,
-                type = StatTypes.UInt16,
-                offset = 0x4A,
-                Max = Limits.CombatSkillMax,
-                Min = Limits.CombatSkillMin }
-            },
-
-            { Stat.MagicDefence, new InitalizationStruct {
-                name = "Magic Defence",
-                statID = Stat.MagicDefence,
                 type = StatTypes.UInt16,
                 offset = 0x4C,
                 Max = Limits.CombatSkillMax,
@@ -260,11 +206,65 @@ namespace pm2_save_editor
                 Min = Limits.RepMin }
             },
 
+            { Stat.CombatSkill, new InitalizationStruct {
+                name = "Combat Skill",
+                statID = Stat.CombatSkill,
+                type = StatTypes.UInt16,
+                offset = 0x56,
+                Max = Limits.CombatSkillMax,
+                Min = Limits.CombatSkillMin }
+            },
+
+            { Stat.Attack, new InitalizationStruct {
+                name = "Attack",
+                statID = Stat.Attack,
+                type = StatTypes.UInt16,
+                offset = 0x58,
+                Max = Limits.CombatSkillMax,
+                Min = Limits.CombatSkillMin }
+            },
+
+            { Stat.Defence, new InitalizationStruct {
+                name = "Defence",
+                statID = Stat.Defence,
+                type = StatTypes.UInt16,
+                offset = 0x5A,
+                Max = Limits.CombatSkillMax,
+                Min = Limits.CombatSkillMin }
+            },
+
+            { Stat.MagicSkill, new InitalizationStruct {
+                name = "Magic Skill",
+                statID = Stat.MagicSkill,
+                type = StatTypes.UInt16,
+                offset = 0x5C,
+                Max = Limits.CombatSkillMax,
+                Min = Limits.CombatSkillMin }
+            },
+
+            { Stat.MagicAttack, new InitalizationStruct {
+                name = "Magic Attack",
+                statID = Stat.MagicAttack,
+                type = StatTypes.UInt16,
+                offset = 0x5E,
+                Max = Limits.CombatSkillMax,
+                Min = Limits.CombatSkillMin }
+            },
+
+            { Stat.MagicDefence, new InitalizationStruct {
+                name = "Magic Defence",
+                statID = Stat.MagicDefence,
+                type = StatTypes.UInt16,
+                offset = 0x60,
+                Max = Limits.CombatSkillMax,
+                Min = Limits.CombatSkillMin }
+            },
+            
             { Stat.Decorum, new InitalizationStruct {
                 name = "Decorum",
                 statID = Stat.Decorum,
                 type = StatTypes.UInt16,
-                offset = 0x56,
+                offset = 0x62,
                 Max = Limits.SocialPersonalStatMax,
                 Min = Limits.SocialPersonalStatMin }
             },
@@ -273,7 +273,7 @@ namespace pm2_save_editor
                 name = "Art Skill",
                 statID = Stat.ArtSkill,
                 type = StatTypes.UInt16,
-                offset = 0x58,
+                offset = 0x64,
                 Max = Limits.SocialPersonalStatMax,
                 Min = Limits.SocialPersonalStatMin }
             },
@@ -282,7 +282,7 @@ namespace pm2_save_editor
                 name = "Speech",
                 statID = Stat.Speech,
                 type = StatTypes.UInt16,
-                offset = 0x5A,
+                offset = 0x66,
                 Max = Limits.SocialPersonalStatMax,
                 Min = Limits.SocialPersonalStatMin }
             },
@@ -291,7 +291,7 @@ namespace pm2_save_editor
                 name = "Cooking",
                 statID = Stat.Cooking,
                 type = StatTypes.UInt16,
-                offset = 0x5C,
+                offset = 0x68,
                 Max = Limits.SocialPersonalStatMax,
                 Min = Limits.SocialPersonalStatMin }
             },
@@ -300,7 +300,7 @@ namespace pm2_save_editor
                 name = "Cleaning",
                 statID = Stat.Cleaning,
                 type = StatTypes.UInt16,
-                offset = 0x5E,
+                offset = 0x6A,
                 Max = Limits.SocialPersonalStatMax,
                 Min = Limits.SocialPersonalStatMin }
             },
@@ -309,7 +309,7 @@ namespace pm2_save_editor
                 name = "Personality",
                 statID = Stat.Personality,
                 type = StatTypes.UInt16,
-                offset = 0x60,
+                offset = 0x6C,
                 Max = Limits.SocialPersonalStatMax,
                 Min = Limits.SocialPersonalStatMin }
             },

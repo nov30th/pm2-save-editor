@@ -135,11 +135,41 @@ namespace pm2_save_editor
         /// <returns>Dictionary of publically accessible stats</returns>
         public Dictionary<Stat, StatContainer> BuildStatDictionary()
         {
+            // the statDictionary and statInitalizationMap are strong candidates for a merger
             Dictionary<Stat, StatContainer> statDictionary = new Dictionary<Stat, StatContainer>
             {
                 { Stat.DaughtersName, StatFactory.BuildStat<StringStatContainer>(Stat.DaughtersName, this) },
                 { Stat.FathersName, StatFactory.BuildStat<StringStatContainer>(Stat.FathersName, this) },
+
+                { Stat.Stamina, StatFactory.BuildStat<IntStatContainer>(Stat.Stamina, this) },
+                { Stat.Strength, StatFactory.BuildStat<IntStatContainer>(Stat.Strength, this) },
+                { Stat.Intelligence, StatFactory.BuildStat<IntStatContainer>(Stat.Intelligence, this) },
+                { Stat.Elegance, StatFactory.BuildStat<IntStatContainer>(Stat.Elegance, this) },
+                { Stat.Glamour, StatFactory.BuildStat<IntStatContainer>(Stat.Glamour, this) },
+                { Stat.Morality, StatFactory.BuildStat<IntStatContainer>(Stat.Morality, this) },
+                { Stat.Faith, StatFactory.BuildStat<IntStatContainer>(Stat.Faith, this) },
+                { Stat.Sin, StatFactory.BuildStat<IntStatContainer>(Stat.Sin, this) },
+                { Stat.Sensetivity, StatFactory.BuildStat<IntStatContainer>(Stat.Sensetivity, this) },
+                { Stat.Stress, StatFactory.BuildStat<IntStatContainer>(Stat.Stress, this) },
+
                 { Stat.FightingRep, StatFactory.BuildStat<IntStatContainer>(Stat.FightingRep, this) },
+                { Stat.MagicRep, StatFactory.BuildStat<IntStatContainer>(Stat.MagicRep, this) },
+                { Stat.SocialRep, StatFactory.BuildStat<IntStatContainer>(Stat.SocialRep, this) },
+                { Stat.HousekeepingRep, StatFactory.BuildStat<IntStatContainer>(Stat.HousekeepingRep, this) },
+
+                { Stat.CombatSkill, StatFactory.BuildStat<IntStatContainer>(Stat.CombatSkill, this) },
+                { Stat.Attack, StatFactory.BuildStat<IntStatContainer>(Stat.Attack, this) },
+                { Stat.Defence, StatFactory.BuildStat<IntStatContainer>(Stat.Defence, this) },
+                { Stat.MagicSkill, StatFactory.BuildStat<IntStatContainer>(Stat.MagicSkill, this) },
+                { Stat.MagicAttack, StatFactory.BuildStat<IntStatContainer>(Stat.MagicAttack, this) },
+                { Stat.MagicDefence, StatFactory.BuildStat<IntStatContainer>(Stat.MagicDefence, this) },
+
+                { Stat.Decorum, StatFactory.BuildStat<IntStatContainer>(Stat.Decorum, this) },
+                { Stat.ArtSkill, StatFactory.BuildStat<IntStatContainer>(Stat.ArtSkill, this) },
+                { Stat.Speech, StatFactory.BuildStat<IntStatContainer>(Stat.Speech, this) },
+                { Stat.Cooking, StatFactory.BuildStat<IntStatContainer>(Stat.Cooking, this) },
+                { Stat.Cleaning, StatFactory.BuildStat<IntStatContainer>(Stat.Cleaning, this) },
+                { Stat.Personality, StatFactory.BuildStat<IntStatContainer>(Stat.Personality, this) },
 
             //                { Stat.FightingRep, new InitalizationStruct {
             //    name = "Fighting Reputation",
