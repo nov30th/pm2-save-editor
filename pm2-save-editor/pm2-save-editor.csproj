@@ -74,6 +74,7 @@
     </Compile>
     <Compile Include="StatContainers\GNXFloatStatContainer.cs" />
     <Compile Include="StatContainers\Int16StatContainer.cs" />
+    <Compile Include="StatContainers\Int32StatContainer.cs" />
     <Compile Include="StatContainers\IntStatContainer.cs" />
     <Compile Include="StatContainers\StatContainer.cs" />
     <Compile Include="StatContainers\UInt16StatContainer.cs" />

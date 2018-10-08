@@ -33,12 +33,15 @@ namespace pm2_save_editor
         public int maxLength;
     }
 
-    public enum Stat { DaughtersName, FathersName,
+    public enum Stat {
+        Gold,
+        DaughtersName, FathersName,
         Stamina, Strength, Intelligence, Elegance, Glamour, Morality, Faith, Sin, Sensetivity, Stress,
         FightingRep, MagicRep, SocialRep, HousekeepingRep,
         CombatSkill, Attack, Defence, MagicSkill, MagicAttack, MagicDefence,
         Decorum, ArtSkill, Speech, Cooking, Cleaning, Personality,
-        Height };
+        Height
+    };
 
     public static class Limits
     {
@@ -52,6 +55,8 @@ namespace pm2_save_editor
         public const int SocialPersonalStatMin = 0;
         public const int NameMax = 8;
         public const int NameMin = 1;
+        public const int GoldMax = 2147483647;
+        public const int GoldMin = -2147483647;
     }
     
 
@@ -60,6 +65,14 @@ namespace pm2_save_editor
 
         internal static Dictionary<Stat, InitalizationStruct> statInitalizationMap = new Dictionary<Stat, InitalizationStruct>
         {
+            { Stat.Gold, new InitalizationStruct {
+                name = "Gold",
+                statID = Stat.Gold,
+                type = StatTypes.Int32,
+                offset = 0x70,
+                Max = Limits.GoldMax,
+                Min = Limits.GoldMin, }
+            },
             { Stat.DaughtersName, new InitalizationStruct {
                 name = "Daughter's Name",
                 statID = Stat.DaughtersName,

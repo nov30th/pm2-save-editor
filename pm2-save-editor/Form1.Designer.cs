@@ -96,11 +96,15 @@
             this.statContainerBindedTextBox21 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox20 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox19 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.statContainerBindedTextBox29 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -530,6 +534,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
@@ -737,6 +742,35 @@
             this.statContainerBindedTextBox19.Size = new System.Drawing.Size(100, 20);
             this.statContainerBindedTextBox19.TabIndex = 0;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.statContainerBindedTextBox29);
+            this.tabPage4.Controls.Add(this.label26);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(704, 395);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Gold";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(235, 160);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(29, 13);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Gold";
+            // 
+            // statContainerBindedTextBox29
+            // 
+            this.statContainerBindedTextBox29.bindTarget = pm2_save_editor.Stat.Gold;
+            this.statContainerBindedTextBox29.Location = new System.Drawing.Point(270, 157);
+            this.statContainerBindedTextBox29.Name = "statContainerBindedTextBox29";
+            this.statContainerBindedTextBox29.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox29.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -756,6 +790,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -831,6 +867,9 @@
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox20;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox19;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TabPage tabPage4;
+        private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox29;
+        private System.Windows.Forms.Label label26;
     }
 }
 

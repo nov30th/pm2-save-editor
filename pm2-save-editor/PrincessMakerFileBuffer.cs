@@ -170,25 +170,9 @@ namespace pm2_save_editor
                 { Stat.Cooking, StatFactory.BuildStat<IntStatContainer>(Stat.Cooking, this) },
                 { Stat.Cleaning, StatFactory.BuildStat<IntStatContainer>(Stat.Cleaning, this) },
                 { Stat.Personality, StatFactory.BuildStat<IntStatContainer>(Stat.Personality, this) },
-
-            //                { Stat.FightingRep, new InitalizationStruct {
-            //    name = "Fighting Reputation",
-            //    statID = Stat.FightingRep,
-            //    type = StatTypes.UInt16,
-            //    offset = 0x4E,
-            //    Max = Limits.RepMax,
-            //    Min = Limits.RepMin }
-            //},
-
-            //{ Stat.Height, new InitalizationStruct {
-            //    name = "Height",
-            //    statID = Stat.Height,
-            //    type = StatTypes.GNXFloat,
-            //    offset = 0xF0,
-            //    Max = 50000,
-            //    Min = 0 }
-            //},
+                { Stat.Gold, StatFactory.BuildStat<IntStatContainer>(Stat.Gold, this) },
             };
+
             return statDictionary;
         }
 
