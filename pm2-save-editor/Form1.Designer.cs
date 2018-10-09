@@ -53,6 +53,43 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.statContainerBindedTextBox34 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.statContainerBindedTextBox33 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.statContainerBindedTextBox32 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.statContainerBindedTextBox31 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.statContainerBindedTextBox30 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.statContainerBindedTextBox2 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.statContainerBindedTextBox1 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox18 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox17 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox16 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
@@ -69,33 +106,6 @@
             this.statContainerBindedTextBox7 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox6 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox4 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.statContainerBindedTextBox34 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.statContainerBindedTextBox33 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.statContainerBindedTextBox32 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.statContainerBindedTextBox31 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.statContainerBindedTextBox30 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.statContainerBindedTextBox2 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.statContainerBindedTextBox1 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.statContainerBindedTextBox28 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox27 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox26 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
@@ -106,20 +116,7 @@
             this.statContainerBindedTextBox21 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox20 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox19 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.statContainerBindedTextBox29 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
             this.statContainerBindedTextBox35 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox36 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox37 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
@@ -130,6 +127,9 @@
             this.statContainerBindedTextBox42 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox43 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox44 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -384,134 +384,6 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "Stamina";
             // 
-            // statContainerBindedTextBox18
-            // 
-            this.statContainerBindedTextBox18.bindTarget = pm2_save_editor.Stat.MagicDefence;
-            this.statContainerBindedTextBox18.Location = new System.Drawing.Point(429, 210);
-            this.statContainerBindedTextBox18.Name = "statContainerBindedTextBox18";
-            this.statContainerBindedTextBox18.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox18.TabIndex = 20;
-            // 
-            // statContainerBindedTextBox17
-            // 
-            this.statContainerBindedTextBox17.bindTarget = pm2_save_editor.Stat.MagicAttack;
-            this.statContainerBindedTextBox17.Location = new System.Drawing.Point(429, 182);
-            this.statContainerBindedTextBox17.Name = "statContainerBindedTextBox17";
-            this.statContainerBindedTextBox17.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox17.TabIndex = 19;
-            // 
-            // statContainerBindedTextBox16
-            // 
-            this.statContainerBindedTextBox16.bindTarget = pm2_save_editor.Stat.MagicSkill;
-            this.statContainerBindedTextBox16.Location = new System.Drawing.Point(429, 155);
-            this.statContainerBindedTextBox16.Name = "statContainerBindedTextBox16";
-            this.statContainerBindedTextBox16.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox16.TabIndex = 18;
-            // 
-            // statContainerBindedTextBox15
-            // 
-            this.statContainerBindedTextBox15.bindTarget = pm2_save_editor.Stat.Defence;
-            this.statContainerBindedTextBox15.Location = new System.Drawing.Point(429, 130);
-            this.statContainerBindedTextBox15.Name = "statContainerBindedTextBox15";
-            this.statContainerBindedTextBox15.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox15.TabIndex = 17;
-            // 
-            // statContainerBindedTextBox5
-            // 
-            this.statContainerBindedTextBox5.bindTarget = pm2_save_editor.Stat.Attack;
-            this.statContainerBindedTextBox5.Location = new System.Drawing.Point(429, 103);
-            this.statContainerBindedTextBox5.Name = "statContainerBindedTextBox5";
-            this.statContainerBindedTextBox5.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox5.TabIndex = 16;
-            // 
-            // statContainerBindedTextBox3
-            // 
-            this.statContainerBindedTextBox3.bindTarget = pm2_save_editor.Stat.CombatSkill;
-            this.statContainerBindedTextBox3.Location = new System.Drawing.Point(429, 77);
-            this.statContainerBindedTextBox3.Name = "statContainerBindedTextBox3";
-            this.statContainerBindedTextBox3.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox3.TabIndex = 15;
-            // 
-            // statContainerBindedTextBox14
-            // 
-            this.statContainerBindedTextBox14.bindTarget = pm2_save_editor.Stat.Stress;
-            this.statContainerBindedTextBox14.Location = new System.Drawing.Point(179, 318);
-            this.statContainerBindedTextBox14.Name = "statContainerBindedTextBox14";
-            this.statContainerBindedTextBox14.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox14.TabIndex = 14;
-            // 
-            // statContainerBindedTextBox13
-            // 
-            this.statContainerBindedTextBox13.bindTarget = pm2_save_editor.Stat.Sensetivity;
-            this.statContainerBindedTextBox13.Location = new System.Drawing.Point(179, 291);
-            this.statContainerBindedTextBox13.Name = "statContainerBindedTextBox13";
-            this.statContainerBindedTextBox13.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox13.TabIndex = 13;
-            // 
-            // statContainerBindedTextBox12
-            // 
-            this.statContainerBindedTextBox12.bindTarget = pm2_save_editor.Stat.Sin;
-            this.statContainerBindedTextBox12.Location = new System.Drawing.Point(179, 264);
-            this.statContainerBindedTextBox12.Name = "statContainerBindedTextBox12";
-            this.statContainerBindedTextBox12.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox12.TabIndex = 12;
-            // 
-            // statContainerBindedTextBox11
-            // 
-            this.statContainerBindedTextBox11.bindTarget = pm2_save_editor.Stat.Faith;
-            this.statContainerBindedTextBox11.Location = new System.Drawing.Point(179, 237);
-            this.statContainerBindedTextBox11.Name = "statContainerBindedTextBox11";
-            this.statContainerBindedTextBox11.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox11.TabIndex = 11;
-            // 
-            // statContainerBindedTextBox10
-            // 
-            this.statContainerBindedTextBox10.bindTarget = pm2_save_editor.Stat.Morality;
-            this.statContainerBindedTextBox10.Location = new System.Drawing.Point(179, 210);
-            this.statContainerBindedTextBox10.Name = "statContainerBindedTextBox10";
-            this.statContainerBindedTextBox10.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox10.TabIndex = 10;
-            // 
-            // statContainerBindedTextBox9
-            // 
-            this.statContainerBindedTextBox9.bindTarget = pm2_save_editor.Stat.Glamour;
-            this.statContainerBindedTextBox9.Location = new System.Drawing.Point(179, 183);
-            this.statContainerBindedTextBox9.Name = "statContainerBindedTextBox9";
-            this.statContainerBindedTextBox9.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox9.TabIndex = 9;
-            // 
-            // statContainerBindedTextBox8
-            // 
-            this.statContainerBindedTextBox8.bindTarget = pm2_save_editor.Stat.Elegance;
-            this.statContainerBindedTextBox8.Location = new System.Drawing.Point(179, 156);
-            this.statContainerBindedTextBox8.Name = "statContainerBindedTextBox8";
-            this.statContainerBindedTextBox8.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox8.TabIndex = 8;
-            // 
-            // statContainerBindedTextBox7
-            // 
-            this.statContainerBindedTextBox7.bindTarget = pm2_save_editor.Stat.Intelligence;
-            this.statContainerBindedTextBox7.Location = new System.Drawing.Point(179, 129);
-            this.statContainerBindedTextBox7.Name = "statContainerBindedTextBox7";
-            this.statContainerBindedTextBox7.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox7.TabIndex = 7;
-            // 
-            // statContainerBindedTextBox6
-            // 
-            this.statContainerBindedTextBox6.bindTarget = pm2_save_editor.Stat.Strength;
-            this.statContainerBindedTextBox6.Location = new System.Drawing.Point(179, 103);
-            this.statContainerBindedTextBox6.Name = "statContainerBindedTextBox6";
-            this.statContainerBindedTextBox6.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox6.TabIndex = 6;
-            // 
-            // statContainerBindedTextBox4
-            // 
-            this.statContainerBindedTextBox4.bindTarget = pm2_save_editor.Stat.Stamina;
-            this.statContainerBindedTextBox4.Location = new System.Drawing.Point(179, 77);
-            this.statContainerBindedTextBox4.Name = "statContainerBindedTextBox4";
-            this.statContainerBindedTextBox4.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox4.TabIndex = 4;
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.label34);
@@ -545,15 +417,6 @@
             this.label34.TabIndex = 13;
             this.label34.Text = "Waist";
             // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(145, 160);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(28, 13);
-            this.label33.TabIndex = 12;
-            this.label33.Text = "Hips";
-            // 
             // label32
             // 
             this.label32.AutoSize = true;
@@ -563,64 +426,6 @@
             this.label32.TabIndex = 11;
             this.label32.Text = "Weight";
             // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(145, 132);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(28, 13);
-            this.label31.TabIndex = 10;
-            this.label31.Text = "Bust";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(135, 106);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(38, 13);
-            this.label27.TabIndex = 9;
-            this.label27.Text = "Height";
-            // 
-            // statContainerBindedTextBox34
-            // 
-            this.statContainerBindedTextBox34.bindTarget = pm2_save_editor.Stat.Hips;
-            this.statContainerBindedTextBox34.Location = new System.Drawing.Point(179, 157);
-            this.statContainerBindedTextBox34.Name = "statContainerBindedTextBox34";
-            this.statContainerBindedTextBox34.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox34.TabIndex = 8;
-            // 
-            // statContainerBindedTextBox33
-            // 
-            this.statContainerBindedTextBox33.bindTarget = pm2_save_editor.Stat.Waist;
-            this.statContainerBindedTextBox33.Location = new System.Drawing.Point(429, 129);
-            this.statContainerBindedTextBox33.Name = "statContainerBindedTextBox33";
-            this.statContainerBindedTextBox33.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox33.TabIndex = 7;
-            // 
-            // statContainerBindedTextBox32
-            // 
-            this.statContainerBindedTextBox32.bindTarget = pm2_save_editor.Stat.Bust;
-            this.statContainerBindedTextBox32.Location = new System.Drawing.Point(179, 130);
-            this.statContainerBindedTextBox32.Name = "statContainerBindedTextBox32";
-            this.statContainerBindedTextBox32.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox32.TabIndex = 6;
-            // 
-            // statContainerBindedTextBox31
-            // 
-            this.statContainerBindedTextBox31.bindTarget = pm2_save_editor.Stat.Weight;
-            this.statContainerBindedTextBox31.Location = new System.Drawing.Point(429, 103);
-            this.statContainerBindedTextBox31.Name = "statContainerBindedTextBox31";
-            this.statContainerBindedTextBox31.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox31.TabIndex = 5;
-            // 
-            // statContainerBindedTextBox30
-            // 
-            this.statContainerBindedTextBox30.bindTarget = pm2_save_editor.Stat.Height;
-            this.statContainerBindedTextBox30.Location = new System.Drawing.Point(179, 103);
-            this.statContainerBindedTextBox30.Name = "statContainerBindedTextBox30";
-            this.statContainerBindedTextBox30.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox30.TabIndex = 4;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -629,32 +434,6 @@
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Father\'s Name";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Daughter\'s Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
-            // 
-            // statContainerBindedTextBox2
-            // 
-            this.statContainerBindedTextBox2.bindTarget = pm2_save_editor.Stat.FathersName;
-            this.statContainerBindedTextBox2.Location = new System.Drawing.Point(429, 77);
-            this.statContainerBindedTextBox2.Name = "statContainerBindedTextBox2";
-            this.statContainerBindedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox2.TabIndex = 1;
-            // 
-            // statContainerBindedTextBox1
-            // 
-            this.statContainerBindedTextBox1.bindTarget = pm2_save_editor.Stat.DaughtersName;
-            this.statContainerBindedTextBox1.Location = new System.Drawing.Point(179, 77);
-            this.statContainerBindedTextBox1.Name = "statContainerBindedTextBox1";
-            this.statContainerBindedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox1.TabIndex = 0;
             // 
             // tabControl1
             // 
@@ -790,86 +569,6 @@
             this.label24.TabIndex = 30;
             this.label24.Text = "Decorum";
             // 
-            // statContainerBindedTextBox28
-            // 
-            this.statContainerBindedTextBox28.bindTarget = pm2_save_editor.Stat.HousekeepingRep;
-            this.statContainerBindedTextBox28.Location = new System.Drawing.Point(429, 157);
-            this.statContainerBindedTextBox28.Name = "statContainerBindedTextBox28";
-            this.statContainerBindedTextBox28.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox28.TabIndex = 9;
-            // 
-            // statContainerBindedTextBox27
-            // 
-            this.statContainerBindedTextBox27.bindTarget = pm2_save_editor.Stat.SocialRep;
-            this.statContainerBindedTextBox27.Location = new System.Drawing.Point(429, 130);
-            this.statContainerBindedTextBox27.Name = "statContainerBindedTextBox27";
-            this.statContainerBindedTextBox27.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox27.TabIndex = 8;
-            // 
-            // statContainerBindedTextBox26
-            // 
-            this.statContainerBindedTextBox26.bindTarget = pm2_save_editor.Stat.MagicRep;
-            this.statContainerBindedTextBox26.Location = new System.Drawing.Point(429, 103);
-            this.statContainerBindedTextBox26.Name = "statContainerBindedTextBox26";
-            this.statContainerBindedTextBox26.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox26.TabIndex = 7;
-            // 
-            // statContainerBindedTextBox25
-            // 
-            this.statContainerBindedTextBox25.bindTarget = pm2_save_editor.Stat.FightingRep;
-            this.statContainerBindedTextBox25.Location = new System.Drawing.Point(429, 77);
-            this.statContainerBindedTextBox25.Name = "statContainerBindedTextBox25";
-            this.statContainerBindedTextBox25.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox25.TabIndex = 6;
-            // 
-            // statContainerBindedTextBox24
-            // 
-            this.statContainerBindedTextBox24.bindTarget = pm2_save_editor.Stat.Personality;
-            this.statContainerBindedTextBox24.Location = new System.Drawing.Point(179, 212);
-            this.statContainerBindedTextBox24.Name = "statContainerBindedTextBox24";
-            this.statContainerBindedTextBox24.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox24.TabIndex = 5;
-            // 
-            // statContainerBindedTextBox23
-            // 
-            this.statContainerBindedTextBox23.bindTarget = pm2_save_editor.Stat.Cleaning;
-            this.statContainerBindedTextBox23.Location = new System.Drawing.Point(179, 185);
-            this.statContainerBindedTextBox23.Name = "statContainerBindedTextBox23";
-            this.statContainerBindedTextBox23.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox23.TabIndex = 4;
-            // 
-            // statContainerBindedTextBox22
-            // 
-            this.statContainerBindedTextBox22.bindTarget = pm2_save_editor.Stat.Cooking;
-            this.statContainerBindedTextBox22.Location = new System.Drawing.Point(179, 158);
-            this.statContainerBindedTextBox22.Name = "statContainerBindedTextBox22";
-            this.statContainerBindedTextBox22.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox22.TabIndex = 3;
-            // 
-            // statContainerBindedTextBox21
-            // 
-            this.statContainerBindedTextBox21.bindTarget = pm2_save_editor.Stat.Speech;
-            this.statContainerBindedTextBox21.Location = new System.Drawing.Point(179, 131);
-            this.statContainerBindedTextBox21.Name = "statContainerBindedTextBox21";
-            this.statContainerBindedTextBox21.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox21.TabIndex = 2;
-            // 
-            // statContainerBindedTextBox20
-            // 
-            this.statContainerBindedTextBox20.bindTarget = pm2_save_editor.Stat.ArtSkill;
-            this.statContainerBindedTextBox20.Location = new System.Drawing.Point(179, 104);
-            this.statContainerBindedTextBox20.Name = "statContainerBindedTextBox20";
-            this.statContainerBindedTextBox20.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox20.TabIndex = 1;
-            // 
-            // statContainerBindedTextBox19
-            // 
-            this.statContainerBindedTextBox19.bindTarget = pm2_save_editor.Stat.Decorum;
-            this.statContainerBindedTextBox19.Location = new System.Drawing.Point(179, 77);
-            this.statContainerBindedTextBox19.Name = "statContainerBindedTextBox19";
-            this.statContainerBindedTextBox19.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox19.TabIndex = 0;
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.statContainerBindedTextBox29);
@@ -881,14 +580,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Gold";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // statContainerBindedTextBox29
-            // 
-            this.statContainerBindedTextBox29.bindTarget = pm2_save_editor.Stat.Gold;
-            this.statContainerBindedTextBox29.Location = new System.Drawing.Point(270, 157);
-            this.statContainerBindedTextBox29.Name = "statContainerBindedTextBox29";
-            this.statContainerBindedTextBox29.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox29.TabIndex = 1;
             // 
             // label26
             // 
@@ -1019,8 +710,325 @@
             this.label44.TabIndex = 47;
             this.label44.Text = "Science";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(84, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Daughter\'s Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // statContainerBindedTextBox34
+            // 
+            this.statContainerBindedTextBox34.autoGenerateLabel = true;
+            this.statContainerBindedTextBox34.bindTarget = pm2_save_editor.Stat.Hips;
+            this.statContainerBindedTextBox34.Location = new System.Drawing.Point(179, 157);
+            this.statContainerBindedTextBox34.Name = "statContainerBindedTextBox34";
+            this.statContainerBindedTextBox34.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox34.TabIndex = 8;
+            // 
+            // statContainerBindedTextBox33
+            // 
+            this.statContainerBindedTextBox33.autoGenerateLabel = true;
+            this.statContainerBindedTextBox33.bindTarget = pm2_save_editor.Stat.Waist;
+            this.statContainerBindedTextBox33.Location = new System.Drawing.Point(429, 129);
+            this.statContainerBindedTextBox33.Name = "statContainerBindedTextBox33";
+            this.statContainerBindedTextBox33.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox33.TabIndex = 7;
+            // 
+            // statContainerBindedTextBox32
+            // 
+            this.statContainerBindedTextBox32.autoGenerateLabel = true;
+            this.statContainerBindedTextBox32.bindTarget = pm2_save_editor.Stat.Bust;
+            this.statContainerBindedTextBox32.Location = new System.Drawing.Point(179, 130);
+            this.statContainerBindedTextBox32.Name = "statContainerBindedTextBox32";
+            this.statContainerBindedTextBox32.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox32.TabIndex = 6;
+            // 
+            // statContainerBindedTextBox31
+            // 
+            this.statContainerBindedTextBox31.autoGenerateLabel = true;
+            this.statContainerBindedTextBox31.bindTarget = pm2_save_editor.Stat.Weight;
+            this.statContainerBindedTextBox31.Location = new System.Drawing.Point(429, 103);
+            this.statContainerBindedTextBox31.Name = "statContainerBindedTextBox31";
+            this.statContainerBindedTextBox31.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox31.TabIndex = 5;
+            // 
+            // statContainerBindedTextBox30
+            // 
+            this.statContainerBindedTextBox30.autoGenerateLabel = true;
+            this.statContainerBindedTextBox30.bindTarget = pm2_save_editor.Stat.Height;
+            this.statContainerBindedTextBox30.Location = new System.Drawing.Point(179, 103);
+            this.statContainerBindedTextBox30.Name = "statContainerBindedTextBox30";
+            this.statContainerBindedTextBox30.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox30.TabIndex = 4;
+            // 
+            // statContainerBindedTextBox2
+            // 
+            this.statContainerBindedTextBox2.autoGenerateLabel = true;
+            this.statContainerBindedTextBox2.bindTarget = pm2_save_editor.Stat.FathersName;
+            this.statContainerBindedTextBox2.Location = new System.Drawing.Point(429, 77);
+            this.statContainerBindedTextBox2.Name = "statContainerBindedTextBox2";
+            this.statContainerBindedTextBox2.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox2.TabIndex = 1;
+            // 
+            // statContainerBindedTextBox1
+            // 
+            this.statContainerBindedTextBox1.autoGenerateLabel = true;
+            this.statContainerBindedTextBox1.bindTarget = pm2_save_editor.Stat.DaughtersName;
+            this.statContainerBindedTextBox1.Location = new System.Drawing.Point(179, 77);
+            this.statContainerBindedTextBox1.Name = "statContainerBindedTextBox1";
+            this.statContainerBindedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox1.TabIndex = 0;
+            // 
+            // statContainerBindedTextBox18
+            // 
+            this.statContainerBindedTextBox18.autoGenerateLabel = true;
+            this.statContainerBindedTextBox18.bindTarget = pm2_save_editor.Stat.MagicDefence;
+            this.statContainerBindedTextBox18.Location = new System.Drawing.Point(429, 210);
+            this.statContainerBindedTextBox18.Name = "statContainerBindedTextBox18";
+            this.statContainerBindedTextBox18.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox18.TabIndex = 20;
+            // 
+            // statContainerBindedTextBox17
+            // 
+            this.statContainerBindedTextBox17.autoGenerateLabel = true;
+            this.statContainerBindedTextBox17.bindTarget = pm2_save_editor.Stat.MagicAttack;
+            this.statContainerBindedTextBox17.Location = new System.Drawing.Point(429, 182);
+            this.statContainerBindedTextBox17.Name = "statContainerBindedTextBox17";
+            this.statContainerBindedTextBox17.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox17.TabIndex = 19;
+            // 
+            // statContainerBindedTextBox16
+            // 
+            this.statContainerBindedTextBox16.autoGenerateLabel = true;
+            this.statContainerBindedTextBox16.bindTarget = pm2_save_editor.Stat.MagicSkill;
+            this.statContainerBindedTextBox16.Location = new System.Drawing.Point(429, 155);
+            this.statContainerBindedTextBox16.Name = "statContainerBindedTextBox16";
+            this.statContainerBindedTextBox16.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox16.TabIndex = 18;
+            // 
+            // statContainerBindedTextBox15
+            // 
+            this.statContainerBindedTextBox15.autoGenerateLabel = true;
+            this.statContainerBindedTextBox15.bindTarget = pm2_save_editor.Stat.Defence;
+            this.statContainerBindedTextBox15.Location = new System.Drawing.Point(429, 130);
+            this.statContainerBindedTextBox15.Name = "statContainerBindedTextBox15";
+            this.statContainerBindedTextBox15.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox15.TabIndex = 17;
+            // 
+            // statContainerBindedTextBox5
+            // 
+            this.statContainerBindedTextBox5.autoGenerateLabel = true;
+            this.statContainerBindedTextBox5.bindTarget = pm2_save_editor.Stat.Attack;
+            this.statContainerBindedTextBox5.Location = new System.Drawing.Point(429, 103);
+            this.statContainerBindedTextBox5.Name = "statContainerBindedTextBox5";
+            this.statContainerBindedTextBox5.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox5.TabIndex = 16;
+            // 
+            // statContainerBindedTextBox3
+            // 
+            this.statContainerBindedTextBox3.autoGenerateLabel = true;
+            this.statContainerBindedTextBox3.bindTarget = pm2_save_editor.Stat.CombatSkill;
+            this.statContainerBindedTextBox3.Location = new System.Drawing.Point(429, 77);
+            this.statContainerBindedTextBox3.Name = "statContainerBindedTextBox3";
+            this.statContainerBindedTextBox3.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox3.TabIndex = 15;
+            // 
+            // statContainerBindedTextBox14
+            // 
+            this.statContainerBindedTextBox14.autoGenerateLabel = true;
+            this.statContainerBindedTextBox14.bindTarget = pm2_save_editor.Stat.Stress;
+            this.statContainerBindedTextBox14.Location = new System.Drawing.Point(179, 318);
+            this.statContainerBindedTextBox14.Name = "statContainerBindedTextBox14";
+            this.statContainerBindedTextBox14.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox14.TabIndex = 14;
+            // 
+            // statContainerBindedTextBox13
+            // 
+            this.statContainerBindedTextBox13.autoGenerateLabel = true;
+            this.statContainerBindedTextBox13.bindTarget = pm2_save_editor.Stat.Sensetivity;
+            this.statContainerBindedTextBox13.Location = new System.Drawing.Point(179, 291);
+            this.statContainerBindedTextBox13.Name = "statContainerBindedTextBox13";
+            this.statContainerBindedTextBox13.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox13.TabIndex = 13;
+            // 
+            // statContainerBindedTextBox12
+            // 
+            this.statContainerBindedTextBox12.autoGenerateLabel = true;
+            this.statContainerBindedTextBox12.bindTarget = pm2_save_editor.Stat.Sin;
+            this.statContainerBindedTextBox12.Location = new System.Drawing.Point(179, 264);
+            this.statContainerBindedTextBox12.Name = "statContainerBindedTextBox12";
+            this.statContainerBindedTextBox12.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox12.TabIndex = 12;
+            // 
+            // statContainerBindedTextBox11
+            // 
+            this.statContainerBindedTextBox11.autoGenerateLabel = true;
+            this.statContainerBindedTextBox11.bindTarget = pm2_save_editor.Stat.Faith;
+            this.statContainerBindedTextBox11.Location = new System.Drawing.Point(179, 237);
+            this.statContainerBindedTextBox11.Name = "statContainerBindedTextBox11";
+            this.statContainerBindedTextBox11.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox11.TabIndex = 11;
+            // 
+            // statContainerBindedTextBox10
+            // 
+            this.statContainerBindedTextBox10.autoGenerateLabel = true;
+            this.statContainerBindedTextBox10.bindTarget = pm2_save_editor.Stat.Morality;
+            this.statContainerBindedTextBox10.Location = new System.Drawing.Point(179, 210);
+            this.statContainerBindedTextBox10.Name = "statContainerBindedTextBox10";
+            this.statContainerBindedTextBox10.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox10.TabIndex = 10;
+            // 
+            // statContainerBindedTextBox9
+            // 
+            this.statContainerBindedTextBox9.autoGenerateLabel = true;
+            this.statContainerBindedTextBox9.bindTarget = pm2_save_editor.Stat.Glamour;
+            this.statContainerBindedTextBox9.Location = new System.Drawing.Point(179, 183);
+            this.statContainerBindedTextBox9.Name = "statContainerBindedTextBox9";
+            this.statContainerBindedTextBox9.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox9.TabIndex = 9;
+            // 
+            // statContainerBindedTextBox8
+            // 
+            this.statContainerBindedTextBox8.autoGenerateLabel = true;
+            this.statContainerBindedTextBox8.bindTarget = pm2_save_editor.Stat.Elegance;
+            this.statContainerBindedTextBox8.Location = new System.Drawing.Point(179, 156);
+            this.statContainerBindedTextBox8.Name = "statContainerBindedTextBox8";
+            this.statContainerBindedTextBox8.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox8.TabIndex = 8;
+            // 
+            // statContainerBindedTextBox7
+            // 
+            this.statContainerBindedTextBox7.autoGenerateLabel = true;
+            this.statContainerBindedTextBox7.bindTarget = pm2_save_editor.Stat.Intelligence;
+            this.statContainerBindedTextBox7.Location = new System.Drawing.Point(179, 129);
+            this.statContainerBindedTextBox7.Name = "statContainerBindedTextBox7";
+            this.statContainerBindedTextBox7.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox7.TabIndex = 7;
+            // 
+            // statContainerBindedTextBox6
+            // 
+            this.statContainerBindedTextBox6.autoGenerateLabel = true;
+            this.statContainerBindedTextBox6.bindTarget = pm2_save_editor.Stat.Strength;
+            this.statContainerBindedTextBox6.Location = new System.Drawing.Point(179, 103);
+            this.statContainerBindedTextBox6.Name = "statContainerBindedTextBox6";
+            this.statContainerBindedTextBox6.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox6.TabIndex = 6;
+            // 
+            // statContainerBindedTextBox4
+            // 
+            this.statContainerBindedTextBox4.autoGenerateLabel = true;
+            this.statContainerBindedTextBox4.bindTarget = pm2_save_editor.Stat.Stamina;
+            this.statContainerBindedTextBox4.Location = new System.Drawing.Point(179, 77);
+            this.statContainerBindedTextBox4.Name = "statContainerBindedTextBox4";
+            this.statContainerBindedTextBox4.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox4.TabIndex = 4;
+            // 
+            // statContainerBindedTextBox28
+            // 
+            this.statContainerBindedTextBox28.autoGenerateLabel = true;
+            this.statContainerBindedTextBox28.bindTarget = pm2_save_editor.Stat.HousekeepingRep;
+            this.statContainerBindedTextBox28.Location = new System.Drawing.Point(429, 157);
+            this.statContainerBindedTextBox28.Name = "statContainerBindedTextBox28";
+            this.statContainerBindedTextBox28.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox28.TabIndex = 9;
+            // 
+            // statContainerBindedTextBox27
+            // 
+            this.statContainerBindedTextBox27.autoGenerateLabel = true;
+            this.statContainerBindedTextBox27.bindTarget = pm2_save_editor.Stat.SocialRep;
+            this.statContainerBindedTextBox27.Location = new System.Drawing.Point(429, 130);
+            this.statContainerBindedTextBox27.Name = "statContainerBindedTextBox27";
+            this.statContainerBindedTextBox27.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox27.TabIndex = 8;
+            // 
+            // statContainerBindedTextBox26
+            // 
+            this.statContainerBindedTextBox26.autoGenerateLabel = true;
+            this.statContainerBindedTextBox26.bindTarget = pm2_save_editor.Stat.MagicRep;
+            this.statContainerBindedTextBox26.Location = new System.Drawing.Point(429, 103);
+            this.statContainerBindedTextBox26.Name = "statContainerBindedTextBox26";
+            this.statContainerBindedTextBox26.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox26.TabIndex = 7;
+            // 
+            // statContainerBindedTextBox25
+            // 
+            this.statContainerBindedTextBox25.autoGenerateLabel = true;
+            this.statContainerBindedTextBox25.bindTarget = pm2_save_editor.Stat.FightingRep;
+            this.statContainerBindedTextBox25.Location = new System.Drawing.Point(429, 77);
+            this.statContainerBindedTextBox25.Name = "statContainerBindedTextBox25";
+            this.statContainerBindedTextBox25.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox25.TabIndex = 6;
+            // 
+            // statContainerBindedTextBox24
+            // 
+            this.statContainerBindedTextBox24.autoGenerateLabel = true;
+            this.statContainerBindedTextBox24.bindTarget = pm2_save_editor.Stat.Personality;
+            this.statContainerBindedTextBox24.Location = new System.Drawing.Point(179, 212);
+            this.statContainerBindedTextBox24.Name = "statContainerBindedTextBox24";
+            this.statContainerBindedTextBox24.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox24.TabIndex = 5;
+            // 
+            // statContainerBindedTextBox23
+            // 
+            this.statContainerBindedTextBox23.autoGenerateLabel = true;
+            this.statContainerBindedTextBox23.bindTarget = pm2_save_editor.Stat.Cleaning;
+            this.statContainerBindedTextBox23.Location = new System.Drawing.Point(179, 185);
+            this.statContainerBindedTextBox23.Name = "statContainerBindedTextBox23";
+            this.statContainerBindedTextBox23.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox23.TabIndex = 4;
+            // 
+            // statContainerBindedTextBox22
+            // 
+            this.statContainerBindedTextBox22.autoGenerateLabel = true;
+            this.statContainerBindedTextBox22.bindTarget = pm2_save_editor.Stat.Cooking;
+            this.statContainerBindedTextBox22.Location = new System.Drawing.Point(179, 158);
+            this.statContainerBindedTextBox22.Name = "statContainerBindedTextBox22";
+            this.statContainerBindedTextBox22.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox22.TabIndex = 3;
+            // 
+            // statContainerBindedTextBox21
+            // 
+            this.statContainerBindedTextBox21.autoGenerateLabel = true;
+            this.statContainerBindedTextBox21.bindTarget = pm2_save_editor.Stat.Speech;
+            this.statContainerBindedTextBox21.Location = new System.Drawing.Point(179, 131);
+            this.statContainerBindedTextBox21.Name = "statContainerBindedTextBox21";
+            this.statContainerBindedTextBox21.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox21.TabIndex = 2;
+            // 
+            // statContainerBindedTextBox20
+            // 
+            this.statContainerBindedTextBox20.autoGenerateLabel = true;
+            this.statContainerBindedTextBox20.bindTarget = pm2_save_editor.Stat.ArtSkill;
+            this.statContainerBindedTextBox20.Location = new System.Drawing.Point(179, 104);
+            this.statContainerBindedTextBox20.Name = "statContainerBindedTextBox20";
+            this.statContainerBindedTextBox20.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox20.TabIndex = 1;
+            // 
+            // statContainerBindedTextBox19
+            // 
+            this.statContainerBindedTextBox19.autoGenerateLabel = true;
+            this.statContainerBindedTextBox19.bindTarget = pm2_save_editor.Stat.Decorum;
+            this.statContainerBindedTextBox19.Location = new System.Drawing.Point(179, 77);
+            this.statContainerBindedTextBox19.Name = "statContainerBindedTextBox19";
+            this.statContainerBindedTextBox19.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox19.TabIndex = 0;
+            // 
+            // statContainerBindedTextBox29
+            // 
+            this.statContainerBindedTextBox29.autoGenerateLabel = true;
+            this.statContainerBindedTextBox29.bindTarget = pm2_save_editor.Stat.Gold;
+            this.statContainerBindedTextBox29.Location = new System.Drawing.Point(270, 157);
+            this.statContainerBindedTextBox29.Name = "statContainerBindedTextBox29";
+            this.statContainerBindedTextBox29.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox29.TabIndex = 1;
+            // 
             // statContainerBindedTextBox35
             // 
+            this.statContainerBindedTextBox35.autoGenerateLabel = true;
             this.statContainerBindedTextBox35.bindTarget = pm2_save_editor.Stat.MagicAttack;
             this.statContainerBindedTextBox35.Location = new System.Drawing.Point(429, 182);
             this.statContainerBindedTextBox35.Name = "statContainerBindedTextBox35";
@@ -1029,6 +1037,7 @@
             // 
             // statContainerBindedTextBox36
             // 
+            this.statContainerBindedTextBox36.autoGenerateLabel = true;
             this.statContainerBindedTextBox36.bindTarget = pm2_save_editor.Stat.MagicSkill;
             this.statContainerBindedTextBox36.Location = new System.Drawing.Point(429, 155);
             this.statContainerBindedTextBox36.Name = "statContainerBindedTextBox36";
@@ -1037,6 +1046,7 @@
             // 
             // statContainerBindedTextBox37
             // 
+            this.statContainerBindedTextBox37.autoGenerateLabel = true;
             this.statContainerBindedTextBox37.bindTarget = pm2_save_editor.Stat.Defence;
             this.statContainerBindedTextBox37.Location = new System.Drawing.Point(429, 130);
             this.statContainerBindedTextBox37.Name = "statContainerBindedTextBox37";
@@ -1045,6 +1055,7 @@
             // 
             // statContainerBindedTextBox38
             // 
+            this.statContainerBindedTextBox38.autoGenerateLabel = true;
             this.statContainerBindedTextBox38.bindTarget = pm2_save_editor.Stat.Attack;
             this.statContainerBindedTextBox38.Location = new System.Drawing.Point(429, 103);
             this.statContainerBindedTextBox38.Name = "statContainerBindedTextBox38";
@@ -1053,6 +1064,7 @@
             // 
             // statContainerBindedTextBox39
             // 
+            this.statContainerBindedTextBox39.autoGenerateLabel = true;
             this.statContainerBindedTextBox39.bindTarget = pm2_save_editor.Stat.CombatSkill;
             this.statContainerBindedTextBox39.Location = new System.Drawing.Point(429, 77);
             this.statContainerBindedTextBox39.Name = "statContainerBindedTextBox39";
@@ -1061,6 +1073,7 @@
             // 
             // statContainerBindedTextBox40
             // 
+            this.statContainerBindedTextBox40.autoGenerateLabel = true;
             this.statContainerBindedTextBox40.bindTarget = pm2_save_editor.Stat.Glamour;
             this.statContainerBindedTextBox40.Location = new System.Drawing.Point(179, 183);
             this.statContainerBindedTextBox40.Name = "statContainerBindedTextBox40";
@@ -1069,6 +1082,7 @@
             // 
             // statContainerBindedTextBox41
             // 
+            this.statContainerBindedTextBox41.autoGenerateLabel = true;
             this.statContainerBindedTextBox41.bindTarget = pm2_save_editor.Stat.Elegance;
             this.statContainerBindedTextBox41.Location = new System.Drawing.Point(179, 156);
             this.statContainerBindedTextBox41.Name = "statContainerBindedTextBox41";
@@ -1077,6 +1091,7 @@
             // 
             // statContainerBindedTextBox42
             // 
+            this.statContainerBindedTextBox42.autoGenerateLabel = true;
             this.statContainerBindedTextBox42.bindTarget = pm2_save_editor.Stat.Intelligence;
             this.statContainerBindedTextBox42.Location = new System.Drawing.Point(179, 129);
             this.statContainerBindedTextBox42.Name = "statContainerBindedTextBox42";
@@ -1085,6 +1100,7 @@
             // 
             // statContainerBindedTextBox43
             // 
+            this.statContainerBindedTextBox43.autoGenerateLabel = true;
             this.statContainerBindedTextBox43.bindTarget = pm2_save_editor.Stat.Strength;
             this.statContainerBindedTextBox43.Location = new System.Drawing.Point(179, 103);
             this.statContainerBindedTextBox43.Name = "statContainerBindedTextBox43";
@@ -1093,11 +1109,39 @@
             // 
             // statContainerBindedTextBox44
             // 
+            this.statContainerBindedTextBox44.autoGenerateLabel = true;
             this.statContainerBindedTextBox44.bindTarget = pm2_save_editor.Stat.Stamina;
             this.statContainerBindedTextBox44.Location = new System.Drawing.Point(179, 77);
             this.statContainerBindedTextBox44.Name = "statContainerBindedTextBox44";
             this.statContainerBindedTextBox44.Size = new System.Drawing.Size(100, 20);
             this.statContainerBindedTextBox44.TabIndex = 37;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(135, 106);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(38, 13);
+            this.label27.TabIndex = 9;
+            this.label27.Text = "Height";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(145, 132);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(28, 13);
+            this.label31.TabIndex = 10;
+            this.label31.Text = "Bust";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(145, 160);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(28, 13);
+            this.label33.TabIndex = 12;
+            this.label33.Text = "Hips";
             // 
             // Form1
             // 
@@ -1142,7 +1186,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox1;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox14;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox13;
@@ -1202,10 +1245,7 @@
         private System.Windows.Forms.Label label26;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox30;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label27;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox34;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox33;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox32;
@@ -1231,6 +1271,10 @@
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox42;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox43;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox44;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label27;
     }
 }
 
