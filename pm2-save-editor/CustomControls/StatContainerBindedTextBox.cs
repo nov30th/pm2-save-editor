@@ -25,7 +25,7 @@ namespace pm2_save_editor.CustomControls
         private Stat _bindTarget;
         private StatContainer _boundStat;
         private bool _autoGenerateLabel = true;
-        private Label generatedLabel;
+        private SmartLabel generatedLabel;
 
         [Category("Binding"), Description("The stat to which the TextBox should be bound.")]
         public Stat bindTarget
@@ -79,30 +79,9 @@ namespace pm2_save_editor.CustomControls
 
         private void GenerateLabel()
         {
-            generatedLabel = new Label();
+            generatedLabel = new SmartLabel();
+            generatedLabel.RecalcuateLabelContents(this);
             this.Parent.Controls.Add(generatedLabel);
-
-            RecalcuateLabelContents();
-        }
-
-        private void RecalcuateLabelContents()
-        {
-            generatedLabel.Text = "Placeholder";
-
-            Point textBoxLocation = this.Location;
-            Size textBoxSize = this.Size;
-            Size labelSize = generatedLabel.Size;
-
-            int labelX = textBoxLocation.X - generatedLabel.Width - 5;
-            generatedLabel.TextAlign = ContentAlignment.MiddleRight;
-
-            int labelY = textBoxLocation.Y; // Align the top left corners of both controls
-            labelY -= 3; // Couldn't make it work programatically so a bit of a magic number - won't scale up with changes in font size or text box size
-
-            //int textBoxMiddle = textBoxLocation.Y + (textBoxSize.Height / 2);
-            //labelY = textBoxMiddle - (textBoxSize.Height / 2);
-
-            generatedLabel.Location = new Point(labelX, labelY);
         }
 
         public void TextUpdated(object sender, EventArgs e)
