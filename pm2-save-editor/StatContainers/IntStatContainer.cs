@@ -17,6 +17,10 @@ namespace pm2_save_editor
         /// </summary>
         Stat statId;
         /// <summary>
+        /// A string representation of the stat's name used for generating labels
+        /// </summary>
+        string statName;
+        /// <summary>
         /// Indicator of the specific type of stat which the container holds
         /// </summary>
         protected StatTypes statType;
@@ -50,6 +54,7 @@ namespace pm2_save_editor
         {
             attachedBuffer = workingFileBuffer;
             statId = defaultValues.statID;
+            statName = defaultValues.name;
             offset = defaultValues.offset;
             Max = defaultValues.Max;
             Min = defaultValues.Min;
