@@ -134,7 +134,14 @@ namespace pm2_save_editor
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StatContainerListUpdate();
-            workingFile.SaveFile(workingFileName);
+            if (workingFile.SaveFile(workingFileName))
+            {
+                MessageBox.Show("File saved!");
+            }
+            else
+            {
+                MessageBox.Show("There are was an error when attempting to save the file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -151,7 +158,11 @@ namespace pm2_save_editor
 
             StatContainerListUpdate();
 
-            if (!workingFile.SaveFile(saveFileDialog1.FileName))
+            if (workingFile.SaveFile(saveFileDialog1.FileName))
+            {
+                MessageBox.Show("File saved!");
+            }
+            else
             {
                 MessageBox.Show("There are was an error when attempting to save the file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
