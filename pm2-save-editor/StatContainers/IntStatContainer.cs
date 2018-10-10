@@ -128,6 +128,15 @@ namespace pm2_save_editor
             return statName;
         }
 
+        /// <summary>
+        /// Public interface for calculating PM2 checksum of the container
+        /// </summary>
+        /// <returns>Calculated checksum</returns>
+        public int GetChecksum()
+        {
+            return (int)currentValue;
+        }
+
     }
 }
 

@@ -5,6 +5,8 @@
 #define PM2_WINDOWS
 #endif
 
+enum ChecksumVariants { EnglishRefine = 0, JapaneseRefine = 1 };
+
 typedef UINT16 GNX_FLOAT;
 
 struct pm2_save_file_skeleton {
