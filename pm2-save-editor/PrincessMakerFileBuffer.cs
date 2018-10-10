@@ -20,8 +20,8 @@ namespace pm2_save_editor
 
         byte[] pm2SaveFileBytes;
         Version workingVersion = Version.EnglishRefine;
-
-
+        Dictionary<Stat, StatContainer> statDictionary;
+        int oldChecksum; 
         /// <summary>
         /// Read a Princess Maker 2 save file into memory
         /// </summary>
@@ -75,6 +75,11 @@ namespace pm2_save_editor
                 MessageBox.Show(errorString, "Error opening file", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(1);
             }
+
+            // need some form of version checking here
+            statDictionary = BuildStatDictionary();
+
+            oldChecksum = GetOrignalChecksum() - CalculatePartialChecksum(); 
 
             FileStream fs = new FileStream(fileName + "_BAK", FileMode.Create);
             BinaryWriter bw = new BinaryWriter(fs);
@@ -130,7 +135,7 @@ namespace pm2_save_editor
                 return false;
             }
 
-            int newChecksum = Checksum.CalculateChecksum(pm2SaveFileBytes, workingVersion);
+            int newChecksum = oldChecksum + CalculatePartialChecksum();
 
             // Again, the actual workings and responsilities of the checksum are not entirely clear due to its unique function
             if (workingVersion == Version.EnglishRefine)
@@ -176,7 +181,7 @@ namespace pm2_save_editor
         /// Build a dictionary of StatContainers based on the contents of this buffer
         /// </summary>
         /// <returns>Dictionary of publically accessible stats</returns>
-        public Dictionary<Stat, StatContainer> BuildStatDictionary()
+        private Dictionary<Stat, StatContainer> BuildStatDictionary()
         {
             Dictionary<Stat, StatContainer> statDictionary = new Dictionary<Stat, StatContainer>();
 
@@ -201,6 +206,39 @@ namespace pm2_save_editor
             }
 
             return statDictionary;
+        }
+
+        public Dictionary<Stat, StatContainer> GetStatDictionary()
+        {
+            return statDictionary;
+        }
+
+        /// <summary>
+        /// Calcuate the checksum value of supported stats
+        /// </summary>
+        /// <returns>Calcuated checksum</returns>
+        /// <remarks>
+        /// Checksum is found by adding the contents of all stats together. By subtracting the contents of supported stats from the checksum at load time and readding them at save time, we can calcuate partial checksums and create valid PM2 files without having to support every stat or write specific checksum fuctions for different file layouts.
+        /// </remarks>
+        private int CalculatePartialChecksum()
+        {
+            int partialChecksum = 0;
+
+            foreach (StatContainer container in statDictionary.Values)
+            {
+                partialChecksum += container.GetChecksum();
+            }
+
+            return partialChecksum;
+        }
+
+        /// <summary>
+        /// Get the original file checksum from the file
+        /// </summary>
+        /// <returns>Found checksum</returns>
+        private int GetOrignalChecksum()
+        {
+            return BitConverter.ToInt32(ReadAtOffset(Checksum.ENGLISH_REFINE_CHECKSUM_OFFSET, 4), 0);
         }
 
     }

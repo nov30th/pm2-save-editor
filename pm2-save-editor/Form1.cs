@@ -18,7 +18,7 @@ namespace pm2_save_editor
         private bool fileHasBeenOpened = false;
         private bool unsavedChangesPresent = false; // not yet impelemeted
         private PrincessMakerFileBuffer workingFile;
-        Dictionary<Stat, StatContainer> statDictionary; // should perhaps belong to PrincessMakerFileBuffer, can be easily moved if necessary
+        Dictionary<Stat, StatContainer> statDictionary;
         private string workingFileName = "";
 
         public Form1()
@@ -110,7 +110,7 @@ namespace pm2_save_editor
                 saveAsToolStripMenuItem.Enabled = true; // perhaps these should be in seperate functions
                 saveToolStripMenuItem.Enabled = true;
                 workingFileName = openFileDialog1.FileName;
-                statDictionary = workingFile.BuildStatDictionary();
+                statDictionary = workingFile.GetStatDictionary();
                 InitalizeTabChildControls();
                 ShowTabPages();
             }

@@ -86,7 +86,7 @@
     <Compile Include="PrincessMakerFileBuffer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StatContainerInitalizationValues\StatContainerInitalizationValues.cs" />
+    <Compile Include="StatContainerInitalizationValues\StatsSharedData.cs" />
     <Compile Include="StatContainers\StringStatContainer.cs" />
     <Compile Include="StatFactory.cs" />
     <EmbeddedResource Include="CustomControls\StatContainerBindedTextBox.resx">
