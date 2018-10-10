@@ -151,5 +151,14 @@ namespace pm2_save_editor
             CommitContents();
         }
 
+        /// <summary>
+        /// Public interface for getting the name of the attached stat
+        /// </summary>
+        /// <returns>Name of stat which this container represents</returns>
+        public string GetStatName()
+        {
+            return statName;
+        }
+
     }
 }

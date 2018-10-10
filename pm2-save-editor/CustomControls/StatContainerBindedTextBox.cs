@@ -80,7 +80,7 @@ namespace pm2_save_editor.CustomControls
         private void GenerateLabel()
         {
             generatedLabel = new SmartLabel();
-            generatedLabel.RecalcuateLabelContents(this);
+            generatedLabel.RecalcuateLabelContents(this, _boundStat.GetStatName());
             this.Parent.Controls.Add(generatedLabel);
         }
 

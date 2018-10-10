@@ -118,6 +118,16 @@ namespace pm2_save_editor
         /// Public interface for requesting the StatContainer push its current contents for the attached file buffer
         /// </summary>
         public abstract void PushChanges();
+
+        /// <summary>
+        /// Public interface for getting the name of the attached stat
+        /// </summary>
+        /// <returns>Name of stat which this container represents</returns>
+        public string GetStatName()
+        {
+            return statName;
+        }
+
     }
 }
 
