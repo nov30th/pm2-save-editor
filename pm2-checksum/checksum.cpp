@@ -3,11 +3,11 @@
 #define PM2_CHECKSUM
 #endif
 
-extern "C" __declspec(dllexport) int CalculateChecksum(pm2_save_file_skeleton *pm2_file) {
+extern "C" __declspec(dllexport) int CalculateChecksum(pm2_save_file_skeleton *pm2_file, int version) {
 
 		int i;
 		int new_checksum = 0;
-		
+
 		new_checksum += pm2_file->variable_0001;
 		new_checksum += pm2_file->variable_0002;
 		new_checksum += pm2_file->variable_0003;

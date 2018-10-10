@@ -16,8 +16,11 @@ namespace pm2_save_editor
     /// </summary>
     public class PrincessMakerFileBuffer
     {
+        public enum Version { EnglishRefine, JapaneseRefine }
+
         byte[] pm2SaveFileBytes;
-        const int CHECKSUM_OFFSET = 0x1B4C; // temporary storage of checksum offset here - will ideally pull the offset from full offset list later
+        Version workingVersion = Version.EnglishRefine;
+
 
         /// <summary>
         /// Read a Princess Maker 2 save file into memory
@@ -90,25 +93,24 @@ namespace pm2_save_editor
         private bool CheckChecksum()
         {
 
-            if (pm2SaveFileBytes.Length < CHECKSUM_OFFSET)
+            if (pm2SaveFileBytes.Length < Checksum.ENGLISH_REFINE_CHECKSUM_OFFSET)
             {
                 return false;
             }
 
-            int expectedChecksum = BitConverter.ToInt32(ReadAtOffset(CHECKSUM_OFFSET, 4), 0);
-            int calculatedChecksum = Checksum.CalculateChecksum(pm2SaveFileBytes);
+            int expectedChecksum = BitConverter.ToInt32(ReadAtOffset(Checksum.ENGLISH_REFINE_CHECKSUM_OFFSET, 4), 0);
+            int calculatedChecksum = Checksum.CalculateChecksum(pm2SaveFileBytes,  workingVersion);
 
             if (expectedChecksum != calculatedChecksum)
             {
                 return false;
             }
 
-
             return true;
         }
 
         /// <summary>
-        /// Write a loaded Princess Market 2 save file to disk
+        /// Write a loaded Princess Marker 2 save file to disk
         /// </summary>
         /// <param name="fileName"></param>
         /// <returns></returns>
@@ -128,8 +130,13 @@ namespace pm2_save_editor
                 return false;
             }
 
-            int newChecksum = Checksum.CalculateChecksum(pm2SaveFileBytes);
-            WriteAtOffset(CHECKSUM_OFFSET, 4, BitConverter.GetBytes(newChecksum));
+            int newChecksum = Checksum.CalculateChecksum(pm2SaveFileBytes, workingVersion);
+
+            // Again, the actual workings and responsilities of the checksum are not entirely clear due to its unique function
+            if (workingVersion == Version.EnglishRefine)
+            {
+                WriteAtOffset(Checksum.ENGLISH_REFINE_CHECKSUM_OFFSET, 4, BitConverter.GetBytes(newChecksum));
+            }
 
             BinaryWriter bw = new BinaryWriter(fs);
 
