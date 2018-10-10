@@ -16,7 +16,6 @@ namespace pm2_save_editor
     /// </summary>
     public class PrincessMakerFileBuffer
     {
-        const int PM2_SAVE_FILE_SIZE = 8192;
         byte[] pm2SaveFileBytes;
         const int CHECKSUM_OFFSET = 0x1B4C; // temporary storage of checksum offset here - will ideally pull the offset from full offset list later
 
@@ -33,14 +32,6 @@ namespace pm2_save_editor
             if (!pm2SaveFileInfo.Exists)
             {
                 MessageBox.Show("Could not find file " + fileName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }           
-
-            if (pm2SaveFileInfo.Length != PM2_SAVE_FILE_SIZE)
-            {
-                // the usage of "Are you sure" here implies a Yes/No response, so it may need to be changed or reworked
-                // not sure whether or not user should be allowed to proceed with a file of the wrong extension and wrong size. the chances of them actually having a valid file that fits such criteria is vanishingly small.
-                MessageBox.Show("File " + fileName + " did not match the expected file size. Are you sure it is a PM2 save file?", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -62,11 +53,25 @@ namespace pm2_save_editor
                 }
             }
 
-            pm2SaveFileBytes = new byte[PM2_SAVE_FILE_SIZE];
+            int fileSize = (int)pm2SaveFileInfo.Length;
 
-            pm2SaveFileStream.Read(pm2SaveFileBytes, 0, PM2_SAVE_FILE_SIZE);
+            pm2SaveFileBytes = new byte[fileSize];
+
+            pm2SaveFileStream.Read(pm2SaveFileBytes, 0, fileSize);
 
             pm2SaveFileStream.Close();
+
+            if (!CheckChecksum())
+            {
+                String errorString =
+                    "The checksum of the file could not be computed successfully. This could mean that:\n\n" +
+                    "-The file was not a valid PM2 save file\n" +
+                    "-The file was corrupt\n" + 
+                    "-The file belongs to a version of the game which is incompatible with the editor\n";
+                    
+                MessageBox.Show(errorString, "Error opening file", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(1);
+            }
 
             FileStream fs = new FileStream(fileName + "_BAK", FileMode.Create);
             BinaryWriter bw = new BinaryWriter(fs);
@@ -75,6 +80,29 @@ namespace pm2_save_editor
 
             bw.Close();
             fs.Close();
+
+            return true;
+        }
+
+        /// <summary>
+        /// Determine whether or not the file is a valid PM2 file by calculating the files checksum and comparing it to the expected checksum taken from the file
+        /// </summary>
+        private bool CheckChecksum()
+        {
+
+            if (pm2SaveFileBytes.Length < CHECKSUM_OFFSET)
+            {
+                return false;
+            }
+
+            int expectedChecksum = BitConverter.ToInt32(ReadAtOffset(CHECKSUM_OFFSET, 4), 0);
+            int calculatedChecksum = Checksum.CalculateChecksum(pm2SaveFileBytes);
+
+            if (expectedChecksum != calculatedChecksum)
+            {
+                return false;
+            }
+
 
             return true;
         }
