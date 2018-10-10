@@ -16,10 +16,10 @@ namespace pm2_save_editor
     /// </summary>
     public class PrincessMakerFileBuffer
     {
-        public enum Version { EnglishRefine, JapaneseRefine }
+        public enum Version { Unknown, EnglishRefine, JapaneseRefine, DOS }
 
         byte[] pm2SaveFileBytes;
-        Version workingVersion = Version.EnglishRefine;
+        Version workingVersion = Version.EnglishRefine; // default is EnglishRefine
         Dictionary<Stat, StatContainer> statDictionary;
         int oldChecksum; 
         /// <summary>
@@ -64,14 +64,24 @@ namespace pm2_save_editor
 
             pm2SaveFileStream.Close();
 
-            if (!CheckChecksum())
+            workingVersion = CheckVersion();
+
+            if (workingVersion == Version.DOS)
+            {
+                String errorString =
+                    "This files appears to have been produced by a DOS version of the game or other non-Refine version of the game. Non-Refine versions of Princess Maker 2 are not supported at this time.";
+                MessageBox.Show(errorString, "Error opening file", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(1); // is a hard exit too extreme for errors like this?
+            }
+
+            if (workingVersion == Version.Unknown)
             {
                 String errorString =
                     "The checksum of the file could not be computed successfully. This could mean that:\n\n" +
                     "-The file was not a valid PM2 save file\n" +
-                    "-The file was corrupt\n" + 
+                    "-The file was corrupt\n" +
                     "-The file belongs to a version of the game which is incompatible with the editor\n";
-                    
+
                 MessageBox.Show(errorString, "Error opening file", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(1);
             }
@@ -90,6 +100,30 @@ namespace pm2_save_editor
             fs.Close();
 
             return true;
+        }
+
+        private Version CheckVersion()
+        {
+
+            // Check EnglishRefine
+            if (CheckChecksum())
+            {
+                return Version.EnglishRefine; // We have a complete map of variable size and type of EnglishRefine, so checksumming the whole file and checking it against the expected checksum works very well as a test 
+            }
+
+            // Check DOS or other non-Refine versions
+            const string DOSHeaderString = "PM2/ver1.02";
+            int DOSHeaderSize = DOSHeaderString.Length;
+            byte[] DOSHeader = ASCIIEncoding.GetEncoding("ascii").GetBytes(DOSHeaderString); // DOS files seem to have a header where Refine files do not. I am unsure if any other versions of the game produce files with this header, but it seems to be enough to rule out any Refine versions.
+            byte[] possibleHeader = new byte[DOSHeaderSize];
+            Array.Copy(pm2SaveFileBytes, 0, possibleHeader, 0, DOSHeaderSize);
+            if (DOSHeader.SequenceEqual(possibleHeader))
+            {
+                return Version.DOS;
+            }
+
+            return Version.Unknown;
+
         }
 
         /// <summary>
