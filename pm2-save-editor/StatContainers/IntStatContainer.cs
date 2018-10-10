@@ -17,6 +17,10 @@ namespace pm2_save_editor
         /// </summary>
         Stat statId;
         /// <summary>
+        /// A string representation of the stat's name used for generating labels
+        /// </summary>
+        string statName;
+        /// <summary>
         /// Indicator of the specific type of stat which the container holds
         /// </summary>
         protected StatTypes statType;
@@ -50,6 +54,7 @@ namespace pm2_save_editor
         {
             attachedBuffer = workingFileBuffer;
             statId = defaultValues.statID;
+            statName = defaultValues.name;
             offset = defaultValues.offset;
             Max = defaultValues.Max;
             Min = defaultValues.Min;
@@ -113,6 +118,16 @@ namespace pm2_save_editor
         /// Public interface for requesting the StatContainer push its current contents for the attached file buffer
         /// </summary>
         public abstract void PushChanges();
+
+        /// <summary>
+        /// Public interface for getting the name of the attached stat
+        /// </summary>
+        /// <returns>Name of stat which this container represents</returns>
+        public string GetStatName()
+        {
+            return statName;
+        }
+
     }
 }
 

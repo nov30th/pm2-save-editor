@@ -72,6 +72,7 @@ namespace pm2_save_editor
                         Stat bindTarget = bindedTextBox.bindTarget;
                         StatContainer foundStat = RequestStat(bindTarget);
                         bindedTextBox.Bind(foundStat);
+                        bindedTextBox.Visible = true;
                     }
                 }
             }
