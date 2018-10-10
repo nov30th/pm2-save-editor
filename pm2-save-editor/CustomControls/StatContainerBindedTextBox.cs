@@ -62,6 +62,7 @@ namespace pm2_save_editor.CustomControls
         public StatContainerBindedTextBox()
         {
             InitializeComponent();
+            this.Visible = false;
         }
 
         public void Bind(StatContainer stat)
