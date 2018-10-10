@@ -75,6 +75,8 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="StatContainerInitalizationValues\EnglishRefineInitalizationMap.cs" />
+    <Compile Include="StatContainerInitalizationValues\JapaneseRefineInitalizationMap.cs" />
     <Compile Include="StatContainers\GNXFloatStatContainer.cs" />
     <Compile Include="StatContainers\Int16StatContainer.cs" />
     <Compile Include="StatContainers\Int32StatContainer.cs" />
@@ -84,7 +86,7 @@
     <Compile Include="PrincessMakerFileBuffer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StatContainers\StatContainerInitalizationValues.cs" />
+    <Compile Include="StatContainerInitalizationValues\StatContainerInitalizationValues.cs" />
     <Compile Include="StatContainers\StringStatContainer.cs" />
     <Compile Include="StatFactory.cs" />
     <EmbeddedResource Include="CustomControls\StatContainerBindedTextBox.resx">

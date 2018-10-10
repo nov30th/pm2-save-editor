@@ -180,7 +180,17 @@ namespace pm2_save_editor
         {
             Dictionary<Stat, StatContainer> statDictionary = new Dictionary<Stat, StatContainer>();
 
-            var dictEnumerator = StatInitalizationValues.statInitalizationMap.GetEnumerator();
+            var dictEnumerator = StatInitalizationValues.englishRefineStatInitalizationMap.GetEnumerator(); // should be removed at the earliest opportunity and replaced by below funtionality - only exists to force compilaiton
+
+            if (workingVersion == Version.EnglishRefine)
+            {
+               dictEnumerator  = StatInitalizationValues.englishRefineStatInitalizationMap.GetEnumerator();
+            }
+            else
+            {
+                MessageBox.Show("Remember to change the dictionary in BuildStatDictionary when trying the new version!");
+                Environment.Exit(1);
+            }
 
             while (dictEnumerator.MoveNext() != false)
             {
