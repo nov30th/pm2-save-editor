@@ -25,18 +25,7 @@ namespace pm2_save_editor
 
         public static int CalculateChecksum(byte[] file, PrincessMakerFileBuffer.Version workingVersion)
         {
-            if (workingVersion == PrincessMakerFileBuffer.Version.EnglishRefine)
-            {
-                return FullCheckSum(file, workingVersion);
-            }
-            
-            return PartialChecksum(file);
-
-        }
-
-        private static int PartialChecksum(byte[] file)
-        {
-            return 0x00;
+            return FullCheckSum(file, workingVersion);
         }
 
         /// <summary>
