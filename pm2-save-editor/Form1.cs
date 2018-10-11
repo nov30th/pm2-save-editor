@@ -20,6 +20,7 @@ namespace pm2_save_editor
         private PrincessMakerFileBuffer workingFile;
         Dictionary<Stat, StatContainer> statDictionary;
         private string workingFileName = "";
+        internal HashSet<Type> statBindedComboBoxList = new HashSet<Type> { typeof(CustomControls.BloodTypeComboBox) };  // less than ideal
 
         public Form1()
         {
@@ -65,14 +66,22 @@ namespace pm2_save_editor
                 var tab = tabPage as TabPage;
                 foreach (Control childControl in tab.Controls)
                 {
-                    bool isBindedTextBox = childControl.GetType() == typeof(CustomControls.StatContainerBindedTextBox);
-                    if (isBindedTextBox)
+                    var childControlType = childControl.GetType();
+                    if (childControlType == typeof(CustomControls.StatContainerBindedTextBox))
                     {
                         var bindedTextBox = childControl as CustomControls.StatContainerBindedTextBox;
                         Stat bindTarget = bindedTextBox.bindTarget;
                         StatContainer foundStat = RequestStat(bindTarget);
                         bindedTextBox.Bind(foundStat);
                         bindedTextBox.Visible = true;
+                    }
+                    else if (statBindedComboBoxList.Contains(childControlType))
+                    {
+                        var bindedComboBox = childControl as CustomControls.StatContainerBindedComboBox;
+                        Stat bindTarget = bindedComboBox.bindTarget;
+                        StatContainer foundStat = RequestStat(bindTarget);
+                        bindedComboBox.Bind(foundStat);
+                        bindedComboBox.Visible = true;
                     }
                 }
             }

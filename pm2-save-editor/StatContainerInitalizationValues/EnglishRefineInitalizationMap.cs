@@ -43,8 +43,8 @@ namespace pm2_save_editor
                 statID = Stat.BloodType,
                 type = StatTypes.Int16,
                 offset = 0xD4,
-                minLength = Limits.BloodTypeMax,
-                maxLength = Limits.BloodTypeMin }
+                Max = Limits.BloodTypeMax,
+                Min = Limits.BloodTypeMin }
             },
 
             { Stat.Stamina, new InitalizationStruct {
