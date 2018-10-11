@@ -29,7 +29,7 @@ namespace pm2_save_editor.CustomControls
         /// </summary>
         /// <param name="parent">The StatContainerBindedTextBox to which this label is tied to</param>
         /// <param name="newContents">The new contents of the label</param>
-        public void RecalcuateLabelContents(StatContainerBindedTextBox parent, string newContents = "Placeholder")
+        public void RecalcuateLabelContents(Control parent, string newContents = "Placeholder")
         {
             Text = newContents;
 
