@@ -37,18 +37,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.statContainerBindedTextBox34 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.statContainerBindedTextBox33 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.statContainerBindedTextBox32 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.statContainerBindedTextBox31 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.statContainerBindedTextBox30 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.statContainerBindedTextBox2 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.statContainerBindedTextBox1 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox18 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox17 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox16 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
@@ -65,6 +53,17 @@
             this.statContainerBindedTextBox7 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox6 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox4 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.bloodTypeComboBox1 = new pm2_save_editor.CustomControls.BloodTypeComboBox();
+            this.statContainerBindedTextBox34 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.statContainerBindedTextBox33 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.statContainerBindedTextBox32 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.statContainerBindedTextBox31 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.statContainerBindedTextBox30 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.statContainerBindedTextBox2 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.statContainerBindedTextBox1 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.statContainerBindedTextBox28 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox27 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox26 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
@@ -75,7 +74,10 @@
             this.statContainerBindedTextBox21 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox20 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox19 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.statContainerBindedTextBox29 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.educationComboBox1 = new pm2_save_editor.CustomControls.EducationComboBox();
             this.statContainerBindedTextBox35 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox36 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox37 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
@@ -86,7 +88,15 @@
             this.statContainerBindedTextBox42 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox43 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox44 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
-            this.bloodTypeComboBox1 = new pm2_save_editor.CustomControls.BloodTypeComboBox();
+            this.educationComboBox2 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox3 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox4 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox5 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox6 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox7 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox8 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox9 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox10 = new pm2_save_editor.CustomControls.EducationComboBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -180,159 +190,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Core Stats";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.bloodTypeComboBox1);
-            this.tabPage1.Controls.Add(this.statContainerBindedTextBox34);
-            this.tabPage1.Controls.Add(this.statContainerBindedTextBox33);
-            this.tabPage1.Controls.Add(this.statContainerBindedTextBox32);
-            this.tabPage1.Controls.Add(this.statContainerBindedTextBox31);
-            this.tabPage1.Controls.Add(this.statContainerBindedTextBox30);
-            this.tabPage1.Controls.Add(this.statContainerBindedTextBox2);
-            this.tabPage1.Controls.Add(this.statContainerBindedTextBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(704, 395);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Bio";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(12, 27);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(712, 421);
-            this.tabControl1.TabIndex = 2;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.statContainerBindedTextBox28);
-            this.tabPage3.Controls.Add(this.statContainerBindedTextBox27);
-            this.tabPage3.Controls.Add(this.statContainerBindedTextBox26);
-            this.tabPage3.Controls.Add(this.statContainerBindedTextBox25);
-            this.tabPage3.Controls.Add(this.statContainerBindedTextBox24);
-            this.tabPage3.Controls.Add(this.statContainerBindedTextBox23);
-            this.tabPage3.Controls.Add(this.statContainerBindedTextBox22);
-            this.tabPage3.Controls.Add(this.statContainerBindedTextBox21);
-            this.tabPage3.Controls.Add(this.statContainerBindedTextBox20);
-            this.tabPage3.Controls.Add(this.statContainerBindedTextBox19);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(704, 395);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Core Stats 2";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.statContainerBindedTextBox29);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(704, 395);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Gold";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.statContainerBindedTextBox35);
-            this.tabPage5.Controls.Add(this.statContainerBindedTextBox36);
-            this.tabPage5.Controls.Add(this.statContainerBindedTextBox37);
-            this.tabPage5.Controls.Add(this.statContainerBindedTextBox38);
-            this.tabPage5.Controls.Add(this.statContainerBindedTextBox39);
-            this.tabPage5.Controls.Add(this.statContainerBindedTextBox40);
-            this.tabPage5.Controls.Add(this.statContainerBindedTextBox41);
-            this.tabPage5.Controls.Add(this.statContainerBindedTextBox42);
-            this.tabPage5.Controls.Add(this.statContainerBindedTextBox43);
-            this.tabPage5.Controls.Add(this.statContainerBindedTextBox44);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(704, 395);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Education";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // statContainerBindedTextBox34
-            // 
-            this.statContainerBindedTextBox34.autoGenerateLabel = true;
-            this.statContainerBindedTextBox34.bindTarget = pm2_save_editor.Stat.Hips;
-            this.statContainerBindedTextBox34.Location = new System.Drawing.Point(179, 157);
-            this.statContainerBindedTextBox34.Name = "statContainerBindedTextBox34";
-            this.statContainerBindedTextBox34.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox34.TabIndex = 8;
-            this.statContainerBindedTextBox34.Visible = false;
-            // 
-            // statContainerBindedTextBox33
-            // 
-            this.statContainerBindedTextBox33.autoGenerateLabel = true;
-            this.statContainerBindedTextBox33.bindTarget = pm2_save_editor.Stat.Waist;
-            this.statContainerBindedTextBox33.Location = new System.Drawing.Point(429, 129);
-            this.statContainerBindedTextBox33.Name = "statContainerBindedTextBox33";
-            this.statContainerBindedTextBox33.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox33.TabIndex = 7;
-            this.statContainerBindedTextBox33.Visible = false;
-            // 
-            // statContainerBindedTextBox32
-            // 
-            this.statContainerBindedTextBox32.autoGenerateLabel = true;
-            this.statContainerBindedTextBox32.bindTarget = pm2_save_editor.Stat.Bust;
-            this.statContainerBindedTextBox32.Location = new System.Drawing.Point(179, 130);
-            this.statContainerBindedTextBox32.Name = "statContainerBindedTextBox32";
-            this.statContainerBindedTextBox32.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox32.TabIndex = 6;
-            this.statContainerBindedTextBox32.Visible = false;
-            // 
-            // statContainerBindedTextBox31
-            // 
-            this.statContainerBindedTextBox31.autoGenerateLabel = true;
-            this.statContainerBindedTextBox31.bindTarget = pm2_save_editor.Stat.Weight;
-            this.statContainerBindedTextBox31.Location = new System.Drawing.Point(429, 103);
-            this.statContainerBindedTextBox31.Name = "statContainerBindedTextBox31";
-            this.statContainerBindedTextBox31.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox31.TabIndex = 5;
-            this.statContainerBindedTextBox31.Visible = false;
-            // 
-            // statContainerBindedTextBox30
-            // 
-            this.statContainerBindedTextBox30.autoGenerateLabel = true;
-            this.statContainerBindedTextBox30.bindTarget = pm2_save_editor.Stat.Height;
-            this.statContainerBindedTextBox30.Location = new System.Drawing.Point(179, 103);
-            this.statContainerBindedTextBox30.Name = "statContainerBindedTextBox30";
-            this.statContainerBindedTextBox30.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox30.TabIndex = 4;
-            this.statContainerBindedTextBox30.Visible = false;
-            // 
-            // statContainerBindedTextBox2
-            // 
-            this.statContainerBindedTextBox2.autoGenerateLabel = true;
-            this.statContainerBindedTextBox2.bindTarget = pm2_save_editor.Stat.FathersName;
-            this.statContainerBindedTextBox2.Location = new System.Drawing.Point(429, 77);
-            this.statContainerBindedTextBox2.Name = "statContainerBindedTextBox2";
-            this.statContainerBindedTextBox2.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox2.TabIndex = 1;
-            this.statContainerBindedTextBox2.Visible = false;
-            // 
-            // statContainerBindedTextBox1
-            // 
-            this.statContainerBindedTextBox1.autoGenerateLabel = true;
-            this.statContainerBindedTextBox1.bindTarget = pm2_save_editor.Stat.DaughtersName;
-            this.statContainerBindedTextBox1.Location = new System.Drawing.Point(179, 77);
-            this.statContainerBindedTextBox1.Name = "statContainerBindedTextBox1";
-            this.statContainerBindedTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.statContainerBindedTextBox1.TabIndex = 0;
-            this.statContainerBindedTextBox1.Visible = false;
             // 
             // statContainerBindedTextBox18
             // 
@@ -494,6 +351,153 @@
             this.statContainerBindedTextBox4.TabIndex = 4;
             this.statContainerBindedTextBox4.Visible = false;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.bloodTypeComboBox1);
+            this.tabPage1.Controls.Add(this.statContainerBindedTextBox34);
+            this.tabPage1.Controls.Add(this.statContainerBindedTextBox33);
+            this.tabPage1.Controls.Add(this.statContainerBindedTextBox32);
+            this.tabPage1.Controls.Add(this.statContainerBindedTextBox31);
+            this.tabPage1.Controls.Add(this.statContainerBindedTextBox30);
+            this.tabPage1.Controls.Add(this.statContainerBindedTextBox2);
+            this.tabPage1.Controls.Add(this.statContainerBindedTextBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(704, 395);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Bio";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // bloodTypeComboBox1
+            // 
+            this.bloodTypeComboBox1.autoGenerateLabel = true;
+            this.bloodTypeComboBox1.bindTarget = pm2_save_editor.Stat.BloodType;
+            this.bloodTypeComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bloodTypeComboBox1.FormattingEnabled = true;
+            this.bloodTypeComboBox1.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "O",
+            "AB",
+            "A",
+            "B",
+            "O",
+            "AB",
+            "A",
+            "B",
+            "O",
+            "AB"});
+            this.bloodTypeComboBox1.Location = new System.Drawing.Point(429, 155);
+            this.bloodTypeComboBox1.Name = "bloodTypeComboBox1";
+            this.bloodTypeComboBox1.Size = new System.Drawing.Size(100, 21);
+            this.bloodTypeComboBox1.TabIndex = 9;
+            this.bloodTypeComboBox1.Visible = false;
+            // 
+            // statContainerBindedTextBox34
+            // 
+            this.statContainerBindedTextBox34.autoGenerateLabel = true;
+            this.statContainerBindedTextBox34.bindTarget = pm2_save_editor.Stat.Hips;
+            this.statContainerBindedTextBox34.Location = new System.Drawing.Point(179, 157);
+            this.statContainerBindedTextBox34.Name = "statContainerBindedTextBox34";
+            this.statContainerBindedTextBox34.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox34.TabIndex = 8;
+            this.statContainerBindedTextBox34.Visible = false;
+            // 
+            // statContainerBindedTextBox33
+            // 
+            this.statContainerBindedTextBox33.autoGenerateLabel = true;
+            this.statContainerBindedTextBox33.bindTarget = pm2_save_editor.Stat.Waist;
+            this.statContainerBindedTextBox33.Location = new System.Drawing.Point(429, 129);
+            this.statContainerBindedTextBox33.Name = "statContainerBindedTextBox33";
+            this.statContainerBindedTextBox33.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox33.TabIndex = 7;
+            this.statContainerBindedTextBox33.Visible = false;
+            // 
+            // statContainerBindedTextBox32
+            // 
+            this.statContainerBindedTextBox32.autoGenerateLabel = true;
+            this.statContainerBindedTextBox32.bindTarget = pm2_save_editor.Stat.Bust;
+            this.statContainerBindedTextBox32.Location = new System.Drawing.Point(179, 130);
+            this.statContainerBindedTextBox32.Name = "statContainerBindedTextBox32";
+            this.statContainerBindedTextBox32.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox32.TabIndex = 6;
+            this.statContainerBindedTextBox32.Visible = false;
+            // 
+            // statContainerBindedTextBox31
+            // 
+            this.statContainerBindedTextBox31.autoGenerateLabel = true;
+            this.statContainerBindedTextBox31.bindTarget = pm2_save_editor.Stat.Weight;
+            this.statContainerBindedTextBox31.Location = new System.Drawing.Point(429, 103);
+            this.statContainerBindedTextBox31.Name = "statContainerBindedTextBox31";
+            this.statContainerBindedTextBox31.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox31.TabIndex = 5;
+            this.statContainerBindedTextBox31.Visible = false;
+            // 
+            // statContainerBindedTextBox30
+            // 
+            this.statContainerBindedTextBox30.autoGenerateLabel = true;
+            this.statContainerBindedTextBox30.bindTarget = pm2_save_editor.Stat.Height;
+            this.statContainerBindedTextBox30.Location = new System.Drawing.Point(179, 103);
+            this.statContainerBindedTextBox30.Name = "statContainerBindedTextBox30";
+            this.statContainerBindedTextBox30.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox30.TabIndex = 4;
+            this.statContainerBindedTextBox30.Visible = false;
+            // 
+            // statContainerBindedTextBox2
+            // 
+            this.statContainerBindedTextBox2.autoGenerateLabel = true;
+            this.statContainerBindedTextBox2.bindTarget = pm2_save_editor.Stat.FathersName;
+            this.statContainerBindedTextBox2.Location = new System.Drawing.Point(429, 77);
+            this.statContainerBindedTextBox2.Name = "statContainerBindedTextBox2";
+            this.statContainerBindedTextBox2.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox2.TabIndex = 1;
+            this.statContainerBindedTextBox2.Visible = false;
+            // 
+            // statContainerBindedTextBox1
+            // 
+            this.statContainerBindedTextBox1.autoGenerateLabel = true;
+            this.statContainerBindedTextBox1.bindTarget = pm2_save_editor.Stat.DaughtersName;
+            this.statContainerBindedTextBox1.Location = new System.Drawing.Point(179, 77);
+            this.statContainerBindedTextBox1.Name = "statContainerBindedTextBox1";
+            this.statContainerBindedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.statContainerBindedTextBox1.TabIndex = 0;
+            this.statContainerBindedTextBox1.Visible = false;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Location = new System.Drawing.Point(12, 27);
+            this.tabControl1.Multiline = true;
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(712, 421);
+            this.tabControl1.TabIndex = 2;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.statContainerBindedTextBox28);
+            this.tabPage3.Controls.Add(this.statContainerBindedTextBox27);
+            this.tabPage3.Controls.Add(this.statContainerBindedTextBox26);
+            this.tabPage3.Controls.Add(this.statContainerBindedTextBox25);
+            this.tabPage3.Controls.Add(this.statContainerBindedTextBox24);
+            this.tabPage3.Controls.Add(this.statContainerBindedTextBox23);
+            this.tabPage3.Controls.Add(this.statContainerBindedTextBox22);
+            this.tabPage3.Controls.Add(this.statContainerBindedTextBox21);
+            this.tabPage3.Controls.Add(this.statContainerBindedTextBox20);
+            this.tabPage3.Controls.Add(this.statContainerBindedTextBox19);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(704, 395);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Core Stats 2";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // statContainerBindedTextBox28
             // 
             this.statContainerBindedTextBox28.autoGenerateLabel = true;
@@ -594,6 +598,17 @@
             this.statContainerBindedTextBox19.TabIndex = 0;
             this.statContainerBindedTextBox19.Visible = false;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.statContainerBindedTextBox29);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(704, 395);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Gold";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // statContainerBindedTextBox29
             // 
             this.statContainerBindedTextBox29.autoGenerateLabel = true;
@@ -603,6 +618,47 @@
             this.statContainerBindedTextBox29.Size = new System.Drawing.Size(100, 20);
             this.statContainerBindedTextBox29.TabIndex = 1;
             this.statContainerBindedTextBox29.Visible = false;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.educationComboBox6);
+            this.tabPage5.Controls.Add(this.educationComboBox7);
+            this.tabPage5.Controls.Add(this.educationComboBox8);
+            this.tabPage5.Controls.Add(this.educationComboBox9);
+            this.tabPage5.Controls.Add(this.educationComboBox10);
+            this.tabPage5.Controls.Add(this.educationComboBox5);
+            this.tabPage5.Controls.Add(this.educationComboBox4);
+            this.tabPage5.Controls.Add(this.educationComboBox3);
+            this.tabPage5.Controls.Add(this.educationComboBox2);
+            this.tabPage5.Controls.Add(this.educationComboBox1);
+            this.tabPage5.Controls.Add(this.statContainerBindedTextBox35);
+            this.tabPage5.Controls.Add(this.statContainerBindedTextBox36);
+            this.tabPage5.Controls.Add(this.statContainerBindedTextBox37);
+            this.tabPage5.Controls.Add(this.statContainerBindedTextBox38);
+            this.tabPage5.Controls.Add(this.statContainerBindedTextBox39);
+            this.tabPage5.Controls.Add(this.statContainerBindedTextBox40);
+            this.tabPage5.Controls.Add(this.statContainerBindedTextBox41);
+            this.tabPage5.Controls.Add(this.statContainerBindedTextBox42);
+            this.tabPage5.Controls.Add(this.statContainerBindedTextBox43);
+            this.tabPage5.Controls.Add(this.statContainerBindedTextBox44);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(704, 395);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Education";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // educationComboBox1
+            // 
+            this.educationComboBox1.autoGenerateLabel = false;
+            this.educationComboBox1.bindTarget = pm2_save_editor.Stat.Science;
+            this.educationComboBox1.FormattingEnabled = true;
+            this.educationComboBox1.Location = new System.Drawing.Point(285, 76);
+            this.educationComboBox1.Name = "educationComboBox1";
+            this.educationComboBox1.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox1.TabIndex = 47;
+            this.educationComboBox1.Visible = false;
             // 
             // statContainerBindedTextBox35
             // 
@@ -704,17 +760,104 @@
             this.statContainerBindedTextBox44.TabIndex = 37;
             this.statContainerBindedTextBox44.Visible = false;
             // 
-            // bloodTypeComboBox1
+            // educationComboBox2
             // 
-            this.bloodTypeComboBox1.autoGenerateLabel = true;
-            this.bloodTypeComboBox1.bindTarget = pm2_save_editor.Stat.BloodType;
-            this.bloodTypeComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bloodTypeComboBox1.FormattingEnabled = true;
-            this.bloodTypeComboBox1.Location = new System.Drawing.Point(429, 155);
-            this.bloodTypeComboBox1.Name = "bloodTypeComboBox1";
-            this.bloodTypeComboBox1.Size = new System.Drawing.Size(100, 21);
-            this.bloodTypeComboBox1.TabIndex = 9;
-            this.bloodTypeComboBox1.Visible = false;
+            this.educationComboBox2.autoGenerateLabel = false;
+            this.educationComboBox2.bindTarget = pm2_save_editor.Stat.Poetry;
+            this.educationComboBox2.FormattingEnabled = true;
+            this.educationComboBox2.Location = new System.Drawing.Point(285, 103);
+            this.educationComboBox2.Name = "educationComboBox2";
+            this.educationComboBox2.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox2.TabIndex = 48;
+            this.educationComboBox2.Visible = false;
+            // 
+            // educationComboBox3
+            // 
+            this.educationComboBox3.autoGenerateLabel = false;
+            this.educationComboBox3.bindTarget = pm2_save_editor.Stat.Theology;
+            this.educationComboBox3.FormattingEnabled = true;
+            this.educationComboBox3.Location = new System.Drawing.Point(285, 130);
+            this.educationComboBox3.Name = "educationComboBox3";
+            this.educationComboBox3.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox3.TabIndex = 49;
+            this.educationComboBox3.Visible = false;
+            // 
+            // educationComboBox4
+            // 
+            this.educationComboBox4.autoGenerateLabel = false;
+            this.educationComboBox4.bindTarget = pm2_save_editor.Stat.Strategy;
+            this.educationComboBox4.FormattingEnabled = true;
+            this.educationComboBox4.Location = new System.Drawing.Point(285, 157);
+            this.educationComboBox4.Name = "educationComboBox4";
+            this.educationComboBox4.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox4.TabIndex = 50;
+            this.educationComboBox4.Visible = false;
+            // 
+            // educationComboBox5
+            // 
+            this.educationComboBox5.autoGenerateLabel = false;
+            this.educationComboBox5.bindTarget = pm2_save_editor.Stat.Fencing;
+            this.educationComboBox5.FormattingEnabled = true;
+            this.educationComboBox5.Location = new System.Drawing.Point(285, 183);
+            this.educationComboBox5.Name = "educationComboBox5";
+            this.educationComboBox5.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox5.TabIndex = 51;
+            this.educationComboBox5.Visible = false;
+            // 
+            // educationComboBox6
+            // 
+            this.educationComboBox6.autoGenerateLabel = false;
+            this.educationComboBox6.bindTarget = pm2_save_editor.Stat.Dance;
+            this.educationComboBox6.FormattingEnabled = true;
+            this.educationComboBox6.Location = new System.Drawing.Point(535, 183);
+            this.educationComboBox6.Name = "educationComboBox6";
+            this.educationComboBox6.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox6.TabIndex = 56;
+            this.educationComboBox6.Visible = false;
+            // 
+            // educationComboBox7
+            // 
+            this.educationComboBox7.autoGenerateLabel = false;
+            this.educationComboBox7.bindTarget = pm2_save_editor.Stat.Painting;
+            this.educationComboBox7.FormattingEnabled = true;
+            this.educationComboBox7.Location = new System.Drawing.Point(535, 157);
+            this.educationComboBox7.Name = "educationComboBox7";
+            this.educationComboBox7.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox7.TabIndex = 55;
+            this.educationComboBox7.Visible = false;
+            // 
+            // educationComboBox8
+            // 
+            this.educationComboBox8.autoGenerateLabel = false;
+            this.educationComboBox8.bindTarget = pm2_save_editor.Stat.Manners;
+            this.educationComboBox8.FormattingEnabled = true;
+            this.educationComboBox8.Location = new System.Drawing.Point(535, 130);
+            this.educationComboBox8.Name = "educationComboBox8";
+            this.educationComboBox8.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox8.TabIndex = 54;
+            this.educationComboBox8.Visible = false;
+            // 
+            // educationComboBox9
+            // 
+            this.educationComboBox9.autoGenerateLabel = false;
+            this.educationComboBox9.bindTarget = pm2_save_editor.Stat.Magic;
+            this.educationComboBox9.FormattingEnabled = true;
+            this.educationComboBox9.Location = new System.Drawing.Point(535, 103);
+            this.educationComboBox9.Name = "educationComboBox9";
+            this.educationComboBox9.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox9.TabIndex = 53;
+            this.educationComboBox9.Visible = false;
+            // 
+            // educationComboBox10
+            // 
+            this.educationComboBox10.autoGenerateLabel = false;
+            this.educationComboBox10.bindTarget = pm2_save_editor.Stat.KungFu;
+            this.educationComboBox10.FormattingEnabled = true;
+            this.educationComboBox10.Location = new System.Drawing.Point(535, 76);
+            this.educationComboBox10.Name = "educationComboBox10";
+            this.educationComboBox10.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox10.TabIndex = 52;
+            this.educationComboBox10.Visible = false;
             // 
             // Form1
             // 
@@ -805,6 +948,16 @@
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox43;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox44;
         private CustomControls.BloodTypeComboBox bloodTypeComboBox1;
+        private CustomControls.EducationComboBox educationComboBox1;
+        private CustomControls.EducationComboBox educationComboBox6;
+        private CustomControls.EducationComboBox educationComboBox7;
+        private CustomControls.EducationComboBox educationComboBox8;
+        private CustomControls.EducationComboBox educationComboBox9;
+        private CustomControls.EducationComboBox educationComboBox10;
+        private CustomControls.EducationComboBox educationComboBox5;
+        private CustomControls.EducationComboBox educationComboBox4;
+        private CustomControls.EducationComboBox educationComboBox3;
+        private CustomControls.EducationComboBox educationComboBox2;
     }
 }
 

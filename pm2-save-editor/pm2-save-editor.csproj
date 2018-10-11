@@ -66,6 +66,9 @@
     <Compile Include="CustomControls\BloodTypeComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomControls\EducationComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CustomControls\SmartLabel.cs">
       <SubType>Component</SubType>
     </Compile>

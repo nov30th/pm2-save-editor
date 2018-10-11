@@ -10,7 +10,7 @@ namespace pm2_save_editor
     /// <summary>
     /// Container for an integer variable
     /// </summary>
-    abstract class IntStatContainer : StatContainer
+    abstract class IntStatContainer : StatContainerBase, IStatContainer
     {
         /// <summary>
         /// Internal ID used to identify the contents of this container
@@ -88,6 +88,7 @@ namespace pm2_save_editor
             }
 
             currentValue = newValue;
+            RaiseStatChangedEvent();
             return StatContainerReturnCodes.OK;
         }
 

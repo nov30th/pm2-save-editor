@@ -20,7 +20,7 @@ namespace pm2_save_editor
             this.statsToSum = defaultValues.statsToSum;
         }
 
-        public void SumStats(Dictionary<Stat, StatContainer> statDictionary)
+        public void SumStats(Dictionary<Stat, IStatContainer> statDictionary)
         {
             long newValue = 0;
 
@@ -32,6 +32,9 @@ namespace pm2_save_editor
 
             this.SetValue(newValue);
             this.PushChanges(); // Having the sum be calculated only once at the end could cause serious problems if the summed parts go over the limit - so the limit of the sum container should be decided in such a way that the combination of the summed parts should never be able to exceed the limit of the sum container.
+
+            RaiseStatChangedEvent();
+
         }
 
     }

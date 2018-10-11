@@ -13,8 +13,8 @@ namespace pm2_save_editor.CustomControls
         // Blood Type is represented by these numbers in file, so they map perfectly to the index of the ComboBox. This is just here for reference.
         enum BloodType { A, B, O, AB }
 
-        public BloodTypeComboBox()
-        { 
+        public override void Initalize()
+        {
             AddItems();
             this.DropDownStyle = ComboBoxStyle.DropDownList;
             this.SelectionChangeCommitted += SelectionUpdated;
@@ -26,6 +26,8 @@ namespace pm2_save_editor.CustomControls
             Items.Add("B");
             Items.Add("O");
             Items.Add("AB");
+
+            InitalizeSelectedIndex();
         }
 
         public override void InitalizeSelectedIndex()
