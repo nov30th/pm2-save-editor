@@ -86,6 +86,7 @@
             this.statContainerBindedTextBox42 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox43 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox44 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.bloodTypeComboBox1 = new pm2_save_editor.CustomControls.BloodTypeComboBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -182,6 +183,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.bloodTypeComboBox1);
             this.tabPage1.Controls.Add(this.statContainerBindedTextBox34);
             this.tabPage1.Controls.Add(this.statContainerBindedTextBox33);
             this.tabPage1.Controls.Add(this.statContainerBindedTextBox32);
@@ -702,6 +704,18 @@
             this.statContainerBindedTextBox44.TabIndex = 37;
             this.statContainerBindedTextBox44.Visible = false;
             // 
+            // bloodTypeComboBox1
+            // 
+            this.bloodTypeComboBox1.autoGenerateLabel = true;
+            this.bloodTypeComboBox1.bindTarget = pm2_save_editor.Stat.BloodType;
+            this.bloodTypeComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bloodTypeComboBox1.FormattingEnabled = true;
+            this.bloodTypeComboBox1.Location = new System.Drawing.Point(429, 155);
+            this.bloodTypeComboBox1.Name = "bloodTypeComboBox1";
+            this.bloodTypeComboBox1.Size = new System.Drawing.Size(100, 21);
+            this.bloodTypeComboBox1.TabIndex = 9;
+            this.bloodTypeComboBox1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -790,6 +804,7 @@
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox42;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox43;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox44;
+        private CustomControls.BloodTypeComboBox bloodTypeComboBox1;
     }
 }
 
