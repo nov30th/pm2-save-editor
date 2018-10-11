@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
+using System.Drawing;
 
 using System.Collections;
 using System.ComponentModel;
@@ -23,6 +24,8 @@ namespace pm2_save_editor.CustomControls
 
         private Stat _bindTarget;
         private StatContainer _boundStat;
+        private bool _autoGenerateLabel = true;
+        private SmartLabel generatedLabel;
 
         [Category("Binding"), Description("The stat to which the TextBox should be bound.")]
         public Stat bindTarget
@@ -37,6 +40,19 @@ namespace pm2_save_editor.CustomControls
             }
         }
 
+        [Category("Binding"), Description("Sets whether or not the TextBox should programatically create its own label.")]
+        public bool autoGenerateLabel
+        {
+            get
+            {
+                return _autoGenerateLabel;
+            }
+            set
+            {
+                _autoGenerateLabel = value;
+            }
+        }
+
         private void InitializeComponent()
         {
             this.SuspendLayout();
@@ -46,6 +62,7 @@ namespace pm2_save_editor.CustomControls
         public StatContainerBindedTextBox()
         {
             InitializeComponent();
+            this.Visible = false;
         }
 
         public void Bind(StatContainer stat)
@@ -53,6 +70,19 @@ namespace pm2_save_editor.CustomControls
             _boundStat = stat;
             Text = stat.GetContents();
             TextChanged += TextUpdated; // adding the handler here avoids having the initial setting of the text trigger a change
+
+            if (_autoGenerateLabel)
+            {
+                GenerateLabel();
+            }
+
+        }
+
+        private void GenerateLabel()
+        {
+            generatedLabel = new SmartLabel();
+            generatedLabel.RecalcuateLabelContents(this, _boundStat.GetStatName());
+            this.Parent.Controls.Add(generatedLabel);
         }
 
         public void TextUpdated(object sender, EventArgs e)

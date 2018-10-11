@@ -20,5 +20,10 @@ namespace pm2_save_editor
         string GetContents();
         StatContainerReturnCodes SetContents(string newContents);
         void PushChanges();
+        string GetStatName();
+        int GetChecksum(); 
     }
+    // It occurs to me that IntStatContainer and StringStatContainer have a lot of overlapping functionality and duplicated code
+    // But I am as of yet unsure if or how to cobine them into one eloquently
+
 }

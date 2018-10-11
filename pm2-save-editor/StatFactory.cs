@@ -18,6 +18,7 @@ namespace pm2_save_editor
             { StatTypes.String, typeof(StringStatContainer) },
             { StatTypes.GNXFloat, typeof(GNXFloatStatContainer) },
             { StatTypes.Int32, typeof(Int32StatContainer) },
+            { StatTypes.Sum, typeof(SumStatContainer) },
         };
 
         /// <summary>

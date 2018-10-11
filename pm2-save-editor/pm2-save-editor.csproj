@@ -63,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Checksum.cs" />
+    <Compile Include="CustomControls\SmartLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CustomControls\StatContainerBindedTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -72,16 +75,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="StatContainerInitalizationValues\EnglishRefineInitalizationMap.cs" />
+    <Compile Include="StatContainerInitalizationValues\JapaneseRefineInitalizationMap.cs" />
     <Compile Include="StatContainers\GNXFloatStatContainer.cs" />
     <Compile Include="StatContainers\Int16StatContainer.cs" />
     <Compile Include="StatContainers\Int32StatContainer.cs" />
     <Compile Include="StatContainers\IntStatContainer.cs" />
     <Compile Include="StatContainers\StatContainer.cs" />
+    <Compile Include="StatContainers\SumStatContainer.cs" />
     <Compile Include="StatContainers\UInt16StatContainer.cs" />
     <Compile Include="PrincessMakerFileBuffer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StatContainers\StatContainerInitalizationValues.cs" />
+    <Compile Include="StatContainerInitalizationValues\StatsSharedData.cs" />
     <Compile Include="StatContainers\StringStatContainer.cs" />
     <Compile Include="StatFactory.cs" />
     <EmbeddedResource Include="CustomControls\StatContainerBindedTextBox.resx">
