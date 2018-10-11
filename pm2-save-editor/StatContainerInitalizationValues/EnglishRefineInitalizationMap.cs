@@ -38,6 +38,15 @@ namespace pm2_save_editor
                 maxLength = Limits.NameMax }
             },
 
+            { Stat.BloodType, new InitalizationStruct {
+                name = "Blood Type",
+                statID = Stat.BloodType,
+                type = StatTypes.Int16,
+                offset = 0xD4,
+                Max = Limits.BloodTypeMax,
+                Min = Limits.BloodTypeMin }
+            },
+
             { Stat.Stamina, new InitalizationStruct {
                 name = "Stamina",
                 statID = Stat.Stamina,

@@ -63,7 +63,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Checksum.cs" />
+    <Compile Include="CustomControls\BloodTypeComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CustomControls\SmartLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\StatContainerBindedComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CustomControls\StatContainerBindedTextBox.cs">

@@ -53,6 +53,7 @@ namespace pm2_save_editor
     public enum Stat {
         Gold,
         DaughtersName, FathersName,
+        BloodType,
         Stamina, Strength, Intelligence, Elegance, Glamour, Morality, Faith, Sin, Sensetivity, Stress,
         FightingRep, MagicRep, SocialRep, HousekeepingRep,
         CombatSkill, Attack, Defence, MagicSkill, MagicAttack, MagicDefence,
@@ -83,6 +84,8 @@ namespace pm2_save_editor
         public const int BodyProportionMin = -50000;
         public const int ClassMax = 300;
         public const int ClassMin = 0;
+        public const int BloodTypeMax = 4;
+        public const int BloodTypeMin = 0;
     }
     
 }
