@@ -16,7 +16,7 @@ namespace pm2_save_editor
     /// - Adding the type to the typeDict in StatFactory
     /// - Ensuring the InitalizationStruct has all necessary info to initalize the stat
     /// </remarks>
-    public enum StatTypes { Int16, UInt16, Int32, String, GNXFloat };
+    public enum StatTypes { Int16, UInt16, Int32, String, GNXFloat, Sum };
 
     /// <summary>
     /// Struct used to hold default initalization values for stat containers. 
@@ -35,6 +35,9 @@ namespace pm2_save_editor
 
         public int minLength;
         public int maxLength;
+
+        public List<Stat> statsToSum;
+
     }
 
     /// <summary>
@@ -54,7 +57,9 @@ namespace pm2_save_editor
         FightingRep, MagicRep, SocialRep, HousekeepingRep,
         CombatSkill, Attack, Defence, MagicSkill, MagicAttack, MagicDefence,
         Decorum, ArtSkill, Speech, Cooking, Cleaning, Personality,
-        Height, Weight, Bust, Waist, Hips
+        Height, Weight, Bust, Waist, Hips,
+        TotalClasses, Science, Poetry, Theology, Strategy, Fencing, KungFu, Magic, Manners, Painting, Dance
+
     };
 
     /// <summary>
@@ -76,6 +81,8 @@ namespace pm2_save_editor
         public const int GoldMin = -2147483647;
         public const int BodyProportionMax = 50000;
         public const int BodyProportionMin = -50000;
+        public const int ClassMax = 300;
+        public const int ClassMin = 0;
     }
     
 }

@@ -169,6 +169,8 @@ namespace pm2_save_editor
                 return false;
             }
 
+            RunSumContainers();
+
             int newChecksum = oldChecksum + CalculatePartialChecksum();
 
             // Again, the actual workings and responsilities of the checksum are not entirely clear due to its unique function
@@ -185,6 +187,22 @@ namespace pm2_save_editor
             fs.Close();
 
             return true;
+        }
+        
+        /// <summary>
+        /// Iterate through stat containers and find any sum containers that need to fired off while preparing to save a file
+        /// </summary>
+        private void RunSumContainers()
+        {
+            // Ideally in the future this will be written more effeciently with dictionaries
+            foreach (StatContainer container in statDictionary.Values)
+            {
+                if (container.GetStatType() == StatTypes.Sum)
+                {
+                    SumStatContainer sumContainer = container as SumStatContainer;
+                    sumContainer.SumStats(statDictionary);
+                }
+            }
         }
 
         /// <summary>

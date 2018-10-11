@@ -313,6 +313,108 @@ namespace pm2_save_editor
                 Min = Limits.BodyProportionMin }
             },
 
+           { Stat.TotalClasses, new InitalizationStruct {
+                name = "Total Classes",
+                statID = Stat.TotalClasses,
+                type = StatTypes.Sum,
+                offset = 0x166E,
+                Max = Limits.ClassMax*10, // There are 10 stats that will be summed by this stats SumStatContainer
+                Min = 0,
+                statsToSum = new List<Stat> { Stat.Science, Stat.Poetry, Stat.Theology, Stat.Strategy, Stat.Fencing, Stat.KungFu, Stat.Magic, Stat.Manners, Stat.Painting, Stat.Dance }, }
+            },
+
+            { Stat.Science, new InitalizationStruct {
+                name = "Science",
+                statID = Stat.Science,
+                type = StatTypes.Int16,
+                offset = 0x1670,
+                Max = Limits.ClassMax,
+                Min = Limits.ClassMin, }
+            },
+
+            { Stat.Poetry, new InitalizationStruct {
+                name = "Poetry",
+                statID = Stat.Poetry,
+                type = StatTypes.Int16,
+                offset = 0x1672,
+                Max = Limits.ClassMax,
+                Min = Limits.ClassMin, }
+            },
+
+            { Stat.Theology, new InitalizationStruct {
+                name = "Theology",
+                statID = Stat.Theology,
+                type = StatTypes.Int16,
+                offset = 0x1674,
+                Max = Limits.ClassMax,
+                Min = Limits.ClassMin, }
+            },
+
+            { Stat.Strategy, new InitalizationStruct {
+                name = "Strategy",
+                statID = Stat.Strategy,
+                type = StatTypes.Int16,
+                offset = 0x1676,
+                Max = Limits.ClassMax,
+                Min = Limits.ClassMin, }
+            },
+
+            { Stat.Fencing, new InitalizationStruct {
+                name = "Fencing",
+                statID = Stat.Fencing,
+                type = StatTypes.Int16,
+                offset = 0x1678,
+                Max = Limits.ClassMax,
+                Min = Limits.ClassMin, }
+            },
+
+            { Stat.KungFu, new InitalizationStruct {
+                name = "Kung Fu",
+                statID = Stat.KungFu,
+                type = StatTypes.Int16,
+                offset = 0x167A,
+                Max = Limits.ClassMax,
+                Min = Limits.ClassMin, }
+            },
+
+            { Stat.Magic, new InitalizationStruct {
+                name = "Magic",
+                statID = Stat.Magic,
+                type = StatTypes.Int16,
+                offset = 0x167C,
+                Max = Limits.ClassMax,
+                Min = Limits.ClassMin, }
+            },
+
+            { Stat.Manners, new InitalizationStruct {
+                name = "Manners",
+                statID = Stat.Manners,
+                type = StatTypes.Int16,
+                offset = 0x167E,
+                Max = Limits.ClassMax,
+                Min = Limits.ClassMin, }
+            },
+
+            { Stat.Painting, new InitalizationStruct {
+                name = "Painting",
+                statID = Stat.Painting,
+                type = StatTypes.Int16,
+                offset = 0x1680,
+                Max = Limits.ClassMax,
+                Min = Limits.ClassMin, }
+            },
+
+            { Stat.Dance, new InitalizationStruct {
+                name = "Dance",
+                statID = Stat.Dance,
+                type = StatTypes.Int16,
+                offset = 0x1682,
+                Max = Limits.ClassMax,
+                Min = Limits.ClassMin, }
+            },
+
+
+
         };
     }
 }
