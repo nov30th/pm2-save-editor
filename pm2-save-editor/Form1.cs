@@ -20,7 +20,7 @@ namespace pm2_save_editor
         private PrincessMakerFileBuffer workingFile;
         Dictionary<Stat, StatContainer> statDictionary;
         private string workingFileName = "";
-        internal HashSet<Type> statBindedComboBoxList = new HashSet<Type> { typeof(CustomControls.BloodTypeComboBox) };  // less than ideal
+        internal HashSet<Type> statBindedComboBoxList = new HashSet<Type> { typeof(CustomControls.BloodTypeComboBox), typeof(CustomControls.EducationComboBox) };  // less than ideal
 
         public Form1()
         {
