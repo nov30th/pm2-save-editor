@@ -20,7 +20,7 @@ namespace pm2_save_editor
 
         byte[] pm2SaveFileBytes;
         Version workingVersion = Version.EnglishRefine; // default is EnglishRefine
-        Dictionary<Stat, StatContainer> statDictionary;
+        Dictionary<Stat, IStatContainer> statDictionary;
         int oldChecksum; 
         /// <summary>
         /// Read a Princess Maker 2 save file into memory
@@ -195,7 +195,7 @@ namespace pm2_save_editor
         private void RunSumContainers()
         {
             // Ideally in the future this will be written more effeciently with dictionaries
-            foreach (StatContainer container in statDictionary.Values)
+            foreach (IStatContainer container in statDictionary.Values)
             {
                 if (container.GetStatType() == StatTypes.Sum)
                 {
@@ -233,9 +233,9 @@ namespace pm2_save_editor
         /// Build a dictionary of StatContainers based on the contents of this buffer
         /// </summary>
         /// <returns>Dictionary of publically accessible stats</returns>
-        private Dictionary<Stat, StatContainer> BuildStatDictionary()
+        private Dictionary<Stat, IStatContainer> BuildStatDictionary()
         {
-            Dictionary<Stat, StatContainer> statDictionary = new Dictionary<Stat, StatContainer>();
+            Dictionary<Stat, IStatContainer> statDictionary = new Dictionary<Stat, IStatContainer>();
 
             var dictEnumerator = StatInitalizationValues.englishRefineStatInitalizationMap.GetEnumerator(); // should be removed at the earliest opportunity and replaced by below funtionality - only exists to force compilaiton
 
@@ -253,14 +253,14 @@ namespace pm2_save_editor
             {
                 var currentStat = dictEnumerator.Current.Key;
                 var currentValues = dictEnumerator.Current.Value;
-                var builtStat = StatFactory.BuildStat<StatContainer>(currentStat, currentValues, this);
+                var builtStat = StatFactory.BuildStat<IStatContainer>(currentStat, currentValues, this);
                 statDictionary[currentStat] = builtStat;
             }
 
             return statDictionary;
         }
 
-        public Dictionary<Stat, StatContainer> GetStatDictionary()
+        public Dictionary<Stat, IStatContainer> GetStatDictionary()
         {
             return statDictionary;
         }
@@ -276,7 +276,7 @@ namespace pm2_save_editor
         {
             int partialChecksum = 0;
 
-            foreach (StatContainer container in statDictionary.Values)
+            foreach (IStatContainer container in statDictionary.Values)
             {
                 partialChecksum += container.GetChecksum();
             }

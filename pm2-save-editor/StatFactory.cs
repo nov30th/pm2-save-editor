@@ -28,7 +28,7 @@ namespace pm2_save_editor
         /// <param name="defaultValue">A struct containing the default values and metadata for the stat</param>
         /// <param name="fileBuffer">A handle to the file buffer which the container should interfact with</param>
         /// <returns>An initalized stat container</returns>
-        public static T BuildStat<T>(Stat statID, InitalizationStruct defaultValue, PrincessMakerFileBuffer fileBuffer) where T: StatContainer
+        public static T BuildStat<T>(Stat statID, InitalizationStruct defaultValue, PrincessMakerFileBuffer fileBuffer) where T: IStatContainer
         {
             var statType = defaultValue.type;
 

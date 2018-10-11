@@ -11,7 +11,7 @@ namespace pm2_save_editor
     /// <summary>
     /// Container for a string variable
     /// </summary>
-    class StringStatContainer : StatContainer
+    class StringStatContainer : StatContainerBase, IStatContainer
     {
         /// <summary>
         /// Internal ID used to identify the contents of this container
@@ -106,6 +106,8 @@ namespace pm2_save_editor
             Array.Clear(stringAsBytes, 0, sizeInMemory);
             byte[] newStringBytes = ASCIIEncoding.ASCII.GetBytes(newString);
             Array.Copy(newStringBytes, stringAsBytes, newStringBytes.Length);
+
+            RaiseStatChangedEvent();
 
             return StatContainerReturnCodes.OK;
 

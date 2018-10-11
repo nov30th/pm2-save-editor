@@ -18,7 +18,7 @@ namespace pm2_save_editor
         private bool fileHasBeenOpened = false;
         private bool unsavedChangesPresent = false; // not yet impelemeted
         private PrincessMakerFileBuffer workingFile;
-        Dictionary<Stat, StatContainer> statDictionary;
+        Dictionary<Stat, IStatContainer> statDictionary;
         private string workingFileName = "";
         internal HashSet<Type> statBindedComboBoxList = new HashSet<Type> { typeof(CustomControls.BloodTypeComboBox), typeof(CustomControls.EducationComboBox) };  // less than ideal
 
@@ -41,10 +41,10 @@ namespace pm2_save_editor
 
         }
 
-        public StatContainer RequestStat(Stat requestedStat)
+        public IStatContainer RequestStat(Stat requestedStat)
         {
             bool success;
-            StatContainer foundStat;
+            IStatContainer foundStat;
 
             success = statDictionary.TryGetValue(requestedStat, out foundStat);
 
@@ -71,7 +71,7 @@ namespace pm2_save_editor
                     {
                         var bindedTextBox = childControl as CustomControls.StatContainerBindedTextBox;
                         Stat bindTarget = bindedTextBox.bindTarget;
-                        StatContainer foundStat = RequestStat(bindTarget);
+                        IStatContainer foundStat = RequestStat(bindTarget);
                         bindedTextBox.Bind(foundStat);
                         bindedTextBox.Visible = true;
                     }
@@ -79,7 +79,7 @@ namespace pm2_save_editor
                     {
                         var bindedComboBox = childControl as CustomControls.StatContainerBindedComboBox;
                         Stat bindTarget = bindedComboBox.bindTarget;
-                        StatContainer foundStat = RequestStat(bindTarget);
+                        IStatContainer foundStat = RequestStat(bindTarget);
                         bindedComboBox.Bind(foundStat);
                         bindedComboBox.Visible = true;
                     }
