@@ -77,6 +77,7 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.statContainerBindedTextBox29 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.educationComboBox1 = new pm2_save_editor.CustomControls.EducationComboBox();
             this.statContainerBindedTextBox35 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox36 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox37 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
@@ -87,6 +88,15 @@
             this.statContainerBindedTextBox42 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox43 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
             this.statContainerBindedTextBox44 = new pm2_save_editor.CustomControls.StatContainerBindedTextBox();
+            this.educationComboBox2 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox3 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox4 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox5 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox6 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox7 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox8 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox9 = new pm2_save_editor.CustomControls.EducationComboBox();
+            this.educationComboBox10 = new pm2_save_editor.CustomControls.EducationComboBox();
             this.menuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -611,6 +621,16 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.educationComboBox6);
+            this.tabPage5.Controls.Add(this.educationComboBox7);
+            this.tabPage5.Controls.Add(this.educationComboBox8);
+            this.tabPage5.Controls.Add(this.educationComboBox9);
+            this.tabPage5.Controls.Add(this.educationComboBox10);
+            this.tabPage5.Controls.Add(this.educationComboBox5);
+            this.tabPage5.Controls.Add(this.educationComboBox4);
+            this.tabPage5.Controls.Add(this.educationComboBox3);
+            this.tabPage5.Controls.Add(this.educationComboBox2);
+            this.tabPage5.Controls.Add(this.educationComboBox1);
             this.tabPage5.Controls.Add(this.statContainerBindedTextBox35);
             this.tabPage5.Controls.Add(this.statContainerBindedTextBox36);
             this.tabPage5.Controls.Add(this.statContainerBindedTextBox37);
@@ -628,6 +648,17 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Education";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // educationComboBox1
+            // 
+            this.educationComboBox1.autoGenerateLabel = false;
+            this.educationComboBox1.bindTarget = pm2_save_editor.Stat.Science;
+            this.educationComboBox1.FormattingEnabled = true;
+            this.educationComboBox1.Location = new System.Drawing.Point(285, 76);
+            this.educationComboBox1.Name = "educationComboBox1";
+            this.educationComboBox1.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox1.TabIndex = 47;
+            this.educationComboBox1.Visible = false;
             // 
             // statContainerBindedTextBox35
             // 
@@ -729,6 +760,105 @@
             this.statContainerBindedTextBox44.TabIndex = 37;
             this.statContainerBindedTextBox44.Visible = false;
             // 
+            // educationComboBox2
+            // 
+            this.educationComboBox2.autoGenerateLabel = false;
+            this.educationComboBox2.bindTarget = pm2_save_editor.Stat.Poetry;
+            this.educationComboBox2.FormattingEnabled = true;
+            this.educationComboBox2.Location = new System.Drawing.Point(285, 103);
+            this.educationComboBox2.Name = "educationComboBox2";
+            this.educationComboBox2.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox2.TabIndex = 48;
+            this.educationComboBox2.Visible = false;
+            // 
+            // educationComboBox3
+            // 
+            this.educationComboBox3.autoGenerateLabel = false;
+            this.educationComboBox3.bindTarget = pm2_save_editor.Stat.Theology;
+            this.educationComboBox3.FormattingEnabled = true;
+            this.educationComboBox3.Location = new System.Drawing.Point(285, 130);
+            this.educationComboBox3.Name = "educationComboBox3";
+            this.educationComboBox3.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox3.TabIndex = 49;
+            this.educationComboBox3.Visible = false;
+            // 
+            // educationComboBox4
+            // 
+            this.educationComboBox4.autoGenerateLabel = false;
+            this.educationComboBox4.bindTarget = pm2_save_editor.Stat.Strategy;
+            this.educationComboBox4.FormattingEnabled = true;
+            this.educationComboBox4.Location = new System.Drawing.Point(285, 157);
+            this.educationComboBox4.Name = "educationComboBox4";
+            this.educationComboBox4.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox4.TabIndex = 50;
+            this.educationComboBox4.Visible = false;
+            // 
+            // educationComboBox5
+            // 
+            this.educationComboBox5.autoGenerateLabel = false;
+            this.educationComboBox5.bindTarget = pm2_save_editor.Stat.Fencing;
+            this.educationComboBox5.FormattingEnabled = true;
+            this.educationComboBox5.Location = new System.Drawing.Point(285, 183);
+            this.educationComboBox5.Name = "educationComboBox5";
+            this.educationComboBox5.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox5.TabIndex = 51;
+            this.educationComboBox5.Visible = false;
+            // 
+            // educationComboBox6
+            // 
+            this.educationComboBox6.autoGenerateLabel = false;
+            this.educationComboBox6.bindTarget = pm2_save_editor.Stat.Dance;
+            this.educationComboBox6.FormattingEnabled = true;
+            this.educationComboBox6.Location = new System.Drawing.Point(535, 183);
+            this.educationComboBox6.Name = "educationComboBox6";
+            this.educationComboBox6.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox6.TabIndex = 56;
+            this.educationComboBox6.Visible = false;
+            // 
+            // educationComboBox7
+            // 
+            this.educationComboBox7.autoGenerateLabel = false;
+            this.educationComboBox7.bindTarget = pm2_save_editor.Stat.Painting;
+            this.educationComboBox7.FormattingEnabled = true;
+            this.educationComboBox7.Location = new System.Drawing.Point(535, 157);
+            this.educationComboBox7.Name = "educationComboBox7";
+            this.educationComboBox7.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox7.TabIndex = 55;
+            this.educationComboBox7.Visible = false;
+            // 
+            // educationComboBox8
+            // 
+            this.educationComboBox8.autoGenerateLabel = false;
+            this.educationComboBox8.bindTarget = pm2_save_editor.Stat.Manners;
+            this.educationComboBox8.FormattingEnabled = true;
+            this.educationComboBox8.Location = new System.Drawing.Point(535, 130);
+            this.educationComboBox8.Name = "educationComboBox8";
+            this.educationComboBox8.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox8.TabIndex = 54;
+            this.educationComboBox8.Visible = false;
+            // 
+            // educationComboBox9
+            // 
+            this.educationComboBox9.autoGenerateLabel = false;
+            this.educationComboBox9.bindTarget = pm2_save_editor.Stat.Magic;
+            this.educationComboBox9.FormattingEnabled = true;
+            this.educationComboBox9.Location = new System.Drawing.Point(535, 103);
+            this.educationComboBox9.Name = "educationComboBox9";
+            this.educationComboBox9.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox9.TabIndex = 53;
+            this.educationComboBox9.Visible = false;
+            // 
+            // educationComboBox10
+            // 
+            this.educationComboBox10.autoGenerateLabel = false;
+            this.educationComboBox10.bindTarget = pm2_save_editor.Stat.KungFu;
+            this.educationComboBox10.FormattingEnabled = true;
+            this.educationComboBox10.Location = new System.Drawing.Point(535, 76);
+            this.educationComboBox10.Name = "educationComboBox10";
+            this.educationComboBox10.Size = new System.Drawing.Size(49, 21);
+            this.educationComboBox10.TabIndex = 52;
+            this.educationComboBox10.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -818,6 +948,16 @@
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox43;
         private CustomControls.StatContainerBindedTextBox statContainerBindedTextBox44;
         private CustomControls.BloodTypeComboBox bloodTypeComboBox1;
+        private CustomControls.EducationComboBox educationComboBox1;
+        private CustomControls.EducationComboBox educationComboBox6;
+        private CustomControls.EducationComboBox educationComboBox7;
+        private CustomControls.EducationComboBox educationComboBox8;
+        private CustomControls.EducationComboBox educationComboBox9;
+        private CustomControls.EducationComboBox educationComboBox10;
+        private CustomControls.EducationComboBox educationComboBox5;
+        private CustomControls.EducationComboBox educationComboBox4;
+        private CustomControls.EducationComboBox educationComboBox3;
+        private CustomControls.EducationComboBox educationComboBox2;
     }
 }
 

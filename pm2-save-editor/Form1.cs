@@ -74,6 +74,7 @@ namespace pm2_save_editor
                         IStatContainer foundStat = RequestStat(bindTarget);
                         bindedTextBox.Bind(foundStat);
                         bindedTextBox.Visible = true;
+                        bindedTextBox.Initalize();
                     }
                     else if (statBindedComboBoxList.Contains(childControlType))
                     {
@@ -82,6 +83,7 @@ namespace pm2_save_editor
                         IStatContainer foundStat = RequestStat(bindTarget);
                         bindedComboBox.Bind(foundStat);
                         bindedComboBox.Visible = true;
+                        bindedComboBox.Initalize();
                     }
                 }
             }

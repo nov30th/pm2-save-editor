@@ -88,6 +88,7 @@ namespace pm2_save_editor
             }
 
             currentValue = newValue;
+            RaiseStatChangedEvent();
             return StatContainerReturnCodes.OK;
         }
 

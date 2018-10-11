@@ -12,11 +12,29 @@ namespace pm2_save_editor.CustomControls
 
         enum Level { C = 0, B = 6, A = 11 , S = 16 }
 
-        public EducationComboBox()
+        bool ignoreOnStatChangedEvent = false;
+
+        public override void Initalize()
         {
+            
             AddItems();
             this.DropDownStyle = ComboBoxStyle.DropDownList;
             this.SelectionChangeCommitted += SelectionUpdated;
+
+            var temp = _boundStat as StatContainerBase;
+            temp.OnStatChanged += HandleOnStatChanged;
+
+            InitalizeSelectedIndex();
+        }
+
+        public void HandleOnStatChanged(object sender, EventArgs e)
+        {
+            if (ignoreOnStatChangedEvent)
+            {
+                return;
+            }
+
+            InitalizeSelectedIndex();
         }
 
         public override void AddItems()
@@ -42,15 +60,15 @@ namespace pm2_save_editor.CustomControls
             }
 
             // A bit ugly, but the only alternative I could remember off the top of my head was converting back and forth between enum multiple times
-            if (currentContentsInt <= (int)Level.B)
+            if (currentContentsInt < (int)Level.B)
             {
                 SelectedIndex = 0;
             }
-            else if (currentContentsInt <= (int)Level.C)
+            else if (currentContentsInt < (int)Level.A)
             {
                 SelectedIndex = 1;
             }
-            else if (currentContentsInt <= (int)Level.A)
+            else if (currentContentsInt < (int)Level.S)
             {
                 SelectedIndex = 2;
             }
@@ -64,6 +82,7 @@ namespace pm2_save_editor.CustomControls
         public override void SelectionUpdated(object sender, EventArgs e)
         {
             int newValue = 0;
+            ignoreOnStatChangedEvent = true;
 
             switch (SelectedIndex)
             {
@@ -81,8 +100,10 @@ namespace pm2_save_editor.CustomControls
                     break;
             }
 
+            ignoreOnStatChangedEvent = true;
             _boundStat.SetContents(newValue.ToString());
             _boundStat.PushChanges();
+            ignoreOnStatChangedEvent = false;
         }
 
     }

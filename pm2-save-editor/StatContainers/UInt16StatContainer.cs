@@ -40,8 +40,6 @@ namespace pm2_save_editor
                 return StatContainerReturnCodes.InvalidType;
             }
 
-            RaiseStatChangedEvent();
-
             return SetValue((long)newValue);
 
         }

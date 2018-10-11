@@ -26,6 +26,8 @@ namespace pm2_save_editor.CustomControls
         private IStatContainer _boundStat;
         private bool _autoGenerateLabel = true;
         private SmartLabel generatedLabel;
+        private bool ignoreOnStatChangedEvent = false;
+        private bool ignoreTextChangedEvent = false;
 
         [Category("Binding"), Description("The stat to which the TextBox should be bound.")]
         public Stat bindTarget
@@ -66,6 +68,25 @@ namespace pm2_save_editor.CustomControls
             }
         }
 
+        public void Initalize()
+        {
+            var temp = _boundStat as StatContainerBase;
+            temp.OnStatChanged += HandleOnStatChanged;
+        }
+
+        public void HandleOnStatChanged(object sender, EventArgs e)
+        {
+            if (ignoreOnStatChangedEvent)
+            {
+                return;
+            }
+
+            ignoreTextChangedEvent = true;
+            this.Text = _boundStat.GetContents();
+            ignoreTextChangedEvent = false;
+
+        }
+
         private void InitializeComponent()
         {
             this.SuspendLayout();
@@ -87,6 +108,14 @@ namespace pm2_save_editor.CustomControls
 
         public void TextUpdated(object sender, EventArgs e)
         {
+
+            if (ignoreTextChangedEvent)
+            {
+                return;
+            }
+
+            ignoreOnStatChangedEvent = true;
+
             StatContainerReturnCodes retcode = _boundStat.SetContents(Text);
 
             if (retcode != StatContainerReturnCodes.OK)
@@ -97,6 +126,8 @@ namespace pm2_save_editor.CustomControls
             {
                 BackColor = System.Drawing.Color.White;
             }
+
+            ignoreOnStatChangedEvent = false;
 
         }
     }

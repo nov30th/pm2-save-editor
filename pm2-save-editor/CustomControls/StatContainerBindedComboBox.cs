@@ -43,9 +43,7 @@ namespace pm2_save_editor.CustomControls
             if (_autoGenerateLabel)
             {
                 GenerateLabel();
-            }
-
-            InitalizeSelectedIndex();
+            }          
 
         }
 
@@ -54,6 +52,8 @@ namespace pm2_save_editor.CustomControls
         public abstract void SelectionUpdated(object sender, EventArgs e);
 
         public abstract void InitalizeSelectedIndex();
+
+        public abstract void Initalize();
 
 
         [Category("Binding"), Description("Sets whether or not the TextBox should programatically create its own label.")]
