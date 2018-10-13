@@ -10,22 +10,10 @@ namespace pm2_save_editor
     /// <summary>
     /// Container for an integer variable
     /// </summary>
-    abstract class IntStatContainer : StatContainerBase, IStatContainer
+    abstract class IntStatContainer : StatContainer
     {
         /// <summary>
-        /// Internal ID used to identify the contents of this container
-        /// </summary>
-        Stat statId;
-        /// <summary>
-        /// A string representation of the stat's name used for generating labels
-        /// </summary>
-        string statName;
-        /// <summary>
-        /// Indicator of the specific type of stat which the container holds
-        /// </summary>
-        protected StatTypes statType;
-        /// <summary>
-        /// An enum indicating the kind of integer which the container holds
+        /// A long containing the current value ofthe container
         /// </summary>
         protected long currentValue;
         /// <summary>
@@ -36,14 +24,6 @@ namespace pm2_save_editor
         /// Minimum value of the stat
         /// </summary>
         long Min;
-        /// <summary>
-        /// Offset of the int in the file
-        /// </summary>
-        protected int offset = 0;
-        /// <summary>
-        /// A handle to the file buffer in which this container represents a stat
-        /// </summary>
-        protected PrincessMakerFileBuffer attachedBuffer;
 
         /// <summary>
         /// Initalize the container
@@ -97,7 +77,7 @@ namespace pm2_save_editor
         /// </summary>
         public abstract void CommitContents();
 
-        public StatTypes GetStatType()
+        public override StatTypes GetStatType()
         {
             return statType;
         }
@@ -106,25 +86,25 @@ namespace pm2_save_editor
         /// Public interface for accessing container contents
         /// </summary>
         /// <returns>Container contents as string</returns>
-        public abstract string GetContents();
+        public abstract override string GetContents();
 
         /// <summary>
         /// Public interface for setting container contents
         /// </summary>
         /// <param name="newContents">New containers contents</param>
         /// <returns>Information on whether or not attempt to set contents was successful</returns>
-        public abstract StatContainerReturnCodes SetContents(string newContents);
+        public abstract override StatContainerReturnCodes SetContents(string newContents);
 
         /// <summary>
         /// Public interface for requesting the StatContainer push its current contents for the attached file buffer
         /// </summary>
-        public abstract void PushChanges();
+        public abstract override void PushChanges();
 
         /// <summary>
         /// Public interface for getting the name of the attached stat
         /// </summary>
         /// <returns>Name of stat which this container represents</returns>
-        public string GetStatName()
+        public override string GetStatName()
         {
             return statName;
         }
@@ -133,7 +113,7 @@ namespace pm2_save_editor
         /// Public interface for calculating PM2 checksum of the container
         /// </summary>
         /// <returns>Calculated checksum</returns>
-        public int GetChecksum()
+        public override int GetChecksum()
         {
             return (int)currentValue;
         }
