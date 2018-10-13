@@ -16,6 +16,10 @@ namespace pm2_save_editor.CustomControls
         /// <summary>
         /// Initalize the control (generate label if necessary, load inital contents, etc) - must be called after bind
         /// </summary>
-        void Initalize(); 
+        void Initalize();
+        /// <summary>
+        /// Get the Stat to which the control expects to be bound
+        /// </summary>
+        Stat GetBindTarget();
     }
 }

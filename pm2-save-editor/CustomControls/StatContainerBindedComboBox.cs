@@ -47,6 +47,11 @@ namespace pm2_save_editor.CustomControls
 
         }
 
+        public Stat GetBindTarget()
+        {
+            return bindTarget;
+        }
+
         public abstract void AddItems();
 
         public abstract void SelectionUpdated(object sender, EventArgs e);

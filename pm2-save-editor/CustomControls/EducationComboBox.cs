@@ -25,6 +25,8 @@ namespace pm2_save_editor.CustomControls
             temp.OnStatChanged += HandleOnStatChanged;
 
             InitalizeSelectedIndex();
+
+            this.Visible = true;
         }
 
         public void HandleOnStatChanged(object sender, EventArgs e)

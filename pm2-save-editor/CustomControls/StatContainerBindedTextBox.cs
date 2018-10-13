@@ -53,6 +53,11 @@ namespace pm2_save_editor.CustomControls
 
         }
 
+        public Stat GetBindTarget()
+        {
+            return bindTarget;
+        }
+
         [Category("Binding"), Description("Sets whether or not the TextBox should programatically create its own label.")]
         public bool autoGenerateLabel
         {
@@ -70,6 +75,7 @@ namespace pm2_save_editor.CustomControls
         {
             var temp = _boundStat as StatContainerBase;
             temp.OnStatChanged += HandleOnStatChanged;
+            this.Visible = true;
         }
 
         public void HandleOnStatChanged(object sender, EventArgs e)

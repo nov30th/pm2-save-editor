@@ -20,7 +20,6 @@ namespace pm2_save_editor
         private PrincessMakerFileBuffer workingFile;
         Dictionary<Stat, IStatContainer> statDictionary;
         private string workingFileName = "";
-        internal HashSet<Type> statBindedComboBoxList = new HashSet<Type> { typeof(CustomControls.BloodTypeComboBox), typeof(CustomControls.EducationComboBox) };  // less than ideal
 
         public Form1()
         {
@@ -66,24 +65,13 @@ namespace pm2_save_editor
                 var tab = tabPage as TabPage;
                 foreach (Control childControl in tab.Controls)
                 {
-                    var childControlType = childControl.GetType();
-                    if (childControlType == typeof(CustomControls.StatContainerBindedTextBox))
+                    if (childControl is CustomControls.IStatContainerBindedControl)
                     {
-                        var bindedTextBox = childControl as CustomControls.StatContainerBindedTextBox;
-                        Stat bindTarget = bindedTextBox.bindTarget;
+                        var statContainerBindedControl = childControl as CustomControls.IStatContainerBindedControl;
+                        Stat bindTarget = statContainerBindedControl.GetBindTarget();
                         IStatContainer foundStat = RequestStat(bindTarget);
-                        bindedTextBox.Bind(foundStat);
-                        bindedTextBox.Visible = true;
-                        bindedTextBox.Initalize();
-                    }
-                    else if (statBindedComboBoxList.Contains(childControlType))
-                    {
-                        var bindedComboBox = childControl as CustomControls.StatContainerBindedComboBox;
-                        Stat bindTarget = bindedComboBox.bindTarget;
-                        IStatContainer foundStat = RequestStat(bindTarget);
-                        bindedComboBox.Bind(foundStat);
-                        bindedComboBox.Visible = true;
-                        bindedComboBox.Initalize();
+                        statContainerBindedControl.Bind(foundStat);
+                        statContainerBindedControl.Initalize();
                     }
                 }
             }
