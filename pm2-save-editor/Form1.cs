@@ -11,10 +11,7 @@ using System.Windows.Forms;
 namespace pm2_save_editor
 {
     public partial class Form1 : Form
-    {
-
-        
-
+    {  
         private bool fileHasBeenOpened = false;
         private bool unsavedChangesPresent = false; // not yet impelemeted
         private PrincessMakerFileBuffer workingFile;

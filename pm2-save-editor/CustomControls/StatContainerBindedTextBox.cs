@@ -73,8 +73,7 @@ namespace pm2_save_editor.CustomControls
 
         public void Initalize()
         {
-            var temp = _boundStat as StatContainerBase;
-            temp.OnStatChanged += HandleOnStatChanged;
+            _boundStat.SubscribeToOnStatChanged(HandleOnStatChanged);
             this.Visible = true;
         }
 
