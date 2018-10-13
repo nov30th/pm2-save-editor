@@ -75,6 +75,7 @@
     <Compile Include="CustomControls\StatContainerBindedComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomControls\StatContainerBindedControl.cs" />
     <Compile Include="CustomControls\StatContainerBindedTextBox.cs">
       <SubType>Component</SubType>
     </Compile>

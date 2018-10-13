@@ -18,6 +18,7 @@ namespace pm2_save_editor.CustomControls
             AddItems();
             this.DropDownStyle = ComboBoxStyle.DropDownList;
             this.SelectionChangeCommitted += SelectionUpdated;
+            this.Visible = true;
         }
 
         public override void AddItems()

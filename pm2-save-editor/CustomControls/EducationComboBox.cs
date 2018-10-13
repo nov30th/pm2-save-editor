@@ -21,10 +21,11 @@ namespace pm2_save_editor.CustomControls
             this.DropDownStyle = ComboBoxStyle.DropDownList;
             this.SelectionChangeCommitted += SelectionUpdated;
 
-            var temp = _boundStat as StatContainerBase;
-            temp.OnStatChanged += HandleOnStatChanged;
+            _boundStat.SubscribeToOnStatChanged(HandleOnStatChanged);
 
             InitalizeSelectedIndex();
+
+            this.Visible = true;
         }
 
         public void HandleOnStatChanged(object sender, EventArgs e)
