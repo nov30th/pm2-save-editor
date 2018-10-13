@@ -27,7 +27,7 @@ namespace pm2_save_editor
     // It occurs to me that IntStatContainer and StringStatContainer have a lot of overlapping functionality and duplicated code
     // But I am as of yet unsure if or how to cobine them into one eloquently
 
-    public abstract class StatContainerBase
+    public abstract class StatContainer : IStatContainer
     {
         protected event EventHandler OnStatChanged;
 
@@ -40,6 +40,34 @@ namespace pm2_save_editor
         {
             OnStatChanged += handler;
         }
+
+        /// <summary>
+        /// Internal ID used to identify the contents of this container
+        /// </summary>
+        protected Stat statId;
+        /// <summary>
+        /// A string representation of the stat's name used for generating labels
+        /// </summary>
+        protected string statName;
+        /// <summary>
+        /// Indicator of the specific type of stat which the container holds
+        /// </summary>
+        protected StatTypes statType;
+        /// <summary>
+        /// Offset of the int in the file
+        /// </summary>
+        protected int offset = 0;
+        /// <summary>
+        /// A handle to the file buffer in which this container represents a stat
+        /// </summary>
+        protected PrincessMakerFileBuffer attachedBuffer;
+
+        public abstract StatTypes GetStatType();
+        public abstract string GetContents();
+        public abstract StatContainerReturnCodes SetContents(string newContents);
+        public abstract void PushChanges();
+        public abstract string GetStatName();
+        public abstract int GetChecksum();
 
     }
 
