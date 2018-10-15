@@ -24,6 +24,10 @@ namespace pm2_save_editor
         /// Minimum value of the stat
         /// </summary>
         long Min;
+        /// <summary>
+        /// The contents of the container when it was first initalized
+        /// </summary>
+        protected long originalContents;
 
         /// <summary>
         /// Initalize the container
@@ -116,6 +120,11 @@ namespace pm2_save_editor
         public override int GetChecksum()
         {
             return (int)currentValue;
+        }
+
+        public override bool HaveContentsChanged()
+        {
+            return !(originalContents == currentValue);
         }
 
     }

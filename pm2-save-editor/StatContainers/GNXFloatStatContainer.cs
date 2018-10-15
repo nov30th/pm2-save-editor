@@ -18,6 +18,7 @@ namespace pm2_save_editor
         {
             byte[] intAsBytes = workingFileBuffer.ReadAtOffset(offset, 2);
             currentValue = BitConverter.ToInt16(intAsBytes, 0);
+            originalContents = currentValue;
             this.statType = StatTypes.GNXFloat;
         }
 
