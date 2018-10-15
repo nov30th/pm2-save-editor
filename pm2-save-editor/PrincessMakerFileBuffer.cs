@@ -91,18 +91,15 @@ namespace pm2_save_editor
             // need some form of version checking here
             statDictionary = BuildStatDictionary();
 
-            oldChecksum = GetOrignalChecksum() - CalculatePartialChecksum(); 
+            oldChecksum = GetOrignalChecksum() - CalculatePartialChecksum();
 
-            FileStream fs = new FileStream(fileName + "_BAK", FileMode.Create);
-            BinaryWriter bw = new BinaryWriter(fs);
-
-            bw.Write(pm2SaveFileBytes);
-
-            bw.Close();
-            fs.Close();
+            var backupCreator = new BackupCreator();
+            backupCreator.CreateBackupFile(fileName, this, pm2SaveFileBytes);
 
             return true;
         }
+
+
 
         private Version CheckVersion()
         {
@@ -277,6 +274,28 @@ namespace pm2_save_editor
         }
 
         /// <summary>
+        /// Attempt to fetch a specific stat from the buffers stat dictionary
+        /// </summary>
+        /// <param name="desiredStat">The desired stat</param>
+        /// <returns>The container corresponding to the desired stat if found, null if not found</returns>
+        public IStatContainer GetStat(Stat desiredStat)
+        {
+            IStatContainer foundContainer;
+            bool success;
+
+            success = statDictionary.TryGetValue(desiredStat, out foundContainer);
+
+            if (success)
+            {
+                return foundContainer;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
         /// Calcuate the checksum value of supported stats
         /// </summary>
         /// <returns>Calcuated checksum</returns>
@@ -307,6 +326,9 @@ namespace pm2_save_editor
         /// <summary>
         /// Force the current buffer to use the full checksum calculation over partial checksum calcuation
         /// </summary>
+        /// <remarks>
+        /// Most useful when attempting to edit parts of the file that do not have registered stat containers
+        /// </remarks>
         public void EnableForceFullChecksum()
         {
             if (workingVersion != Version.EnglishRefine)
