@@ -49,7 +49,7 @@ namespace pm2_save_editor
             this.offset = defaultValues.offset;
             this.maxSize = defaultValues.maxLength;
             this.minSize = defaultValues.minLength;
-
+            
             this.statType = StatTypes.String;
 
             stringAsBytes = attachedBuffer.ReadAtOffset(offset, sizeInMemory);

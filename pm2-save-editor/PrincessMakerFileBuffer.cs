@@ -307,6 +307,9 @@ namespace pm2_save_editor
         /// <summary>
         /// Force the current buffer to use the full checksum calculation over partial checksum calcuation
         /// </summary>
+        /// <remarks>
+        /// Most useful when attempting to edit parts of the file that do not have registered stat containers
+        /// </remarks>
         public void EnableForceFullChecksum()
         {
             if (workingVersion != Version.EnglishRefine)

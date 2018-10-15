@@ -10,6 +10,38 @@ namespace pm2_save_editor
     {
         internal static Dictionary<Stat, InitalizationStruct> englishRefineStatInitalizationMap = new Dictionary<Stat, InitalizationStruct>
         {
+            { Stat.Year, new InitalizationStruct {
+                name = "Year",
+                statID = Stat.Year,
+                type = StatTypes.Int16,
+                offset = 0x00,
+                Max = int.MaxValue, // if someone wants to make their princess 1000 years old who am I to tell them no?
+                Min = int.MinValue }
+            },
+            { Stat.Month, new InitalizationStruct {
+                name = "Month",
+                statID = Stat.Month,
+                type = StatTypes.Int16,
+                offset = 0x02,
+                Max = int.MaxValue, // consider these humorous temporary values - any exposure to the user will most likely be in the form of a drop box anyway
+                Min = int.MinValue }
+            },
+            { Stat.Day, new InitalizationStruct {
+                name = "Day",
+                statID = Stat.Day, // the day of the week - will be overwritten by the date, so it's not very useful practically
+                type = StatTypes.Int16,
+                offset = 0x04,
+                Max = int.MaxValue,
+                Min = int.MinValue }
+            },
+            { Stat.Date, new InitalizationStruct {
+                name = "Date", // the 30 in october 30
+                statID = Stat.Date,
+                type = StatTypes.Int16,
+                offset = 0x06, // may also be duplicated in 0x0A, so this is not considered stable. it should be considered read only at the moment, though this is not yet enforce programmatically
+                Max = int.MaxValue,
+                Min = int.MinValue }
+            },
             { Stat.Gold, new InitalizationStruct {
                 name = "Gold",
                 statID = Stat.Gold,

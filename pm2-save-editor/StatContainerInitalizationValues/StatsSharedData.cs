@@ -51,6 +51,7 @@ namespace pm2_save_editor
     /// - Adding the maximum and minimum bounds to the Limits class
     /// </remarks>
     public enum Stat {
+        Year, Month, Day, Date,
         Gold,
         DaughtersName, FathersName,
         BloodType,
@@ -86,6 +87,7 @@ namespace pm2_save_editor
         public const int ClassMin = 0;
         public const int BloodTypeMax = 4;
         public const int BloodTypeMin = 0;
+        
     }
     
 }
