@@ -27,6 +27,7 @@ namespace pm2_save_editor
             short contents = Convert.ToInt16(currentValue);
             byte[] intAsBytes = BitConverter.GetBytes(contents);
             attachedBuffer.WriteAtOffset(offset, sizeof(short), intAsBytes);
+            originalContents = currentValue;
         }
 
         public StatContainerReturnCodes SetValueFromFloat(double newValue) // overloading SetValue with long and double parameters results in an infinite loop

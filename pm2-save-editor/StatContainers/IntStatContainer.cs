@@ -25,7 +25,7 @@ namespace pm2_save_editor
         /// </summary>
         long Min;
         /// <summary>
-        /// The contents of the container when it was first initalized
+        /// The contents of the container when it was first initalized or last saved
         /// </summary>
         protected long originalContents;
 
@@ -122,7 +122,7 @@ namespace pm2_save_editor
             return (int)currentValue;
         }
 
-        public override bool HaveContentsChanged()
+        public override bool QueryContentsHaveChanged()
         {
             return !(originalContents == currentValue);
         }

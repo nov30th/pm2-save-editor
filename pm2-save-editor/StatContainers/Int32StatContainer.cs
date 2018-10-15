@@ -23,6 +23,7 @@ namespace pm2_save_editor
             int contents = Convert.ToInt32(currentValue);
             byte[] intAsBytes = BitConverter.GetBytes(contents);
             attachedBuffer.WriteAtOffset(offset, sizeof(int), intAsBytes);
+            originalContents = currentValue;
         }
 
         public override string GetContents()

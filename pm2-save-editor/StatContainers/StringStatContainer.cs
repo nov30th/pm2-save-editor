@@ -18,7 +18,7 @@ namespace pm2_save_editor
         /// </summary>
         byte[] stringAsBytes;
         /// <summary>
-        /// The contents of the container when it was first initalized
+        /// The contents of the container when it was first initalized or last saved
         /// </summary>
         private byte[] originalContents;
         /// <summary>
@@ -104,7 +104,8 @@ namespace pm2_save_editor
         /// </summary>
         public void CommitContents()
         {
-            attachedBuffer.WriteAtOffset(offset, sizeInMemory, stringAsBytes);            
+            attachedBuffer.WriteAtOffset(offset, sizeInMemory, stringAsBytes);
+            originalContents = attachedBuffer.ReadAtOffset(offset, sizeInMemory);
         }
 
         public override StatTypes GetStatType()
@@ -168,7 +169,7 @@ namespace pm2_save_editor
         /// Check whether or not the current contents of the container are the same as the containers inital contents
         /// </summary>
         /// <returns></returns>
-        public override bool HaveContentsChanged()
+        public override bool QueryContentsHaveChanged()
         {
             return !(stringAsBytes.SequenceEqual(originalContents));
         }

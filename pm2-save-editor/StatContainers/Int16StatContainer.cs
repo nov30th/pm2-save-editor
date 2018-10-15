@@ -24,6 +24,7 @@ namespace pm2_save_editor
             short contents = Convert.ToInt16(currentValue);
             byte[] intAsBytes = BitConverter.GetBytes(contents);
             attachedBuffer.WriteAtOffset(offset, sizeof(short), intAsBytes);
+            originalContents = currentValue;
         }
 
         public override string GetContents()
