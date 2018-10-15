@@ -14,6 +14,7 @@ namespace pm2_save_editor
         {
             byte[] intAsBytes = workingFileBuffer.ReadAtOffset(offset, 4);
             currentValue = BitConverter.ToInt32(intAsBytes, 0);
+            originalContents = currentValue;
             this.statType = StatTypes.Int32;
         }
 
@@ -22,6 +23,7 @@ namespace pm2_save_editor
             int contents = Convert.ToInt32(currentValue);
             byte[] intAsBytes = BitConverter.GetBytes(contents);
             attachedBuffer.WriteAtOffset(offset, sizeof(int), intAsBytes);
+            originalContents = currentValue;
         }
 
         public override string GetContents()

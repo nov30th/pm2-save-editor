@@ -33,6 +33,8 @@ namespace pm2_save_editor
             openFileDialog1.Filter = "PM2 Save Files|*.GNX";
             saveFileDialog1.Filter = "PM2 Save Files|*.GNX";
 
+            this.FormClosing += new FormClosingEventHandler(FormCloseCatcher);
+
             HideTabPages();
 
         }
@@ -128,17 +130,28 @@ namespace pm2_save_editor
 
         }
 
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        private bool Save(string fileName)
         {
             StatContainerListUpdate();
+
             if (workingFile.SaveFile(workingFileName))
             {
                 MessageBox.Show("File saved!");
+                return true;
             }
             else
             {
                 MessageBox.Show("There are was an error when attempting to save the file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
+
+
+
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Save(workingFileName);
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -153,33 +166,75 @@ namespace pm2_save_editor
                 return;
             }
 
-            StatContainerListUpdate();
-
-            if (workingFile.SaveFile(saveFileDialog1.FileName))
+            if (Save(saveFileDialog1.FileName))
             {
-                MessageBox.Show("File saved!");
-            }
-            else
-            {
-                MessageBox.Show("There are was an error when attempting to save the file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            workingFileName = saveFileDialog1.FileName;
+                workingFileName = saveFileDialog1.FileName; // only update working filename if it is confirmed it is a valid file
+            }      
 
 
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Create an unsaved changes form and have it check if there are unsaved changes. User will be asked how to proceed if there are.
+        /// </summary>
+        /// <returns>true if no unsaved changes, true if unsaved changes but user wants to discard them, false if unsaved changes and user wants to cancel operation</returns>
+        private bool CheckUnsavedChanges()
+        {
+            var unsavedChangesForm = new UnsavedChangesForm();
+            bool safeToProceed = false;
+
+            var returnCode = unsavedChangesForm.CheckUnsavedChanges(statDictionary);
+
+            switch (returnCode)
+            {
+                case UnsavedChangesForm.SavedChangesReturnCodes.SaveAndExit:
+                    if (Save(workingFileName))
+                    {
+                        safeToProceed = true;
+                    }
+                    else
+                    {
+                        safeToProceed = false;
+                    }
+                    break;
+                case UnsavedChangesForm.SavedChangesReturnCodes.ExitWithoutSaving:
+                    safeToProceed = true;
+                    break;
+                case UnsavedChangesForm.SavedChangesReturnCodes.CancelExit:
+                    safeToProceed = false;
+                    break;
+            }
+
+            return safeToProceed;
+        }
+
+        /// <summary>
+        /// Check whether it is safe to exit the application
+        /// </summary>
+        /// <returns></returns>
+        private bool SafeToExit()
         {
             if (fileHasBeenOpened)
             {
-                var result = MessageBox.Show("Are you sure you wish to exit? Any unsaved changes will be lost.", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.Yes)
+                if (!CheckUnsavedChanges())
                 {
-                    Environment.Exit(0);
+                    return false;
                 }
             }
-            else
+            return true;
+        }
+
+        private void FormCloseCatcher(object sender, CancelEventArgs e)
+        {
+            if (!SafeToExit())
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SafeToExit())
             {
                 Environment.Exit(0);
             }

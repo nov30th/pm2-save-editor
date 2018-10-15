@@ -21,7 +21,9 @@ namespace pm2_save_editor
         byte[] pm2SaveFileBytes;
         Version workingVersion = Version.EnglishRefine; // default is EnglishRefine
         Dictionary<Stat, IStatContainer> statDictionary;
-        int oldChecksum; 
+        int oldChecksum;
+        bool forceFullChecksum = false;
+
         /// <summary>
         /// Read a Princess Maker 2 save file into memory
         /// </summary>
@@ -171,7 +173,16 @@ namespace pm2_save_editor
 
             RunSumContainers();
 
-            int newChecksum = oldChecksum + CalculatePartialChecksum();
+            int newChecksum;
+
+            if (forceFullChecksum)
+            {
+                newChecksum = Checksum.CalculateChecksum(pm2SaveFileBytes, workingVersion);
+            }
+            else
+            {
+                newChecksum = oldChecksum + CalculatePartialChecksum();
+            }
 
             // Again, the actual workings and responsilities of the checksum are not entirely clear due to its unique function
             if (workingVersion == Version.EnglishRefine)
@@ -188,7 +199,7 @@ namespace pm2_save_editor
 
             return true;
         }
-        
+
         /// <summary>
         /// Iterate through stat containers and find any sum containers that need to fired off while preparing to save a file
         /// </summary>
@@ -291,6 +302,30 @@ namespace pm2_save_editor
         private int GetOrignalChecksum()
         {
             return BitConverter.ToInt32(ReadAtOffset(Checksum.ENGLISH_REFINE_CHECKSUM_OFFSET, 4), 0);
+        }
+
+        /// <summary>
+        /// Force the current buffer to use the full checksum calculation over partial checksum calcuation
+        /// </summary>
+        public void EnableForceFullChecksum()
+        {
+            if (workingVersion != Version.EnglishRefine)
+            {
+                MessageBox.Show("Full Checksum is only compatible with English Refine.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(0);
+            }
+            else
+            {
+                forceFullChecksum = true;
+            }
+        }
+
+        /// <summary>
+        /// Disable force full checksum
+        /// </summary>
+        public void DisableForceFullChecksum()
+        {
+            forceFullChecksum = false;
         }
 
     }

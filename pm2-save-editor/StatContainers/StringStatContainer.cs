@@ -13,7 +13,14 @@ namespace pm2_save_editor
     /// </summary>
     class StringStatContainer : StatContainer
     {
+        /// <summary>
+        /// The current contents of the container as a byte array
+        /// </summary>
         byte[] stringAsBytes;
+        /// <summary>
+        /// The contents of the container when it was first initalized or last saved
+        /// </summary>
+        private byte[] originalContents;
         /// <summary>
         /// Size of the string block in memory
         /// </summary>
@@ -46,6 +53,8 @@ namespace pm2_save_editor
             this.statType = StatTypes.String;
 
             stringAsBytes = attachedBuffer.ReadAtOffset(offset, sizeInMemory);
+            originalContents = attachedBuffer.ReadAtOffset(offset, sizeInMemory);
+
         }
 
         /// <summary>
@@ -96,6 +105,7 @@ namespace pm2_save_editor
         public void CommitContents()
         {
             attachedBuffer.WriteAtOffset(offset, sizeInMemory, stringAsBytes);
+            originalContents = attachedBuffer.ReadAtOffset(offset, sizeInMemory);
         }
 
         public override StatTypes GetStatType()
@@ -153,6 +163,15 @@ namespace pm2_save_editor
             }
 
             return checksum;
+        }
+
+        /// <summary>
+        /// Check whether or not the current contents of the container are the same as the containers inital contents
+        /// </summary>
+        /// <returns></returns>
+        public override bool QueryContentsHaveChanged()
+        {
+            return !(stringAsBytes.SequenceEqual(originalContents));
         }
 
     }
