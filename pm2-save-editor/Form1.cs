@@ -145,8 +145,6 @@ namespace pm2_save_editor
                 return false;
             }
 
-
-
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)

@@ -91,18 +91,15 @@ namespace pm2_save_editor
             // need some form of version checking here
             statDictionary = BuildStatDictionary();
 
-            oldChecksum = GetOrignalChecksum() - CalculatePartialChecksum(); 
+            oldChecksum = GetOrignalChecksum() - CalculatePartialChecksum();
 
-            FileStream fs = new FileStream(fileName + "_BAK", FileMode.Create);
-            BinaryWriter bw = new BinaryWriter(fs);
-
-            bw.Write(pm2SaveFileBytes);
-
-            bw.Close();
-            fs.Close();
+            var backupCreator = new BackupCreator();
+            backupCreator.CreateBackupFile(fileName, this, pm2SaveFileBytes);
 
             return true;
         }
+
+
 
         private Version CheckVersion()
         {
@@ -274,6 +271,28 @@ namespace pm2_save_editor
         public Dictionary<Stat, IStatContainer> GetStatDictionary()
         {
             return statDictionary;
+        }
+
+        /// <summary>
+        /// Attempt to fetch a specific stat from the buffers stat dictionary
+        /// </summary>
+        /// <param name="desiredStat">The desired stat</param>
+        /// <returns>The container corresponding to the desired stat if found, null if not found</returns>
+        public IStatContainer GetStat(Stat desiredStat)
+        {
+            IStatContainer foundContainer;
+            bool success;
+
+            success = statDictionary.TryGetValue(desiredStat, out foundContainer);
+
+            if (success)
+            {
+                return foundContainer;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         /// <summary>

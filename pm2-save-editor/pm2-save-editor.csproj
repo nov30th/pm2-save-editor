@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackupCreator.cs" />
     <Compile Include="Checksum.cs" />
     <Compile Include="CustomControls\BloodTypeComboBox.cs">
       <SubType>Component</SubType>
