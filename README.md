@@ -1,4 +1,4 @@
-# 美少女梦工厂2 重置版 Steam 存档修改器
+# 美少女梦工厂2 重制版 Steam 存档修改器
 
 An open-source save file editor for Princess Maker 2.
 
@@ -40,7 +40,7 @@ The latest version can be downloaded from the [releases page](https://github.com
 
 This save editor is compatible with:
 * Princess Maker 2 Refine (Chinese Version, might be working in other versions)
-* 美少女梦工厂2重置版 （中文测试通过，其他语言理论上也可）
+* 美少女梦工厂2重制版 （中文测试通过，其他语言理论上也可）
 
 ## Requirements
 
