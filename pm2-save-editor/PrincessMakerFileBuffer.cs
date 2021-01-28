@@ -100,8 +100,8 @@ namespace pm2_save_editor
                 return false;
             }
 
-            int newChecksum = Checksum.CalculateChecksum(pm2SaveFileBytes);
-            WriteAtOffset(CHECKSUM_OFFSET, 4, BitConverter.GetBytes(newChecksum));
+//            int newChecksum = Checksum.CalculateChecksum(pm2SaveFileBytes);
+//            WriteAtOffset(CHECKSUM_OFFSET, 4, BitConverter.GetBytes(newChecksum));
 
             BinaryWriter bw = new BinaryWriter(fs);
 

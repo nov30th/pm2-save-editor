@@ -25,7 +25,7 @@ namespace pm2_save_editor
         {
             InitializeComponent();
 
-            this.Text = "Princess Maker 2 Save Editor";
+            this.Text = "Princess Maker 2 Save Editor [Modified by HOHO``]";
 
             // Disabling Save/Save As until a file is opened
             saveToolStripMenuItem.Enabled = false;

@@ -49,12 +49,13 @@ namespace pm2_save_editor
     /// </remarks>
     public enum Stat {
         Gold,
-        DaughtersName, FathersName,
+//        DaughtersName, FathersName,
         Stamina, Strength, Intelligence, Elegance, Glamour, Morality, Faith, Sin, Sensetivity, Stress,
         FightingRep, MagicRep, SocialRep, HousekeepingRep,
         CombatSkill, Attack, Defence, MagicSkill, MagicAttack, MagicDefence,
         Decorum, ArtSkill, Speech, Cooking, Cleaning, Personality,
-        Height, Weight, Bust, Waist, Hips
+        Height, Weight, Bust, Waist, Hips,
+        Year, Month, Day
     };
 
     /// <summary>
@@ -62,13 +63,13 @@ namespace pm2_save_editor
     /// </summary>
     public static class Limits
     {
-        public const int RepMax = 2000;
+        public const int RepMax = 9999;
         public const int RepMin = 0;
-        public const int CombatSkillMax = 500;
+        public const int CombatSkillMax = 9999;
         public const int CombatSkillMin = 0;
         public const int GeneralPersonalStatMax = 1500;
         public const int GeneralPersonalStatMin = 0;
-        public const int SocialPersonalStatMax = 500;
+        public const int SocialPersonalStatMax = 999;
         public const int SocialPersonalStatMin = 0;
         public const int NameMax = 8;
         public const int NameMin = 1;
@@ -91,25 +92,25 @@ namespace pm2_save_editor
                 Max = Limits.GoldMax,
                 Min = Limits.GoldMin, }
             },
-            { Stat.DaughtersName, new InitalizationStruct {
-                name = "Daughter's Name",
-                statID = Stat.DaughtersName,
-                type = StatTypes.String,
-                size = 48,
-                offset = 0x74,
-                minLength = Limits.NameMin,
-                maxLength = Limits.NameMax }
-            },
-
-            { Stat.FathersName, new InitalizationStruct {
-                name = "Fathers's Name",
-                statID = Stat.DaughtersName,
-                type = StatTypes.String,
-                size = 48,
-                offset = 0xA4,
-                minLength = Limits.NameMin,
-                maxLength = Limits.NameMax }
-            },
+//            { Stat.DaughtersName, new InitalizationStruct {
+//                name = "Daughter's Name",
+//                statID = Stat.DaughtersName,
+//                type = StatTypes.String,
+//                size = 48,
+//                offset = 0x74,
+//                minLength = Limits.NameMin,
+//                maxLength = Limits.NameMax }
+//            },
+//
+//            { Stat.FathersName, new InitalizationStruct {
+//                name = "Fathers's Name",
+//                statID = Stat.DaughtersName,
+//                type = StatTypes.String,
+//                size = 48,
+//                offset = 0x8C,
+//                minLength = Limits.NameMin,
+//                maxLength = Limits.NameMax }
+//            },
 
             { Stat.Stamina, new InitalizationStruct {
                 name = "Stamina",
@@ -349,7 +350,7 @@ namespace pm2_save_editor
                 name = "Height",
                 statID = Stat.Height,
                 type = StatTypes.GNXFloat,
-                offset = 0xF0,
+                offset = 0xC0,
                 Max = Limits.BodyProportionMax,
                 Min = Limits.BodyProportionMin }
             },
@@ -357,7 +358,7 @@ namespace pm2_save_editor
                 name = "Weight",
                 statID = Stat.Weight,
                 type = StatTypes.GNXFloat,
-                offset = 0xF2,
+                offset = 0xC2,
                 Max = Limits.BodyProportionMax,
                 Min = Limits.BodyProportionMin }
             },
@@ -365,7 +366,7 @@ namespace pm2_save_editor
                 name = "Bust",
                 statID = Stat.Bust,
                 type = StatTypes.GNXFloat,
-                offset = 0xF4,
+                offset = 0xC4,
                 Max = Limits.BodyProportionMax,
                 Min = Limits.BodyProportionMin }
             },
@@ -373,7 +374,7 @@ namespace pm2_save_editor
                 name = "Waist",
                 statID = Stat.Waist,
                 type = StatTypes.GNXFloat,
-                offset = 0xF6,
+                offset = 0xC6,
                 Max = Limits.BodyProportionMax,
                 Min = Limits.BodyProportionMin }
             },
@@ -381,10 +382,35 @@ namespace pm2_save_editor
                 name = "Hips",
                 statID = Stat.Hips,
                 type = StatTypes.GNXFloat,
-                offset = 0xF8,
+                offset = 0xC8,
                 Max = Limits.BodyProportionMax,
                 Min = Limits.BodyProportionMin }
             },
+            { Stat.Year, new InitalizationStruct {
+                name = "Year",
+                statID = Stat.Year,
+                type = StatTypes.UInt16,
+                offset = 0x00,
+                Max = Limits.RepMax,
+                Min = Limits.RepMin }
+            },
+            { Stat.Month, new InitalizationStruct {
+                name = "Month",
+                statID = Stat.Month,
+                type = StatTypes.UInt16,
+                offset = 0x02,
+                Max = Limits.RepMax,
+                Min = Limits.RepMin }
+            },
+            { Stat.Day, new InitalizationStruct {
+                name = "Day",
+                statID = Stat.Day,
+                type = StatTypes.UInt16,
+                offset = 0x04,
+                Max = Limits.RepMax,
+                Min = Limits.RepMin }
+            },
+
 
     };
 

@@ -62,7 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Checksum.cs" />
+    <None Include="Checksum.cs_" />
     <Compile Include="CustomControls\StatContainerBindedTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
